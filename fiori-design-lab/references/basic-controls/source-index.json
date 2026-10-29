@@ -1,0 +1,127 @@
+{
+  "version": "1.151.0",
+  "theme": "sap_horizon",
+  "retrieved": "2026-10-29",
+  "files": [
+    {
+      "file": "Button-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Button-dbg.js",
+      "sha256": "42d19a0a26953c33bc6197cb52fd38e0c7d0c0c58df948233c3edd9c3d610ec6",
+      "bytes": 34089
+    },
+    {
+      "file": "Input-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Input-dbg.js",
+      "sha256": "d4af1d1ed460e2f56725e7acef7419caddbf13104978e814c2418e901d9259ac",
+      "bytes": 123101
+    },
+    {
+      "file": "InputBase-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/InputBase-dbg.js",
+      "sha256": "4be9d5864a3ca2809ad75920adb953a03c87282ea44fc8856e5d6b9e15ac3773",
+      "bytes": 47416
+    },
+    {
+      "file": "CheckBox-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/CheckBox-dbg.js",
+      "sha256": "9dd6c1d5488dc075a71a1b749f7fb0cfc8cb86dda513b59999f9cf44067839d9",
+      "bytes": 21381
+    },
+    {
+      "file": "RadioButton-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/RadioButton-dbg.js",
+      "sha256": "40c729c19902fc9b8fdce7dfee9259ef40fe23f0aba864d9c966a15a518a263d",
+      "bytes": 22149
+    },
+    {
+      "file": "Select-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Select-dbg.js",
+      "sha256": "013c89c5cd4fb279726068ba683594b454d1d11c7465d2fdf565a4914f49acbb",
+      "bytes": 102707
+    },
+    {
+      "file": "SelectList-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/SelectList-dbg.js",
+      "sha256": "692245a1ad2f606af5a48618937b2ebf8fa8ef085ba9c6b608cae62d4a0faab2",
+      "bytes": 32512
+    },
+    {
+      "file": "Dialog-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Dialog-dbg.js",
+      "sha256": "505e4fd72aef5d85052be7d3e2cd3577ef9d109042e4dbf5476bed8fdc18d698",
+      "bytes": 88902
+    },
+    {
+      "file": "MessageStrip-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageStrip-dbg.js",
+      "sha256": "c4e50512f02a49e821e401f2572c88e1c9b69e3dacca41072417b68749a73a79",
+      "bytes": 15354
+    },
+    {
+      "file": "ObjectStatus-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ObjectStatus-dbg.js",
+      "sha256": "6d0c3ea8534e8be5106f92f600818d310e48acb4838694fc436af64827e9c50b",
+      "bytes": 16991
+    },
+    {
+      "file": "ButtonRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ButtonRenderer-dbg.js",
+      "sha256": "beb70a7cb3d2f67fe74590a8cbe590e5a4399c51ec783ae4e85290bf6eb04cbc",
+      "bytes": 12844
+    },
+    {
+      "file": "InputBaseRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/InputBaseRenderer-dbg.js",
+      "sha256": "7b7c210cefac6cefdf36120d70750cc02c524a6f1abc0ff193103817a2d982f7",
+      "bytes": 22294
+    },
+    {
+      "file": "CheckBoxRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/CheckBoxRenderer-dbg.js",
+      "sha256": "aa6cefed1d62b571e8bf1921b426250f3feb753953334eec525289128987a32b",
+      "bytes": 5923
+    },
+    {
+      "file": "RadioButtonRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/RadioButtonRenderer-dbg.js",
+      "sha256": "75a30557e40a6b88a4939ae42f772a09ed93545b2b45761ada8d902c83ab7ef9",
+      "bytes": 6310
+    },
+    {
+      "file": "SelectRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/SelectRenderer-dbg.js",
+      "sha256": "0acb3320a46b4f937574d4c3ee72b62ad9dbb1346486a7fca4b5a36ec497632a",
+      "bytes": 15151
+    },
+    {
+      "file": "DialogRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/DialogRenderer-dbg.js",
+      "sha256": "97862e6294b191eee0ce61a4ea86820ed3bb6582d883564c967a68fd6624c853",
+      "bytes": 9448
+    },
+    {
+      "file": "MessageStripRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageStripRenderer-dbg.js",
+      "sha256": "6b7a69392b2ed109356c1f800a620ea17f081af3dd32f32efb18c6fd7f23e38b",
+      "bytes": 2943
+    },
+    {
+      "file": "ObjectStatusRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ObjectStatusRenderer-dbg.js",
+      "sha256": "97eac42d6804ed0e49674e21216ccd3b076423fac8f67166f2ef3072c49bb448",
+      "bytes": 6044
+    },
+    {
+      "file": "sap-m-horizon-v1-151.css",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/themes/sap_horizon/library.css",
+      "sha256": "4cc54a4c9af0117d8c6932f7b577193f1cacb72951ee5eeac4638dab0a2d7064",
+      "bytes": 1090764
+    },
+    {
+      "file": "MessageStripUtilities-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageStripUtilities-dbg.js",
+      "sha256": "a1be33efaf98d9accb22a892ae2494f90c827fb9281a87af519f0aa94bd22622",
+      "bytes": 3543
+    }
+  ]
+}

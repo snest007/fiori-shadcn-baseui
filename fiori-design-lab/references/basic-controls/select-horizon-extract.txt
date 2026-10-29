@@ -1,0 +1,212 @@
+.sapMActionSelectPicker .sapMSelectListItemBaseSelected.sapMActionSelectItemWithoutFocus{outline:none}
+.sapMBar .sapMSlt{vertical-align:top}
+.sapMBreadcrumbs .sapMSlt{border:0;margin:0;height:1.2rem;padding-right:0.125rem}
+.sapMBreadcrumbs .sapMSlt .sapMSltIcon{margin:0 -0.4rem 0 -0.3rem;vertical-align:top;position:relative;background-color:transparent;line-height:inherit;border:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltIconOnly.sapMSltWithIcon.sapMSltHoverable.sapMSltWithArrow{background:transparent;border:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltIconOnly.sapMSltWithIcon.sapMSltHoverable.sapMSltWithArrow.sapMSltFocused .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltIconOnly.sapMSltWithIcon.sapMSltHoverable.sapMSltWithArrow:hover .sapMSltIcon::before{color:var(--sapLink_Hover_Color);border-bottom:.0625rem solid var(--sapLink_Hover_Color)}
+.sapMBreadcrumbs .sapMSltIcon::before{font-family:var(--sapContent_IconFontFamily);vertical-align:super;color:var(--sapLinkColor);speak:none;content:"\00b7\00b7\00b7\e1ef";font-size:var(--sapFontSize);padding-bottom:0.0625rem}
+.sapMBreadcrumbs .sapMLnk,.sapMBreadcrumbs .sapMBreadcrumbsCurrentLocation,.sapMBreadcrumbs .sapMSlt,.sapMBreadcrumbs .sapMBreadcrumbsSeparator{vertical-align:middle}
+.sapUiSizeCompact .sapMBreadcrumbs .sapMSlt{margin:0;height:1.2rem}
+.sapMDynamicDateRangePopover section>.sapMSlt{left:1rem}
+.sapMOTAPopover.sapMPopover .sapMPopoverCont .sapMPopoverScroll>div.sapMSlt{width:auto !important}
+.sapMOTAPopover.sapMPopover .sapMPopoverCont .sapMPopoverScroll>div.sapMSegBSelectWrapper>div.sapMSlt{width:100% !important;max-width:100% !important}
+.sapMPlanCalHead>.sapMTB>.sapMSlt{flex:auto}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow{height:auto;display:flex;box-sizing:border-box;word-break:break-all}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListFirstCell{height:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;box-sizing:border-box}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell{display:block;box-sizing:border-box}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListFirstCell,.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell{padding-top:0.75rem;padding-bottom:0.75rem;word-break:break-word}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListFirstCell:empty,.sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell:empty{height:2.5rem}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem.sapMSelectListItemWithIcon,.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow.sapMSelectListItemWithIcon .sapMSelectListFirstCell{position:relative;padding-left:2.25rem}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem.sapMSelectListItemWithIcon .sapMSelectListItemIcon,.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow.sapMSelectListItemWithIcon .sapMSelectListFirstCell .sapMSelectListItemIcon{position:absolute;left:1rem}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem{white-space:normal;padding-top:0.75rem;padding-bottom:0.75rem;line-height:1rem;height:auto}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem:empty{height:2.5rem}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow{display:table-row}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow .sapMSelectListFirstCell{white-space:normal}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow .sapMSelectListLastCell{vertical-align:top}
+.sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListRow .sapMSelectListCell{display:table-cell}
+.sapMSltPicker-CTX .sapMSelectList .sapMSelectListItem{display:flex;align-items:center}
+.sapMSltPicker-CTX:not(.sapMPickerWrappedItems){max-width:600px}
+.sapMSltPicker-CTX:not(.sapMPickerWrappedItems) .sapMSelectList:not(.sapMSelectListWrappedItems){max-width:600px}
+.sapMSltPicker-CTX:not(.sapMPickerWrappedItems) .sapMSelectList:not(.sapMSelectListWrappedItems) .sapMSelectListRow{max-width:600px}
+.sapMSltPicker-CTX.sapMPickerWrappedItems{max-width:max-content;width:fit-content}
+.sapMSltPicker-CTX.sapMPickerWrappedItems .sapMSelectList.sapMSelectListWrappedItems{width:fit-content}
+.sapMSltPicker-CTX.sapMPickerWrappedItems .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListTableLayout{width:auto}
+.sapMSltPicker-CTX .sapMSelectList:not(.sapMSelectListWrappedItems) .sapMSelectListFirstCell{width:60%}
+.sapMSltPicker-CTX .sapMSelectList:not(.sapMSelectListWrappedItems) .sapMSelectListLastCell{width:40%}
+.sapMSltPicker-CTX.sapMDialogPhone{max-width:100%}
+.sapMSltPicker-CTX.sapMDialogPhone .sapMSelectList:not(.sapMSelectListWrappedItems){max-width:100%}
+.sapMSltPicker-CTX.sapMDialogPhone .sapMSelectList:not(.sapMSelectListWrappedItems) .sapMSelectListRow{max-width:100%}
+.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListFirstCell,.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell{padding-top:0.5rem;padding-bottom:0.5rem}
+.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListFirstCell:empty,.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList .sapMSelectListRow .sapMSelectListLastCell:empty{height:2rem}
+.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem{padding-top:0.5rem;padding-bottom:0.5rem}
+.sapUiSizeCompact .sapMSltPicker-CTX .sapMSelectList.sapMSelectListWrappedItems .sapMSelectListItem:empty{height:2rem}
+.sapMSlt,.sapMSlt>.sapMSltLabel{box-sizing:border-box}
+.sapMSlt,.sapMSltLabel,.sapMSltArrow{display:inline-block}
+.sapMSlt,.sapMSltLabel{overflow:hidden}
+.sapMSlt:not(.sapMSltDisabled),.sapMSlt:not(.sapMSltDisabled)>.sapMSltLabel,.sapMSltIconOnly:not(.sapMSltDisabled) .sapMSltIcon{cursor:pointer}
+.sapMSlt.sapMSltReadonly{border-color:var(--sapField_ReadOnly_BorderColor);background:var(--sapField_ReadOnly_Background)}
+.sapMSlt.sapMSltReadonly .sapMSltArrow{display:none}
+.sapMSlt>.sapMSltLabel,.sapMSltArrow{height:100%}
+.sapMSlt>.sapMSltLabel,.sapMSlt .sapMSelectListItemBase{padding:0 0.625rem}
+.sapMSltWithArrow>.sapMSltLabel,.sapMSltWithArrow .sapMSelectListItemBase{padding:0 3rem 0 0.625rem}
+.sapMSlt{position:relative;vertical-align:top;outline:none;height:2.5rem;margin:0.25rem 0 0.25rem 0;border:1px solid var(--sapField_BorderColor);background:var(--sapField_Background);line-height:initial}
+.sapMSltMinWidth{min-width:5.125rem}
+.sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState){border-color:var(--sapField_Active_BorderColor)}
+.sapMSltPressed.sapMSltIconOnly:not(.sapMSltDisabled){background:#0064d9;text-shadow:none}
+.sapMSltError{background:var(--sapField_InvalidBackground);border-color:var(--sapField_InvalidColor)}
+.sapMSltWarning{background:var(--sapField_WarningBackground);border-color:var(--sapField_WarningColor)}
+.sapMSltSuccess{background:var(--sapField_SuccessBackground);border-color:var(--sapField_SuccessColor)}
+.sapMSltInformation{background:var(--sapField_Background);border-color:var(--sapHighlightColor)}
+.sapMSlt>.sapMSltLabel{position:absolute;width:100%;left:0;right:0;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;text-indent:0;text-align:start;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--sapField_TextColor);font-style:normal;font-size:.875rem;vertical-align:middle}
+.sapMSlt>.sapMSltLabel::after{content:'';height:100%;display:inline-block;vertical-align:middle;width:0}
+.sapMSlt>.sapMSltLabel .sapMSelectListItemText{vertical-align:middle}
+.sapMSlt>.sapMSltLabel .sapMSelectListItemIcon{vertical-align:middle}
+.sapMSltAutoAdjustedWidth>.sapMSltLabel{position:relative;vertical-align:top}
+.sapMSltIcon{position:absolute;display:block;font-size:1.375rem;line-height:2.375rem;padding:0 0.4375rem;color:var(--sapContent_IconColor)}
+.sapMSltAutoAdjustedWidth .sapMSltIcon{position:relative}
+.sapMSltPressed>.sapMSltIcon{color:var(--sapContent_ContrastIconColor)}
+.sapMSltArrow{position:absolute;text-align:center;width:2.5rem;line-height:2.5rem;top:0;right:0;color:var(--sapContent_IconColor);font-size:var(--sapFontLargeSize)}
+.sapMSltArrow::before{font-family:var(--sapContent_IconFontFamily);speak:none;content:'\e1ef'}
+.sapMSltHoverable:not(.sapMSltPressed):hover>.sapMSltArrow{background:var(--sapButton_Lite_Hover_Background)}
+.sapMSltPressed>.sapMSltArrow{background:#0064d9}
+.sapMSltPressed>.sapMSltArrow::before{color:#fff}
+.sapMSlt>.sapMSelectList{visibility:hidden;position:relative;cursor:inherit;border:none;margin:0;padding:0;min-width:6rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSlt{margin:0}
+.sapUiSizeCondensed .sapUiTableCell .sapMSlt:not(.sapMSltState){border-color:transparent}
+.sapMSltLabelState,.sapMSltArrowState{line-height:2.25rem}
+.sapMSubHeader-CTX .sapMSltPressed>.sapMSltIcon{color:var(--sapContent_ContrastIconColor)}
+.sapMHeader-CTX .sapMSltPressed,.sapMSubHeader-CTX .sapMSltPressed{text-shadow:none}
+.sapMHeader-CTX .sapMSltIconOnly.sapMSltHoverable:hover,.sapMSubHeader-CTX .sapMSltIconOnly.sapMSltHoverable:hover{border-color:var(--sapButton_Lite_Hover_BorderColor);background:var(--sapButton_Lite_Hover_Background)}
+.sapMHeader-CTX .sapMSltIconOnly:not(.sapMSltPressed),.sapMSubHeader-CTX .sapMSltIconOnly:not(.sapMSltPressed){border-color:var(--sapButton_Lite_BorderColor);background-color:var(--sapButton_Lite_Background)}
+.sapMSubHeader-CTX .sapMSltPressed>.sapMSltIcon{color:var(--sapContent_ContrastIconColor)}
+.sapMFooter-CTX .sapMSltIconOnly.sapMSltHoverable:not(.sapMSltPressed):hover{background:#eaecee;border-color:var(--sapButton_Lite_BorderColor)}
+.sapMFooter-CTX .sapMSltIconOnly{background:var(--sapButton_Lite_Background);border-color:var(--sapButton_Lite_BorderColor)}
+.sapMIBar-CTX.sapMFooter-CTX .sapMSltArrow{text-shadow:none}
+.sapMFooter-CTX .sapMSltLabel{text-shadow:none}
+div.sapMSltPicker{border:none;box-shadow:0 0 0 .0625rem rgba(34,53,72,0.42),0 .125rem .5rem 0 rgba(34,53,72,0.3)}
+div.sapMSltPicker.sapUiPopupWithPadding .sapMDialogScrollCont.sapMDialogStretchContent{height:100%}
+div.sapMSltPicker .sapMSltPickerValueState{padding:0.5625rem 1rem;color:var(--sapTextColor);font-size:var(--sapFontSmallSize);box-shadow:var(--sapContent_HeaderShadow)}
+div.sapMSltPicker .sapMSltPickerValueState .sapMText{font-size:inherit}
+div.sapMSltPicker .sapMSltPickerValueState .sapMSltPickerValueStateIcon{margin-right:0.375rem;font-size:1rem;flex-shrink:0}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerErrorState{background:var(--sapErrorBackground)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerErrorState .sapMSltPickerValueStateIcon{color:var(--sapNegativeElementColor)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerSuccessState{background:var(--sapSuccessBackground)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerSuccessState .sapMSltPickerValueStateIcon{color:var(--sapPositiveElementColor)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerWarningState{background:var(--sapWarningBackground)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerWarningState .sapMSltPickerValueStateIcon{color:var(--sapCriticalElementColor)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerInformationState{background:var(--sapInformationBackground)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerInformationState .sapMSltPickerValueStateIcon{color:var(--sapInformativeElementColor)}
+div.sapMSltPicker .sapMSltPickerValueState.sapMSltPickerNoneState{display:none}
+div.sapMSltPicker .sapMDialogScrollCont{padding:0}
+.sapUiSizeCompact .sapMSltLabel,.sapUiSizeCompact .sapMSlt .sapMSelectListItemBase,.sapUiSizeCondensed .sapUiTableCell .sapMSltLabel,.sapUiSizeCondensed .sapUiTableCell .sapMSlt .sapMSelectListItemBase{padding-right:2.5rem;padding-left:0.5rem}
+.sapUiSizeCompact .sapMSlt>.sapMSltArrow{line-height:1.5rem}
+.sapUiSizeCompact .sapMSltArrow{width:2rem}
+.sapUiSizeCompact .sapMSltLabelState,.sapUiSizeCompact .sapMSltArrowState{line-height:1.375rem}
+.sapUiSizeCompact .sapMSltIcon{font-size:1rem;line-height:1.5rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSltIcon{font-size:1rem;line-height:1.375rem}
+.sapUiSizeCompact .sapMSlt{height:1.625rem;margin-top:0.1875rem;margin-bottom:0.1875rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSlt{height:1.375rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSlt .sapMSltLabel{line-height:1.375rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSltArrow{line-height:1.375rem}
+.sapUiSizeCondensed .sapUiTableCell .sapMSltHoverable:not(.sapMSltState):hover{border-color:var(--sapField_Hover_BorderColor)}
+.sapUiSizeCondensed .sapUiTableCell .sapMSltLabelState,.sapUiSizeCondensed .sapUiTableCell .sapMSltArrowState{line-height:1.25rem}
+.sapMSltHiddenSelect{width:100%;height:100%;border:none}
+.sapMSlt .sapUiLocalBusyIndicator:focus::after{left:1px;top:1px;right:1px;bottom:1px}
+.sapMSelectListItemBaseSelected.sapMSelectListItemBaseHoverable:hover{background-color:#dcf3ff}
+:not(.sapMSelectListItemBaseDisabled).sapMSelectListItemBase.sapMSelectListItemBasePressed,:not(.sapMSelectListItemBaseDisabled).sapMSelectListItemBase.sapMSelectListItemBasePressed.sapMSelectListItemBaseSelected{color:var(--sapList_Active_TextColor);background:var(--sapList_Active_Background)}
+.sapMColumnHeader>.sapMLabel,.sapMColumnHeader>.sapMText,.sapMListTblCell>.sapMSlt>.sapMSltLabel,.sapMListTblCell>.sapMObjectNumber,.sapMListTblCell>.sapMLabel,.sapMListTblCell>.sapMText{text-align:inherit !important}
+html.sap-phone .sapMTabStrip .sapMSltWithArrow{visibility:visible;display:none}
+html.sap-phone .sapMTabStrip.sapUiSelectable .sapMSltWithArrow{display:inline-block}
+.sapUiSizeCompact .sapMTabStrip .sapMTSTouchArea .sapMSlt{margin-top:0.49375rem}
+.sapMTSScrollable .sapMTSOverflowSelect,.sapMTabStrip.sapMTSScrollForward .sapMTSRightOverflowButtons,.sapMTabStrip.sapMTSScrollBack .sapMTSLeftOverflowButtons,.sapUiSizeCompact .sapMTSOverflowSelectListItem.sapMSelectListItemBaseSelected .sapMTabStripSelectListItemCloseBtn,.sapUiSizeCompact .sapMTSOverflowSelectListItem:hover .sapMTabStripSelectListItemCloseBtn{visibility:visible}
+html.sap-phone .sapMTSOverflowSelectListItem.sapMSelectListItemBaseSelected{border-left:.1875rem solid var(--sapSelectedColor)}
+.sapMActionSelectPicker.sapMSltPicker-CTX .sapMSelectListItemBaseSelected.sapMActionSelectItemWithoutFocus::after{display:none}
+.sapMBreadcrumbs .sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState),.sapMBreadcrumbs .sapMSlt.sapMSltFocused:not(.sapMSltDisabled):not(.sapMSltState){outline-offset:0}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow{box-shadow:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow .sapMSltIcon{display:flex;align-items:center;gap:0.2rem;margin-top:-0.125rem}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow .sapMSltIcon::after{border-bottom:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow .sapMSltIcon::before{content:'••• ';font-family:var(--sapFontLightFamily)}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow .sapMSltIcon::after{content:'\e1ef';font-family:var(--sapContent_IconFontFamily);font-size:var(--sapFontSize);color:var(--sapLinkColor);speak:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow::after{content:'';display:block;position:relative;width:90%;height:0.0625rem;margin:-0.12rem auto 0 .15rem;background-color:transparent}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused{background-color:var(--sapContent_FocusColor)}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover::after,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused::after{background-color:var(--sapContent_ContrastFocusColor)}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover .sapMSltIcon::after,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused .sapMSltIcon::after{color:var(--sapContent_ContrastTextColor);border-bottom:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover:active,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused:active{background-color:transparent}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover:active::after,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused:active::after{background-color:transparent}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover:active .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused:active .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover:active .sapMSltIcon::after,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltFocused:active .sapMSltIcon::after{color:var(--sapLinkColor);border-bottom:none}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow:hover.sapMSltFocused:not(:active)::after{background-color:var(--sapContent_FocusColor)}
+.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltHoverable:hover:not(:active) .sapMSltIcon::before,.sapMBreadcrumbs .sapMBreadcrumbsItem.sapMBreadcrumbsSelectItem>.sapMSlt.sapMSltWithIcon.sapMSltIconOnly.sapMSltWithArrow.sapMSltHoverable.sapMSltFocused:not(:active) .sapMSltIcon::before{color:var(--sapContent_ContrastTextColor);border-bottom:none}
+.sapMSlt.sapMSltIconOnly:not(.sapMSltDisabled){border-color:var(--sapButton_Lite_BorderColor);background:var(--sapButton_Lite_Background);border-radius:0.2rem}
+.sapMSlt.sapMSltIconOnly.sapMSltHoverable:hover:not(.sapMSltState){background:var(--sapField_Hover_Background);border:none}
+.sapMSlt.sapMSltIconOnly.sapMSltHoverable:hover:not(.sapMSltState).sapMSltWithIcon{box-shadow:inset 0 0 0 var(--sapContent_FocusWidth) var(--sapField_Active_BorderColor)}
+.sapMIBar .sapMSltIconOnly:not(.sapMSltDisabled) .sapMSltIcon{color:var(--sapButton_Lite_TextColor)}
+.sapMSltPressed.sapMSltIconOnly:not(.sapMSltDisabled){background:#0064d9}
+.sapMSltPressed.sapMSltIconOnly:not(.sapMSltDisabled) .sapMSltIcon{color:var(--sapField_TextColor)}
+.sapMSlt:not(.sapMSltIconOnly){border-radius:var(--sapField_BorderCornerRadius)}
+.sapMSlt{font-family:var(--sapFontFamily);font-size:.875rem;height:var(--sapElement_Height);border:none;background-image:linear-gradient(0deg, var(--sapField_BorderColor) 0, var(--sapField_BorderColor) 100%);background-size:100% var(--sapField_BorderWidth);background-repeat:repeat-x;background-position:bottom;box-shadow:var(--sapField_Shadow)}
+.sapUiSizeCompact .sapMSlt{height:var(--sapElement_Compact_Height)}
+.sapMSlt>.sapMSltArrow{line-height:2.313rem;background-color:transparent !important}
+.sapMSlt:not(.sapMSltState).sapMSltPressed>.sapMSltArrow::before{color:var(--sapButton_Selected_TextColor)}
+.sapMSlt.sapMSltPressed,.sapMSltPressed>.sapMSltArrow{background:var(--sapField_Hover_Background)}
+html.sap-desktop .sapMSlt.sapMSltFocused:not(.sapMSltExpanded):not(.sapMSltDisabled):not(.sapMSltState)::before{outline-offset:-2px}
+html.sap-desktop .sapMSlt.sapMSltFocused:not(.sapMSltExpanded):not(.sapMSltDisabled).sapMSltState::before{outline-offset:-2px}
+html.sap-desktop .sapMSltIconOnly.focus:not(.sapMSltExpanded):not(.sapMSltDisabled).sapMSltPressed{outline-color:var(--sapContent_ContrastFocusColor)}
+.sapMSltHoverable:not(.sapMSltState):not(.sapMSltIconOnly):hover{background:var(--sapField_Hover_Background);border-color:var(--sapField_Hover_BorderColor);box-shadow:var(--sapField_Hover_Shadow)}
+.sapMSltHoverable:not(.sapMSltState):not(.sapMSltIconOnly):hover .sapMSltArrow{border-radius:var(--sapField_BorderCornerRadius)}
+.sapMSltHoverable.sapMSltPressed:not(.sapMSltState):not(.sapMSltIconOnly):hover .sapMSltArrow{border-radius:var(--sapField_BorderCornerRadius)}
+.sapMSltIconOnly.sapMSltPressed.sapMSltHoverable:not(.sapMSltState):hover{background:#006be8;border-color:var(--sapField_Active_BorderColor)}
+.sapMSltState{border-width:2px}
+.sapMSltDisabled{opacity:var(--sapContent_DisabledOpacity)}
+.sapMSlt.sapMSltReadonly{border-color:var(--sapField_ReadOnly_BorderColor);background:var(--sapField_ReadOnly_BackgroundStyle);background-color:var(--sapField_ReadOnly_Background);box-shadow:none}
+div.sapMSltPicker .sapMSltPickerValueState{padding-left:0.5rem;padding-right:0.5rem}
+div.sapMSltPicker .sapMSltPickerValueState .sapMSltPickerValueStateIcon{margin-right:0.5rem}
+.sapUiSizeCompact .sapMSlt>.sapMSltArrow{line-height:1.75rem}
+.sapMSltMinWidth{min-width:2.75rem}
+.sapUiSizeCompact .sapMSltMinWidth{min-width:2rem}
+.sapMSltHoverable:not(.sapMSltState):not(.sapMSltIconOnly):hover{box-shadow:var(--sapField_Hover_Shadow);border:none;background-image:linear-gradient(0deg, var(--sapField_BorderColor) 0, var(--sapField_BorderColor) 100%);background-size:100% var(--sapField_BorderWidth);background-repeat:repeat-x;background-position:bottom}
+.sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState),.sapMSlt.sapMSltFocused:not(.sapMSltDisabled):not(.sapMSltState){border:none}
+.sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState):not(.sapMSltReadonly),.sapMSlt.sapMSltFocused:not(.sapMSltDisabled):not(.sapMSltState):not(.sapMSltReadonly){background:var(--sapField_Background)}
+.sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState):not(.sapMSltExpanded),.sapMSlt.sapMSltFocused:not(.sapMSltDisabled):not(.sapMSltState):not(.sapMSltExpanded){box-shadow:inset 0 0 0 var(--sapContent_FocusWidth) var(--sapField_Active_BorderColor)}
+.sapMSltHoverable:not(.sapMSltState):not(.sapMSltIconOnly):active{border:none}
+.sapMSltArrow{width:2.25rem;height:2.25rem}
+.sapMSltArrow:hover{box-shadow:var(--sapField_Hover_Shadow)}
+.sapMSltExpanded>.sapMSltArrow{box-shadow:var(--sapField_Hover_Shadow)}
+.sapMSltError>.sapMSltArrow:hover{box-shadow:var(--sapField_Hover_InvalidShadow)}
+.sapMSltWarning>.sapMSltArrow:hover{box-shadow:var(--sapField_Hover_WarningShadow)}
+.sapMSltSuccess>.sapMSltArrow:hover{box-shadow:var(--sapField_Hover_SuccessShadow)}
+.sapMSltInformation>.sapMSltArrow:hover{box-shadow:var(--sapField_Hover_InformationShadow)}
+.sapUiSizeCompact .sapMSltArrow{width:2rem;height:1.625rem}
+.sapMSltPressed>.sapMSltArrow,.sapMSlt:hover>.sapMSltArrow{background-color:var(--sapButton_Active_Background);border-radius:var(--sapField_BorderCornerRadius)}
+html.sap-desktop .sapMSlt.sapMSltFocused:not(.sapMSltExpanded):not(.sapMSltDisabled)::before{box-shadow:inset 0 0 0 2px var(--sapField_Focus_BorderColor)}
+.sapMSltInformation{border:none;background-image:linear-gradient(0deg, var(--sapField_InformationColor) 0, var(--sapField_InformationColor) 100%);background-size:100% var(--sapField_InformationBorderWidth);background-repeat:repeat-x;background-position:bottom;background-color:var(--sapField_InformationBackground);box-shadow:var(--sapField_InformationShadow)}
+.sapMSltInformation.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover{border-color:var(--sapField_InformationColor);box-shadow:var(--sapField_Hover_InformationShadow);background-color:var(--sapField_Hover_Background)}
+.sapMSltInformation.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover:not(.sapMSltFocused){box-shadow:var(--sapField_Hover_InformationShadow)}
+.sapMSltHoverable.sapMSltInformation:not(.sapMSltIconOnly):not(.sapMSltExpanded):active,.sapMSltFocused.sapMSltInformation:not(.sapMSltExpanded){border-bottom:none;box-shadow:inset 0 0 0 2px var(--sapField_InformationColor);background-color:var(--sapField_Focus_Background)}
+.sapMSltInformation.sapMSltPressed .sapMSltArrow{color:var(--sapButton_Selected_TextColor);box-shadow:var(--sapField_Hover_InformationShadow)}
+.sapMSltInformation.sapMSltPressed>.sapMSltArrow::before{color:inherit}
+.sapMSltSuccess{border:none;background-image:linear-gradient(0deg, var(--sapField_SuccessColor) 0, var(--sapField_SuccessColor) 100%);background-size:100% var(--sapField_SuccessBorderWidth);background-repeat:repeat-x;background-position:bottom;background-color:var(--sapField_SuccessBackground);box-shadow:var(--sapField_SuccessShadow)}
+.sapMSltSuccess.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover{border-color:var(--sapField_SuccessColor);box-shadow:var(--sapField_Hover_SuccessShadow);background-color:var(--sapField_Hover_Background)}
+.sapMSltSuccess.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover:not(.sapMSltFocused){box-shadow:var(--sapField_Hover_SuccessShadow)}
+.sapMSltHoverable.sapMSltSuccess:not(.sapMSltIconOnly):not(.sapMSltExpanded):active,.sapMSltFocused.sapMSltSuccess:not(.sapMSltExpanded){border-bottom:none;box-shadow:inset 0 0 0 2px var(--sapField_SuccessColor);border-radius:var(--sapField_BorderCornerRadius);background-color:var(--sapField_Focus_Background)}
+.sapMSltSuccess.sapMSltPressed .sapMSltArrow{color:var(--sapButton_Accept_Selected_TextColor);box-shadow:var(--sapField_Hover_SuccessShadow)}
+.sapMSltSuccess.sapMSltPressed>.sapMSltArrow::before{color:inherit}
+.sapMSltWarning{border:none;background-image:linear-gradient(0deg, var(--sapField_WarningColor) 0, var(--sapField_WarningColor) 100%);background-size:100% var(--sapField_WarningBorderWidth);background-repeat:repeat-x;background-position:bottom;background-color:var(--sapField_WarningBackground);box-shadow:var(--sapField_WarningShadow)}
+.sapMSltWarning.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover{border-color:var(--sapField_WarningColor);box-shadow:var(--sapField_Hover_WarningShadow);background-color:var(--sapField_Hover_Background)}
+.sapMSltWarning.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover:not(.sapMSltFocused){box-shadow:var(--sapField_Hover_WarningShadow)}
+.sapMSltHoverable.sapMSltWarning:not(.sapMSltIconOnly):not(.sapMSltExpanded):active,.sapMSltFocused.sapMSltWarning:not(.sapMSltExpanded){border-bottom:none;box-shadow:inset 0 0 0 2px var(--sapField_WarningColor);background-color:var(--sapField_Focus_Background)}
+.sapMSltWarning.sapMSltPressed .sapMSltArrow{color:var(--sapButton_Attention_Selected_TextColor);box-shadow:var(--sapField_Hover_WarningShadow)}
+.sapMSltWarning.sapMSltPressed>.sapMSltArrow::before{color:inherit}
+.sapMSltError{border:none;background-image:linear-gradient(0deg, var(--sapField_InvalidColor) 0, var(--sapField_InvalidColor) 100%);background-size:100% var(--sapField_InvalidBorderWidth);background-repeat:repeat-x;background-position:bottom;background-color:var(--sapField_InvalidBackground);box-shadow:var(--sapField_InvalidShadow)}
+.sapMSltError.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover{border-color:var(--sapField_InvalidColor);box-shadow:var(--sapField_Hover_InvalidShadow);background-color:var(--sapField_Hover_Background)}
+.sapMSltError.sapMSltHoverable:not(.sapMSltIconOnly):not(.sapMSltDisabled):not(.sapMSltPressed):hover:not(.sapMSltFocused){box-shadow:var(--sapField_Hover_InvalidShadow)}
+.sapMSltHoverable.sapMSltError:not(.sapMSltIconOnly):not(.sapMSltExpanded):active,.sapMSltFocused.sapMSltError:not(.sapMSltExpanded){border-bottom:none;box-shadow:inset 0 0 0 2px var(--sapField_InvalidColor);background-color:var(--sapField_Focus_Background)}
+.sapMSltError.sapMSltPressed .sapMSltArrow{color:var(--sapField_InvalidColor);box-shadow:var(--sapField_Hover_InvalidShadow)}
+.sapMSltError.sapMSltPressed>.sapMSltArrow::before{color:inherit}
+.sapMSelectListItemBase.sapMSelectListItemBaseSelected{background:var(--sapList_SelectionBackgroundColor);color:var(--sapList_TextColor);border-bottom:.0625rem solid var(--sapList_SelectionBorderColor)}
+.sapMSelectListItemBase.sapMSelectListItemBaseSelected:hover{background:var(--sapList_Hover_SelectionBackground)}
+.sapMSelectListItemBase.sapMSelectListItemBasePressed,.sapMSelectListItemBase.sapMSelectListItemBaseSelected.sapMSelectListItemBasePressed{background-color:var(--sapList_Active_Background);color:var(--sapList_Active_TextColor)}
+.sapMSelectListItemBase:focus-visible::after,html.sap-desktop .sapMSelectListItemBase:focus::after,.sapMSltPicker-CTX .sapMSelectListItemBaseSelected::after,.sapMComboBoxBasePicker-CTX .sapMSelectListItemBaseSelected::after{pointer-events:none;content:'';outline:var(--sapContent_FocusWidth) var(--sapContent_FocusStyle) var(--sapContent_FocusColor);outline-offset:-0.1875rem;position:absolute;top:0;right:0;bottom:0;left:0}
+.sapMSltPicker-CTX .sapMSelectListItemBaseSelected,.sapMComboBoxBasePicker-CTX .sapMSelectListItemBaseSelected,.sapMSelectListItemBase:focus-visible,html.sap-desktop .sapMSelectListItemBase:focus{outline:none}
+.sapMSltIcon.sapUiIcon.sapUiIconMirrorInRTL{font-size:1rem}
+.sapUiSizeCompact .sapMTabStrip .sapMTSTouchArea .sapMSlt{margin-top:0.46rem}
+.sapMSltIconOnly.sapMSltHoverable:hover:not(.sapMSltState){border:.0625rem solid var(--sapButton_Emphasized_Hover_BorderColor)}

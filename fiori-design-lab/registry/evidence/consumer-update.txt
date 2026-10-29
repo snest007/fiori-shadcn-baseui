@@ -1,0 +1,69 @@
+✔ The file fiori-scoped.css already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file input.tsx already exists. Would you like to overwrite? › (y/N)✔ The file input.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file select.tsx already exists. Would you like to overwrite? › (y/N)✔ The file select.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file badge.tsx already exists. Would you like to overwrite? › (y/N)✔ The file badge.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file dialog.tsx already exists. Would you like to overwrite? › (y/N)✔ The file dialog.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file field.tsx already exists. Would you like to overwrite? › (y/N)✔ The file field.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file input-group.tsx already exists. Would you like to overwrite? › (y/N)✔ The file input-group.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file table.tsx already exists. Would you like to overwrite? › (y/N)✔ The file table.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file separator.tsx already exists. Would you like to overwrite? › (y/N)✔ The file separator.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file textarea.tsx already exists. Would you like to overwrite? › (y/N)✔ The file textarea.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file alert.tsx already exists. Would you like to overwrite? › (y/N)✔ The file alert.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file popover.tsx already exists. Would you like to overwrite? › (y/N)✔ The file popover.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+? The file toggle.tsx already exists. Would you like to overwrite? › (y/N)✔ The file toggle.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+ℹ Updated 13 files:
+  - src/lib/fiori/styles/fiori-scoped.css
+  - src/components/fiori/ui/input.tsx
+  - src/components/fiori/ui/select.tsx
+  - src/components/fiori/ui/badge.tsx
+  - src/components/fiori/ui/dialog.tsx
+  - src/components/fiori/ui/field.tsx
+  - src/components/fiori/ui/input-group.tsx
+  - src/components/fiori/ui/table.tsx
+  - src/components/fiori/ui/separator.tsx
+  - src/components/fiori/ui/textarea.tsx
+  - src/components/fiori/ui/alert.tsx
+  - src/components/fiori/ui/popover.tsx
+  - src/components/fiori/ui/toggle.tsx
+ℹ Skipped 24 files: (files might be identical, use --overwrite to overwrite)
+  - src/components/fiori/fiori-context.ts
+  - src/components/fiori/fiori-provider.tsx
+  - src/components/fiori/sap-icon.tsx
+  - src/lib/fiori/utils.ts
+  - src/lib/fiori/styles/fiori-fonts.css
+  - src/lib/fiori/styles/SAP-THEME-LICENSE.txt
+  - src/lib/fiori/styles/FONT-LICENSE.txt
+  - src/lib/fiori/styles/FONT-SOURCES.md
+  - src/lib/fiori/licenses/icons-LICENSE.txt
+  - src/lib/fiori/licenses/icons-SOURCES.md
+  - src/components/fiori/ui/button.tsx
+  - src/components/fiori/ui/checkbox.tsx
+  - src/components/fiori/ui/label.tsx
+  - src/components/fiori/ui/toggle-group.tsx
+  - src/components/fiori/message-strip.tsx
+  - src/components/fiori/value-help.tsx
+  - src/components/fiori/value-help.css
+  - src/lib/fiori/value-help-query.ts
+  - src/components/fiori/message-popover.tsx
+  - src/components/fiori/message-popover.css
+  - src/components/fiori/value-help-conditions-field.tsx
+  - src/components/fiori/value-help-condition-operator.tsx
+  - src/components/fiori/value-help-conditions.css
+  - src/lib/fiori/value-help-conditions.ts
+Use FioriProvider around Fiori components. The provider imports isolated theme CSS; no UI5 control runtime or network font request is required.
+Import FioriProvider from your components/fiori/fiori-provider and compose installed Fiori components inside it. React 19 and Tailwind 4 are required. Full API contracts are supplied in the authoring project docs.
+
+

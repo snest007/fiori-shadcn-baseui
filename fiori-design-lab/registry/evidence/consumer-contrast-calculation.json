@@ -1,0 +1,62 @@
+{
+  "method": "WCAG relative luminance from browser computed colors; readonly left stripe occupies 0-4px, text starts at >=8px; empty multi-input areas contain no text",
+  "pairs": [
+    {
+      "name": "只读字段文本",
+      "fg": [
+        19,
+        30,
+        41
+      ],
+      "bg": [
+        234,
+        236,
+        238
+      ],
+      "ratio": 14.24
+    },
+    {
+      "name": "标准字段与token区域",
+      "fg": [
+        19,
+        30,
+        41
+      ],
+      "bg": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 16.86
+    },
+    {
+      "name": "分段按钮选中",
+      "fg": [
+        0,
+        100,
+        217
+      ],
+      "bg": [
+        237,
+        246,
+        255
+      ],
+      "ratio": 5.03
+    },
+    {
+      "name": "分段按钮未选中",
+      "fg": [
+        0,
+        100,
+        217
+      ],
+      "bg": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 5.49
+    }
+  ],
+  "boundary": "Computed color check for these default states only; not physical assistive-technology verification."
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "color-contrast",
+    "nodes": [
+      {
+        "checks": [
+          {
+            "data": {
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": "pseudoContent"
+            },
+            "message": "Element's background color could not be determined due to a pseudo element"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "target": [
+          "button[data-pressed=\"\"] > span[data-slot=\"toggle-group-item-inner\"]"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": "pseudoContent"
+            },
+            "message": "Element's background color could not be determined due to a pseudo element"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "target": [
+          ".group-data-\\[spacing\\=0\\]\\/toggle-group\\:rounded-none.group-data-\\[spacing\\=0\\]\\/toggle-group\\:px-2.focus\\:z-10:nth-child(2) > span[data-slot=\"toggle-group-item-inner\"]"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "contrastRatio": 0,
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "emptyValue"
+            },
+            "message": "Element has no value; test color contrast with a value entered"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered",
+        "target": [
+          "#consumer-material"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "contrastRatio": 0,
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient"
+            },
+            "message": "Element's background color could not be determined due to a background gradient"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "target": [
+          "#consumer-readonly"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "contrastRatio": 0,
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient"
+            },
+            "message": "Element's background color could not be determined due to a background gradient"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "target": [
+          "#consumer-priority > .flex-1.text-left[data-slot=\"select-value\"]"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "contrastRatio": 0,
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient"
+            },
+            "message": "Element's background color could not be determined due to a background gradient"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "target": [
+          "#consumer-readonly-input"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "data": {
+              "contrastRatio": 0,
+              "expectedContrastRatio": "4.5:1",
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "emptyValue"
+            },
+            "message": "Element has no value; test color contrast with a value entered"
+          }
+        ],
+        "summary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered",
+        "target": [
+          "#consumer-conditions"
+        ]
+      }
+    ]
+  }
+]

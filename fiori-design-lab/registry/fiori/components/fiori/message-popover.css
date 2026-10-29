@@ -1,0 +1,331 @@
+[data-fiori-root] .message-view-spacer {
+  flex: 1;
+}
+[data-fiori-root] .message-indicator[data-message-type="error"] {
+  --message-button-background: var(--sapButton_Negative_Background);
+  --message-button-border: var(--sapButton_Negative_BorderColor);
+  --message-button-text: var(--sapButton_Negative_TextColor);
+  --message-button-hover-background: var(--sapButton_Negative_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Negative_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Negative_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Negative_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Negative_BorderColor);
+  --message-button-active-text: var(--sapButton_Negative_Active_TextColor);
+}
+[data-fiori-root] .message-indicator[data-message-type="warning"] {
+  --message-button-background: var(--sapButton_Critical_Background);
+  --message-button-border: var(--sapButton_Critical_BorderColor);
+  --message-button-text: var(--sapButton_Critical_TextColor);
+  --message-button-hover-background: var(--sapButton_Critical_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Critical_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Critical_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Critical_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Critical_BorderColor);
+  --message-button-active-text: var(--sapButton_Critical_Active_TextColor);
+}
+[data-fiori-root] .message-indicator[data-message-type="success"] {
+  --message-button-background: var(--sapButton_Success_Background);
+  --message-button-border: var(--sapButton_Success_BorderColor);
+  --message-button-text: var(--sapButton_Success_TextColor);
+  --message-button-hover-background: var(--sapButton_Success_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Success_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Success_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Success_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Success_BorderColor);
+  --message-button-active-text: var(--sapButton_Success_Active_TextColor);
+}
+[data-fiori-root] .message-indicator[data-message-type="information"] {
+  --message-button-background: var(--sapButton_Neutral_Background);
+  --message-button-border: var(--sapButton_Neutral_BorderColor);
+  --message-button-text: var(--sapButton_Neutral_TextColor);
+  --message-button-hover-background: var(--sapButton_Neutral_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Neutral_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Neutral_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Neutral_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Neutral_Active_BorderColor);
+  --message-button-active-text: var(--sapButton_Neutral_Active_TextColor);
+}
+[data-fiori-root] .message-indicator[data-message-type] {
+  background: var(--message-button-background);
+  border-color: var(--message-button-border);
+  color: var(--message-button-text);
+  text-shadow: var(--sapContent_ContrastTextShadow);
+}
+[data-fiori-root] .message-indicator[data-message-type="information"] {
+  text-shadow: var(--sapContent_TextShadow);
+}
+[data-fiori-root] .message-indicator[data-message-type]:hover {
+  background: var(--message-button-hover-background);
+  border-color: var(--message-button-hover-border);
+  color: var(--message-button-hover-text);
+}
+[data-fiori-root] .message-indicator[data-message-type]:active {
+  background: var(--message-button-active-background);
+  border-color: var(--message-button-active-border);
+  color: var(--message-button-active-text);
+  text-shadow: none;
+}
+[data-fiori-root] .message-indicator:not(
+    [data-message-type="information"]
+  ):focus-visible::before {
+  border-color: var(--sapContent_ContrastFocusColor);
+}
+[data-fiori-root] .message-popover-popup[data-slot="popover-content"] {
+  display: flex;
+  width: 440px;
+  height: 320px;
+  max-width: calc(100vw - 32px);
+  max-height: min(480px, calc(100dvh - 48px));
+  padding: 0;
+  gap: 0;
+  overflow: visible;
+  background: var(--sapGroup_ContentBackground);
+  border-color: var(--sapGroup_ContentBorderColor, var(--border));
+  border-radius: var(--sapPopover_BorderCornerRadius, 8px);
+}
+[data-fiori-root] .message-popover-popup > .message-view {
+  border-radius: inherit;
+  overflow: hidden;
+}
+[data-fiori-root] .message-popover-arrow {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 8px;
+  overflow: clip;
+}
+[data-fiori-root] .message-popover-arrow[data-side="top"] {
+  bottom: -8px;
+  rotate: 180deg;
+}
+[data-fiori-root] .message-popover-arrow[data-side="bottom"] {
+  top: -8px;
+}
+[data-fiori-root] .message-popover-arrow[data-side="left"] {
+  right: -12px;
+  rotate: 90deg;
+}
+[data-fiori-root] .message-popover-arrow[data-side="right"] {
+  left: -12px;
+  rotate: -90deg;
+}
+[data-fiori-root] .message-popover-arrow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(8px * sqrt(2));
+  height: calc(8px * sqrt(2));
+  background: var(--sapGroup_ContentBackground);
+  border: 1px solid var(--sapGroup_ContentBorderColor, var(--border));
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+[data-fiori-root] .message-view {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+[data-fiori-root] .message-view-header,
+[data-fiori-root] .message-view-filterbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 8px;
+  padding: 0 16px;
+  background: var(--sapGroup_ContentBackground);
+  border-bottom: 1px solid var(--sapList_BorderColor);
+}
+[data-fiori-root] .message-view-header .message-view-heading,
+[data-fiori-root] .message-view-header [data-slot="dialog-title"] {
+  color: var(--sapGroup_TitleTextColor);
+  font-family: var(--sapFontHeaderFamily);
+  font-size: 16px;
+  font-weight: normal;
+}
+[data-fiori-root] .message-type-filters[data-slot="toggle-group"] {
+  flex-shrink: 0;
+}
+[data-fiori-root] .message-type-filters [data-slot="toggle-group-item-inner"] {
+  padding-inline: 9px;
+}
+[data-fiori-root] .message-type-filters[data-slot="toggle-group"] [data-message-type="error"] svg,
+[data-fiori-root] [data-message-type="error"] > .message-item-icon,
+[data-fiori-root] [data-message-type="error"] > .message-detail-icon {
+  color: var(--sapNegativeElementColor);
+}
+[data-fiori-root] .message-type-filters[data-slot="toggle-group"]
+  [data-message-type="warning"]
+  svg,
+[data-fiori-root] [data-message-type="warning"] > .message-item-icon,
+[data-fiori-root] [data-message-type="warning"] > .message-detail-icon {
+  color: var(--sapCriticalElementColor);
+}
+[data-fiori-root] .message-type-filters[data-slot="toggle-group"]
+  [data-message-type="success"]
+  svg,
+[data-fiori-root] [data-message-type="success"] > .message-item-icon,
+[data-fiori-root] [data-message-type="success"] > .message-detail-icon {
+  color: var(--sapPositiveElementColor);
+}
+[data-fiori-root] .message-type-filters[data-slot="toggle-group"]
+  [data-message-type="information"]
+  svg,
+[data-fiori-root] [data-message-type="information"] > .message-item-icon,
+[data-fiori-root] [data-message-type="information"] > .message-detail-icon {
+  color: var(--sapInformativeElementColor);
+}
+[data-fiori-root] .message-view-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+}
+[data-fiori-root] .message-view-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px 8px 24px;
+  min-height: 52px;
+  border-bottom: 1px solid var(--sapList_BorderColor);
+  color: var(--sapList_TextColor);
+  background: var(--sapList_Background);
+}
+[data-fiori-root] .message-item-content {
+  min-width: 0;
+  flex: 1;
+  font-size: var(--sapFontHeader6Size, 14px);
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+[data-fiori-root] .message-item-content small {
+  display: block;
+  margin-top: 4px;
+  color: var(--sapContent_LabelColor);
+  font-size: 14px;
+  line-height: 20px;
+}
+[data-fiori-root] .message-view-item .message-item-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+[data-fiori-root] .message-view-item a,
+[data-fiori-root] .message-detail-title[href] {
+  color: var(--sapLinkColor);
+  text-decoration: none;
+}
+[data-fiori-root] .message-view-item a:hover,
+[data-fiori-root] .message-detail-title[href]:hover {
+  color: var(--sapLink_Hover_Color, var(--sapLinkColor));
+  text-decoration: underline;
+}
+[data-fiori-root] .message-view-item:focus-visible {
+  outline: 2px solid var(--sapContent_FocusColor);
+  outline-offset: -3px;
+  border-radius: 6px;
+}
+[data-fiori-root] .message-view-item a:focus-visible,
+[data-fiori-root] .message-detail-title[href]:focus-visible {
+  outline: 2px solid var(--sapContent_FocusColor);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+@media (hover: hover) {
+  [data-fiori-root] .message-view-item:hover {
+    background: var(--sapList_Hover_Background);
+  }
+}
+[data-fiori-root] .message-view-details {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  overflow: auto;
+}
+[data-fiori-root] .message-detail-icon {
+  position: absolute;
+  left: 24px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+}
+[data-fiori-root] .message-detail-title {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 16px 40px;
+  color: var(--sapGroup_TitleTextColor);
+}
+[data-fiori-root] .message-detail-subtitle {
+  margin: 0 0 16px 40px;
+  color: var(--sapContent_LabelColor);
+  font-size: 14px;
+}
+[data-fiori-root] .message-detail-description {
+  margin: 0 0 16px 40px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--sapTextColor);
+}
+[data-fiori-root] .message-view-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--sapContent_LabelColor);
+}
+[data-fiori-root][data-fiori-density="cozy"] .message-view-header {
+  min-height: 44px;
+}
+@media (max-width: 599px) {
+  [data-fiori-root] .message-popover-dialog[data-slot="dialog-content"] {
+    --tw-translate-x: 0px;
+    --tw-translate-y: 0px;
+    display: flex;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    translate: none;
+    transform: none;
+    border-radius: 0;
+    border: 0;
+    animation: none;
+    overflow: hidden;
+  }
+  [data-fiori-root] .message-popover-dialog .message-view-header {
+    min-height: 48px;
+  }
+  [data-fiori-root] .message-popover-dialog .message-view-header [data-slot="dialog-title"] {
+    flex: 1;
+    font-size: 18px;
+  }
+  [data-fiori-root] .message-popover-dialog .message-view-filterbar {
+    min-height: 48px;
+  }
+  [data-fiori-root] .message-popover-dialog .message-type-filters[data-slot="toggle-group"] {
+    width: 100%;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  [data-fiori-root] .message-popover-dialog
+    .message-type-filters
+    [data-slot="toggle-group-item-inner"] {
+    padding-inline: 6px;
+  }
+}

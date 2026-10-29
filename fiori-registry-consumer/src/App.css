@@ -1,0 +1,229 @@
+.consumer-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px;
+}
+.consumer-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.consumer-page-header h1 {
+  font-size: 26px;
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+.consumer-page-header p {
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+.consumer-page-header a {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.consumer-eyebrow {
+  margin-bottom: 8px;
+}
+.consumer-host {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: var(--card);
+}
+.consumer-host h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.consumer-host p {
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+.consumer-host-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+.consumer-host-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+.consumer-host-controls input:not([type="checkbox"]) {
+  min-width: 0;
+  width: 260px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: var(--background);
+  font: inherit;
+}
+.consumer-host-controls output {
+  font-size: 13px;
+  padding-block: 8px;
+}
+.consumer-host-controls .consumer-native-toggle {
+  flex-direction: row;
+  align-items: center;
+  padding-block: 8px;
+}
+.consumer-provider-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+}
+.consumer-primary,
+.consumer-comparison {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  background: var(--card);
+}
+.consumer-primary-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.consumer-primary-heading h2,
+.consumer-comparison h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.consumer-primary-heading p,
+.consumer-comparison > p {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  margin-bottom: 20px;
+}
+.consumer-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.consumer-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.consumer-section > p {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.consumer-field-grid[data-slot="field-group"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.consumer-controlled-values {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.consumer-controlled-values output {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.consumer-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.consumer-action-row output {
+  flex: 1;
+  min-width: 100px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.consumer-readout {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.consumer-result-table {
+  margin-top: 16px;
+  overflow: auto;
+  border: 1px solid var(--border);
+}
+.consumer-strip-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.consumer-comparison {
+  position: sticky;
+  top: 24px;
+}
+.consumer-comparison > output {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+}
+@media (max-width: 1023px) {
+  .consumer-provider-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consumer-comparison {
+    position: static;
+  }
+}
+@media (max-width: 599px) {
+  .consumer-page {
+    padding: 16px;
+  }
+  .consumer-page-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .consumer-page-header h1 {
+    font-size: 22px;
+  }
+  .consumer-host,
+  .consumer-primary,
+  .consumer-comparison {
+    padding: 16px;
+  }
+  .consumer-primary-heading {
+    flex-direction: column;
+  }
+  .consumer-primary-heading p {
+    margin-bottom: 0;
+  }
+  .consumer-field-grid[data-slot="field-group"] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .consumer-host-controls {
+    align-items: start;
+    flex-direction: column;
+  }
+  .consumer-host-controls input:not([type="checkbox"]) {
+    width: min(260px, 100%);
+  }
+  .consumer-action-row output {
+    flex-basis: 100%;
+  }
+}

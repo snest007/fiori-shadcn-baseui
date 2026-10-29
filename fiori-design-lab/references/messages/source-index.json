@@ -1,0 +1,65 @@
+[
+  {
+    "file": "MessagePopover-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessagePopover-dbg.js",
+    "sha256": "fab34d2f30ed490ed569b13a743d8225f9c489d30020bea6ac5b2beae1736d45",
+    "bytes": 28075
+  },
+  {
+    "file": "MessageView-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageView-dbg.js",
+    "sha256": "b369236df54e3a015beafdade26c2fc8de64e2f9499f1fa4c9b35d16bccdf4a2",
+    "bytes": 47830
+  },
+  {
+    "file": "MessageItem-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageItem-dbg.js",
+    "sha256": "9155c11af8ed6fcea611e7878f9ca0ef14df71b7c70f31db1bbae97850565882",
+    "bytes": 6159
+  },
+  {
+    "file": "MessageViewRenderer-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/MessageViewRenderer-dbg.js",
+    "sha256": "e0b1dd6331d74d12c0bb94bfcd96574ffe37988fdfac98a042a5c15f667747b6",
+    "bytes": 735
+  },
+  {
+    "file": "sap-m-horizon-v1-151.css",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/themes/sap_horizon/library.css",
+    "sha256": "4cc54a4c9af0117d8c6932f7b577193f1cacb72951ee5eeac4638dab0a2d7064",
+    "bytes": 1090764
+  },
+  {
+    "file": "MessagePopover.view.xml",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/m/demokit/sample/MessagePopover/MessagePopover.view.xml",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "MessagePopover.controller.js",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/m/demokit/sample/MessagePopover/MessagePopover.controller.js",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "message-popover-guideline-wrapper.html",
+    "url": "https://www.sap.com/design-system/fiori-design-web/v1-151/ui-elements/message-popover",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "manifest.json",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/m/demokit/sample/MessagePopover/manifest.json",
+    "sha256": "135e6fb1d2f67df70114946f8e34990d715cf8f3659f1a1c1277398691d53125",
+    "bytes": 519
+  },
+  {
+    "file": "MessagePopover.view.xml",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/m/demokit/sample/MessagePopover/view/MessagePopover.view.xml",
+    "sha256": "56aba8bf446e46eadb674946e6d16705de026f885b2b8b11c076aa8d300ce3f1",
+    "bytes": 601
+  },
+  {
+    "file": "MessagePopover.controller.js",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/m/demokit/sample/MessagePopover/controller/MessagePopover.controller.js",
+    "sha256": "0bbc1127c943d06c4e0881cbdb877ae680cdcdc42ac72db36d37e2e522b8fdcc",
+    "bytes": 5066
+  }
+]

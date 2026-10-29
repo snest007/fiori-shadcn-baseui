@@ -1,0 +1,65 @@
+.sapMCb:not(.sapMCbBgDis):not(.sapMCbDisplayOnly):hover,.sapMCb:not(.sapMCbBgDis):not(.sapMCbDisplayOnly) .sapMCbLabel:hover{cursor:pointer}
+.sapMCb:not(.sapMCbBgDis):not(.sapMCbDisplayOnly).sapMCbHasLabel:focus::before{pointer-events:none}
+.sapMCb.sapMCbDisplayOnly.sapMCbErr .sapMCbBg,.sapMCb.sapMCbDisplayOnly.sapMCbInfo .sapMCbBg,.sapMCb.sapMCbDisplayOnly.sapMCbWarn .sapMCbBg,.sapMCb.sapMCbDisplayOnly.sapMCbSucc .sapMCbBg{border:none}
+.sapMCb.sapMCbDisplayOnly.sapMCbErr .sapMCbBg.sapMCbMarkChecked::before,.sapMCb.sapMCbDisplayOnly.sapMCbInfo .sapMCbBg.sapMCbMarkChecked::before,.sapMCb.sapMCbDisplayOnly.sapMCbWarn .sapMCbBg.sapMCbMarkChecked::before,.sapMCb.sapMCbDisplayOnly.sapMCbSucc .sapMCbBg.sapMCbMarkChecked::before{color:var(--sapTextColor)}
+.sapMCb.sapMCbDisplayOnly.sapMCbErr .sapMCbBg.sapMCbMarkPartiallyChecked,.sapMCb.sapMCbDisplayOnly.sapMCbInfo .sapMCbBg.sapMCbMarkPartiallyChecked,.sapMCb.sapMCbDisplayOnly.sapMCbWarn .sapMCbBg.sapMCbMarkPartiallyChecked,.sapMCb.sapMCbDisplayOnly.sapMCbSucc .sapMCbBg.sapMCbMarkPartiallyChecked{border:solid .0625rem var(--sapField_BorderColor)}
+.sapUiForm:not(.sapUiFormEdit-CTX) .sapMCb.sapMCbDisplayOnly:not(.sapMCbBgDis){padding-left:1.625rem}
+.sapUiForm:not(.sapUiFormEdit-CTX) .sapMCb.sapMCbDisplayOnly .sapMCbBg{top:0;margin:0}
+.sapMCb.sapMCbDisplayOnly:not(.sapMCbBgDis){padding-left:2.375rem}
+.sapMCbBg{background-color:var(--sapField_Background);border:solid .125rem var(--sapField_BorderColor);display:inline-block;position:absolute;left:0.8125rem;top:0.8125rem;height:1.125rem;width:1.125rem;line-height:1.125rem;padding:0;text-align:center;font-size:1rem;border-top-left-radius:0.125rem;border-top-right-radius:0.125rem;border-bottom-right-radius:0.125rem;border-bottom-left-radius:0.125rem;-webkit-focus-ring-color:none}
+.sapMCbBg>.sapMCbMark,.sapMCbBg.sapMCbMark>input{font-size:inherit}
+.sapMCbBg.sapMCbMarkChecked::before{content:'\e05b';font-family:var(--sapContent_IconFontFamily);display:inline-block}
+.sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{content:'';width:100%;height:100%;background-color:currentColor;border:0.1875rem solid transparent;box-sizing:border-box;background-clip:padding-box}
+.sapUiSizeCompact .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.125rem}
+.sapMCbBg>input{left:0;-webkit-appearance:none;position:absolute;visibility:hidden}
+html[data-sap-ui-browser^=ff] .sapMCbBg>input{position:absolute}
+.sapMCbRo .sapMCbBg{background-color:var(--sapField_ReadOnly_Background);border-color:var(--sapField_ReadOnly_BorderColor)}
+.sapMCbRo>.sapMCbBg.sapMCbMarkChecked::before{color:var(--sapContent_NonInteractiveIconColor)}
+.sapMCbDisplayOnly .sapMCbBg.sapMCbMark.sapMCbMarkChecked.sapMCbMarkPartiallyChecked{border-radius:0.0625rem;border:1px solid var(--sapTextColor)}
+.sapMCbDisplayOnly .sapMCbBg.sapMCbMark.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{background-color:var(--sapTextColor)}
+.sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked){background-color:initial;border:none;margin:0.125rem}
+.sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked)::before{content:'\e19a';font-size:1rem}
+.sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked).sapMCbMarkChecked::before{color:var(--sapTextColor);content:'\e03f'}
+.sapUiSizeCompact .sapMCbBg{left:0.5rem;top:0.5rem;height:0.75rem;width:0.75rem;line-height:0.75rem;font-size:0.75rem;border-radius:0}
+.sapUiSizeCompact .sapUiForm:not(.sapUiFormEdit-CTX) .sapMCb.sapMCbDisplayOnly .sapMCbBg{top:0.0775rem}
+.sapUiSizeCompact .sapMCb.sapMCbDisplayOnly:not(.sapMCbBgDis){padding-left:2rem}
+html.sap-desktop .sapUiSizeCondensed.sapUiTable .sapMCbBg,html.sap-desktop .sapUiSizeCondensed .sapUiTable .sapMCbBg{left:0.5rem;top:0.375rem;height:0.75rem;width:0.75rem;line-height:0.75rem;font-size:0.625rem;border-radius:0}
+html[data-sap-ui-browser^="sf"] .sapMCbBg>.sapMCbMark,.sapMCbBg.sapMCbMark>input{margin:0}
+li.sapMMultiComboBoxItem .sapMCbBg{top:0;bottom:0;margin:auto}
+.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg,.sapMP13nColumnsPanel .sapMLIBActive.sapMLIB,.sapMP13nColumnsPanel .sapMLIBActive.sapMLIB>td{background-color:transparent}
+.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg,.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg.sapMCbMarkChecked,.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg.sapMCbBgDis,.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg.sapMCbBgDis.sapMCbMarkChecked{border-color:var(--sapField_BorderColor)}
+.sapMP13nColumnsPanel .sapMLIBActive .sapMCbBg.sapMCbMarkChecked::before{color:var(--sapSelectedColor)}
+.sapMPersoDialog .sapMLIBActive .sapMCbBg,.sapMPersoDialog .sapMLIBActive.sapMLIB,.sapMPersoDialog .sapMLIBActive.sapMLIB>td{background-color:transparent}
+.sapMPersoDialog .sapMLIBActive .sapMCbBg.sapMCbMarkChecked::before{color:var(--sapSelectedColor)}
+.sapMCbBg{height:1.375rem;width:1.375rem;top:0.6875rem;left:0.6875rem;box-sizing:border-box;border-radius:var(--sapField_BorderCornerRadius);background-color:var(--sapField_Background);border:var(--sapField_BorderWidth) var(--sapField_BorderColor) solid;display:flex;align-items:center;justify-content:center;color:var(--sapContent_Selected_ForegroundColor)}
+.sapMCbBg.sapMCbMarkChecked::before{font-size:1rem;color:currentColor}
+.sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.25rem}
+.sapMCbBgDis{opacity:var(--sapContent_DisabledOpacity)}
+.sapMCbRo .sapMCbBg{background-color:var(--sapField_ReadOnly_Background);border:var(--sapElement_BorderWidth) dashed var(--sapField_ReadOnly_BorderColor)}
+.sapMCbRo>.sapMCbBg.sapMCbMarkChecked::before{color:var(--sapField_TextColor)}
+.sapMCb:not(.sapMCbErr):not(.sapMCbWarn):not(.sapMCbInfo):not(.sapMCbSucc):hover .sapMCbHoverable{border:var(--sapField_BorderWidth) solid var(--sapField_Hover_BorderColor);color:var(--sapContent_Selected_ForegroundColor);background-color:var(--sapContent_Selected_Hover_Background)}
+.sapMCb:hover .sapMCbHoverable{background-color:var(--sapField_Hover_Background)}
+.sapMCbErr .sapMCbBg{background-color:var(--sapField_InvalidBackground);border:var(--sapField_InvalidBorderWidth) solid var(--sapField_InvalidColor);color:var(--sapField_InvalidColor)}
+.sapMCbErr .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.1875rem}
+.sapMCbWarn .sapMCbBg{background-color:var(--sapField_WarningBackground);border:var(--sapField_WarningBorderWidth) solid var(--sapField_WarningColor);color:var(--sapField_WarningColor)}
+.sapMCbWarn .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.1875rem}
+.sapMCbInfo .sapMCbBg{background-color:var(--sapField_InformationBackground);border:var(--sapField_InformationBorderWidth) solid var(--sapField_InformationColor);color:var(--sapField_InformationColor)}
+.sapMCbInfo .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.1875rem}
+.sapMCbSucc .sapMCbBg{background-color:var(--sapField_SuccessBackground);border:var(--sapField_SuccessBorderWidth) solid var(--sapField_SuccessColor);color:var(--sapField_SuccessColor)}
+.sapMCb.sapMCbDisplayOnly:not(.sapMCbBgDis){padding-left:2.75rem}
+.sapUiForm:not(.sapUiFormEdit-CTX) .sapMCb.sapMCbDisplayOnly .sapMCbBg{top:-0.1075rem}
+.sapMCbDisplayOnly .sapMCbBg{top:0.5625rem;left:0.5625rem}
+.sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked).sapMCbMarkChecked::before{color:var(--sapTextColor);font-size:1rem}
+.sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked)::before{color:var(--sapTextColor);font-size:1rem}
+.sapMCbDisplayOnly .sapMCbBg.sapMCbMark.sapMCbMarkChecked.sapMCbMarkPartiallyChecked{width:0.875rem;height:0.875rem;border-radius:0.0675rem;top:0.9375rem;left:0.9375rem}
+.sapMCbDisplayOnly .sapMCbBg.sapMCbMark.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.125rem}
+.sapUiForm .sapMCbBg{left:0}
+.sapUiForm .sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus::before,.sapUiForm .sapMCb:not(.sapMCbBgDis):not(.sapMCbHasLabel):focus::before{left:-0.25rem}
+.sapUiSizeCompact .sapMCbBg{height:1rem;width:1rem;top:0.5rem;left:0.5rem;border-radius:var(--sapField_BorderCornerRadius)}
+.sapUiSizeCompact .sapMCbBg.sapMCbMarkChecked::before{font-size:0.75rem}
+.sapUiSizeCompact .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.1875rem}
+.sapUiSizeCompact .sapMCbErr .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before,.sapUiSizeCompact .sapMCbWarn .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before,.sapUiSizeCompact .sapMCbInfo .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked::before{border-width:0.125rem}
+.sapUiSizeCompact .sapMCbDisplayOnly .sapMCbBg:not(.sapMCbMarkPartiallyChecked){margin:0}
+.sapUiSizeCompact .sapMCbDisplayOnly .sapMCbBg.sapMCbMark.sapMCbMarkChecked.sapMCbMarkPartiallyChecked{top:0.5625rem;left:0.5625rem}
+.sapUiSizeCompact .sapUiForm .sapMCbBg{left:0}
+.sapUiSizeCompact .sapUiForm .sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus::before{left:-0.1875rem}

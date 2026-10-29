@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fiori-message-strip",
+  "title": "Fiori MessageStrip",
+  "description": "Reusable semantic message strip and controlled dismissal.",
+  "dependencies": [
+    "cn@^0.5.0"
+  ],
+  "registryDependencies": [
+    "@fiori/fiori-button",
+    "@fiori/fiori-foundation",
+    "@fiori/fiori-primitives"
+  ],
+  "files": [
+    {
+      "path": "registry/fiori/components/fiori/message-strip.tsx",
+      "content": "\"use client\"\n\nimport type { ComponentProps, ReactNode } from \"react\"\nimport { cn } from \"cn\"\nimport { Alert, AlertAction, AlertTitle } from \"@/components/fiori/ui/alert\"\nimport { Button } from \"@/components/fiori/ui/button\"\nimport { SapIcon } from \"./sap-icon\"\n\nexport type MessageStripTone =\n  \"information\" | \"positive\" | \"critical\" | \"negative\"\n\nexport type MessageStripProps = Omit<\n  ComponentProps<typeof Alert>,\n  \"children\" | \"variant\"\n> & {\n  tone?: MessageStripTone\n  children: ReactNode\n  showIcon?: boolean\n  link?: Omit<ComponentProps<\"a\">, \"children\"> & { children: ReactNode }\n  /** The consumer controls visibility; dismissing never deletes message data. */\n  onDismiss?: () => void\n  dismissLabel?: string\n}\n\nconst icons: Record<MessageStripTone, string> = {\n  information: \"information\",\n  positive: \"sys-enter-2\",\n  critical: \"alert\",\n  negative: \"error\",\n}\n\nexport function MessageStrip({\n  tone = \"information\",\n  children,\n  showIcon = true,\n  link,\n  onDismiss,\n  dismissLabel = \"关闭消息\",\n  role = \"note\",\n  className,\n  ...props\n}: MessageStripProps) {\n  return (\n    <Alert\n      {...props}\n      className={cn(\"fiori-message-strip\", className)}\n      data-tone={tone}\n      role={role}\n      aria-roledescription={props[\"aria-roledescription\"] || \"消息条\"}\n    >\n      {showIcon && <SapIcon name={icons[tone]} />}\n      <AlertTitle>\n        {children}\n        {link && <> {<a {...link} />}</>}\n      </AlertTitle>\n      {onDismiss && (\n        <AlertAction>\n          <Button\n            size=\"icon-sm\"\n            variant=\"ghost\"\n            aria-label={dismissLabel}\n            title={dismissLabel}\n            onClick={onDismiss}\n          >\n            <SapIcon name=\"decline\" />\n          </Button>\n        </AlertAction>\n      )}\n    </Alert>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "@components/fiori/message-strip.tsx"
+    }
+  ],
+  "meta": {
+    "source": "Fiori Design Lab",
+    "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+  },
+  "type": "registry:component"
+}

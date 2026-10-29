@@ -1,0 +1,152 @@
+[data-fiori-root] [data-slot="dialog-content"].value-help-condition-dialog {
+  width: min(880px, calc(100vw - 64px));
+  height: min(560px, calc(100dvh - 64px));
+}
+[data-fiori-root] .value-help-condition-form {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 24px;
+}
+[data-fiori-root] .value-help-condition-row {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 8fr) var(
+      --fiori-control-height
+    );
+  align-items: start;
+  gap: 8px;
+  margin-top: 2px;
+}
+[data-fiori-root] .value-help-condition-row[data-interval="true"] {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 4fr) var(
+      --fiori-control-height
+    );
+}
+[data-fiori-root] .value-help-condition-row[data-empty="true"] {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 8fr) var(
+      --fiori-control-height
+    );
+}
+[data-fiori-root] .value-help-condition-operation[data-slot="input-group"] {
+  width: 100%;
+  min-width: 0;
+}
+[data-fiori-root] .value-help-condition-operand {
+  min-width: 0;
+}
+[data-fiori-root] .value-help-condition-row[data-empty="true"] .value-help-condition-remove {
+  grid-column: 3;
+}
+[data-fiori-root] .value-help-condition-add-row {
+  display: flex;
+  justify-content: flex-end;
+  padding-inline-end: calc(var(--fiori-control-height) + 8px);
+  margin-top: 16px;
+}
+[data-fiori-root] .value-help-condition-none {
+  color: var(--muted-foreground);
+}
+[data-fiori-root] .value-help-condition-operator-positioner {
+  z-index: 50;
+  outline: 0;
+}
+[data-fiori-root] .value-help-condition-operator-popup {
+  width: var(--anchor-width);
+  min-width: min(280px, calc(100vw - 32px));
+  max-width: var(--available-width);
+  background: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--sapContent_Shadow2);
+  overflow: hidden;
+}
+[data-fiori-root] .value-help-condition-operator-list {
+  max-height: min(360px, var(--available-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  outline: none;
+}
+[data-fiori-root] .value-help-condition-operator-label {
+  display: flex;
+  align-items: center;
+  height: var(--fiori-row-height);
+  padding: 4px 12px;
+  color: var(--muted-foreground);
+  background: var(--sapList_GroupHeaderBackground, var(--muted));
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 700;
+}
+[data-fiori-root] .value-help-condition-operator-item {
+  display: flex;
+  align-items: center;
+  min-height: var(--fiori-row-height);
+  padding: 4px 12px;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+  outline: none;
+}
+[data-fiori-root] .value-help-condition-operator-item[data-selected] {
+  background: var(--sapList_SelectionBackgroundColor);
+}
+[data-fiori-root] .value-help-condition-operator-item[data-highlighted] {
+  background: var(--sapList_Hover_Background);
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+[data-fiori-root] .value-help-condition-operator-empty {
+  padding: 16px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+[data-fiori-root] [data-slot="dialog-content"].value-help-condition-warning {
+  width: min(480px, calc(100vw - 32px));
+  max-width: none;
+}
+[data-fiori-root] .value-help-condition-warning-header[data-slot="dialog-header"] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+}
+[data-fiori-root] .value-help-condition-warning-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--sapCriticalElementColor);
+}
+[data-fiori-root] .value-help-condition-warning-message[data-slot="dialog-description"] {
+  color: var(--foreground);
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+[data-fiori-root] .value-help-condition-dialog[data-phone="true"] .value-help-condition-form {
+  padding: 16px;
+}
+@media (max-width: 599px) {
+  [data-fiori-root] .value-help-condition-row,
+[data-fiori-root] .value-help-condition-row[data-interval="true"],
+[data-fiori-root] .value-help-condition-row[data-empty="true"] {
+    grid-template-columns: minmax(0, 1fr) var(--fiori-control-height);
+    gap: 8px;
+    margin-top: 16px;
+  }
+  [data-fiori-root] .value-help-condition-row:first-child {
+    margin-top: 0;
+  }
+  [data-fiori-root] .value-help-condition-operation {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  [data-fiori-root] .value-help-condition-operand {
+    grid-column: 1;
+  }
+  [data-fiori-root] .value-help-condition-row .value-help-condition-remove,
+[data-fiori-root] .value-help-condition-row[data-empty="true"] .value-help-condition-remove {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

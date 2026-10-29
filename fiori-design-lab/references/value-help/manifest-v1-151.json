@@ -1,0 +1,44 @@
+{
+	"sap.app": {
+		"id": "sap.ui.comp.sample.valuehelpdialog",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.comp.sample.valuehelpdialog.recommended.ValueHelpDialog",
+			"type": "XML",
+			"async": true
+		},
+		"resourceRoots": {
+			"mockserver": "mockserver"
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.f": {},
+				"sap.ui.layout": {},
+				"sap.ui.table": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"ValueHelpDialog.view.xml",
+					"ValueHelpDialog.controller.js",
+					"ValueHelpDialogFilterbar.fragment.xml",
+					"ValueHelpDialogFilterbarWithSuggestions.fragment.xml",
+					"ValueHelpDialogWhitespaces.fragment.xml",
+					"mockserver/metadata.xml",
+					"mockserver/ZSALESREPORT.json",
+					"mockserver/ZSALESREPORTSuggestions.json",
+					"mockserver/ZSALESREPORTWhitespace.json",
+					"manifest.json"
+				]
+			}
+		}
+	}
+}

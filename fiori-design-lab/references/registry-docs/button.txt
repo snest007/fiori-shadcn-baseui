@@ -1,0 +1,511 @@
+Source: https://ui.shadcn.com/docs/components/base/button
+
+Sections
+Introduction
+Components
+AI Elements
+Installation
+Theming
+CLI
+Typeset
+Skills
+Registry
+Changelog
+Components
+Accordion
+Alert
+Alert Dialog
+Aspect Ratio
+Attachment
+Avatar
+Badge
+Breadcrumb
+Bubble
+Button
+Button Group
+Calendar
+Card
+Carousel
+Chart
+Checkbox
+Code Block
+Collapsible
+Combobox
+Command
+Context Menu
+Data Table
+Date Picker
+Dialog
+Direction
+Drawer
+Dropdown Menu
+Empty
+Field
+Hover Card
+Input
+Input Group
+Input OTP
+Item
+Kbd
+Label
+Marker
+Menubar
+Message
+Message Scroller
+Native Select
+Navigation Menu
+Pagination
+Popover
+Progress
+Questionnaire
+Radio Group
+Resizable
+Scroll Area
+Select
+Separator
+Sheet
+Sidebar
+Skeleton
+Slider
+Spinner
+Switch
+Table
+Tabs
+Textarea
+Toast
+Toggle
+Toggle Group
+Tooltip
+Trace
+Typography
+AI Elements
+Introduction
+Chain of Thought
+Chat
+Checkpoint
+Confirmation
+Context
+File Tree
+Inline Citation
+Message
+Model Selector
+Plan
+Prompt Input
+Queue
+Reasoning
+Sources
+Stack Trace
+Subagent
+Suggestion
+Task
+Terminal
+Test Results
+Tool
+Get Started
+Installation
+components.json
+Package Imports
+Theming
+Typeset
+Dark Mode
+CLI
+Monorepo
+Skills
+JavaScript
+Figma
+llms.txt
+Legacy Docs
+@shadcn/react
+Message Scroller
+Questionnaire
+@shadcn/helpers
+AI SDK
+TanStack AI
+Forms
+React Hook Form
+TanStack Form
+Formisch
+Utilities
+scroll-fade
+shimmer
+Registry
+Introduction
+Getting Started
+GitHub Registries
+Registry Directory
+Registry Health
+Examples
+Namespaces
+Authentication
+Dynamic Search
+MCP Server
+Open in v0
+FAQ
+API Reference
+registry.json
+registry-item.json
+Button
+Copy Page
+Previous
+Next
+Displays a button or a component that looks like a button.
+Base UI
+React Aria
+Radix UI
+Button
+Copy
+import
+{ ArrowUpIcon }
+from
+"lucide-react"
+import
+{ Button }
+from
+"@/components/ui/button"
+View Code
+Installation
+#
+Command
+Manual
+pnpm
+npm
+yarn
+bun
+pnpm dlx shadcn@latest add button
+Copy
+Usage
+#
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+Copy
+<
+Button
+variant
+=
+"outline"
+>
+Button
+</
+Button
+>
+Cursor
+#
+Tailwind v4
+switched
+from
+cursor: pointer
+to
+cursor: default
+for the button component.
+If you want to keep the
+cursor: pointer
+behavior, add the following code to your CSS file:
+You can also enable this during project setup with
+npx shadcn@latest init --pointer
+.
+globals.css
+Copy
+@layer
+base {
+button
+:not
+(
+:disabled
+),
+[
+role
+=
+"button"
+]
+:not
+(
+:disabled
+)
+{
+cursor
+:
+pointer
+;
+}
+}
+Size
+#
+Use the
+size
+prop to change the size of the button.
+Extra Small
+Small
+Default
+Large
+Copy
+import
+{ ArrowUpRightIcon }
+from
+"lucide-react"
+import
+{ Button }
+from
+"@/components/ui/button"
+View Code
+Default
+#
+Button
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonDefault
+() {
+View Code
+Outline
+#
+Outline
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonOutline
+() {
+View Code
+Secondary
+#
+Secondary
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonSecondary
+() {
+View Code
+Ghost
+#
+Ghost
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonGhost
+() {
+View Code
+Destructive
+#
+Destructive
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonDestructive
+() {
+View Code
+Link
+#
+Link
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+export
+function
+ButtonLink
+() {
+View Code
+Icon
+#
+Copy
+import
+{ CircleFadingArrowUpIcon }
+from
+"lucide-react"
+import
+{ Button }
+from
+"@/components/ui/button"
+View Code
+With Icon
+#
+Remember to add the
+data-icon="inline-start"
+or
+data-icon="inline-end"
+attribute to the icon for the correct spacing.
+New Branch
+Fork
+Copy
+import
+{ IconGitBranch, IconGitFork }
+from
+"@tabler/icons-react"
+import
+{ Button }
+from
+"@/components/ui/button"
+View Code
+Rounded
+#
+Use the
+rounded-full
+class to make the button rounded.
+Get Started
+Copy
+import
+{ ArrowUpIcon }
+from
+"lucide-react"
+import
+{ Button }
+from
+"@/components/ui/button"
+View Code
+Spinner
+#
+Render a
+<Spinner />
+component inside the button to show a loading state. Remember to add the
+data-icon="inline-start"
+or
+data-icon="inline-end"
+attribute to the spinner for the correct spacing.
+Generating
+Downloading
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{ Spinner }
+from
+"@/components/ui/spinner"
+View Code
+Button Group
+#
+To create a button group, use the
+ButtonGroup
+component. See the
+Button Group
+documentation for more details.
+Archive
+Report
+Snooze
+Copy
+"use client"
+import
+*
+as
+React
+from
+"react"
+View Code
+As Link
+#
+You can use the
+buttonVariants
+helper to make a link look like a button.
+Do not use
+<Button render={<a />} nativeButton={false} />
+for links.
+The Base UI
+Button
+component always applies
+role="button"
+, which overrides the semantic link role on
+<a>
+elements. Use
+buttonVariants
+with a plain
+<a>
+tag instead.
+Login
+Copy
+import
+{ buttonVariants }
+from
+"@/components/ui/button"
+export
+function
+ButtonRender
+() {
+View Code
+RTL
+#
+To enable RTL support in shadcn/ui, see the
+RTL configuration guide
+.
+Arabic (العربية)
+▼
+Toggle
+زر
+حذف
+إرسال
+جاري التحميل
+Copy
+"use client"
+import
+{ ArrowRightIcon, PlusIcon }
+from
+"lucide-react"
+View Code
+API Reference
+#
+Button
+#
+The
+Button
+component is a wrapper around the
+button
+element that adds a variety of styles and functionality.
+Prop
+Type
+Default
+variant
+"default" | "outline" | "ghost" | "destructive" | "secondary" | "link"
+"default"
+size
+"default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"
+"default"
+Bubble
+Button Group
+On This Page
+Installation
+Usage
+Cursor
+Size
+Default
+Outline
+Secondary
+Ghost
+Destructive
+Link
+Icon
+With Icon
+Rounded
+Spinner
+Button Group
+As Link
+RTL
+API Reference
+Button
+Deploy your shadcn/ui app on Vercel
+Trusted by OpenAI, Sonos, Adobe, and more.
+Vercel provides tools and infrastructure to deploy apps and features at scale.
+Deploy Now
+Deploy to Vercel

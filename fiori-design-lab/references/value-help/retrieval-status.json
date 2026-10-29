@@ -1,0 +1,18 @@
+{
+  "requests": [
+    {
+      "url": "https://www.sap.com/design-system/fiori-design-web/v1-151/ui-elements/value-help-dialog",
+      "directHttp": "403",
+      "searchService": "200 extraction, 11 lines, title/control/Usage wrapper only"
+    }
+  ],
+  "unverifiedFragmentCandidates": [
+    "/usage",
+    "/usage.plain.html",
+    ".plain.html",
+    "/usage.html",
+    "-usage",
+    "/usage.content.html"
+  ],
+  "notUsed": "No CUA, browser access, or Figma; no src files edited in research turn"
+}

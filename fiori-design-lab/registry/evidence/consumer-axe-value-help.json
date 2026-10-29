@@ -1,0 +1,15 @@
+{
+  "incomplete": [
+    {
+      "id": "aria-hidden-focus",
+      "nodes": 11
+    },
+    {
+      "id": "color-contrast",
+      "nodes": 7
+    }
+  ],
+  "passes": 27,
+  "version": "4.14.0",
+  "violations": []
+}

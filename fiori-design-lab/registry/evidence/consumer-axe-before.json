@@ -1,0 +1,62 @@
+{
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": 5
+    }
+  ],
+  "passes": 27,
+  "version": "4.14.0",
+  "violations": [
+    {
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "nodes": [
+        {
+          "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+          "target": [
+            "#consumer-warehouse"
+          ]
+        },
+        {
+          "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+          "target": [
+            "#consumer-material"
+          ]
+        },
+        {
+          "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+          "target": [
+            "#consumer-readonly"
+          ]
+        },
+        {
+          "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+          "target": [
+            "#consumer-disabled"
+          ]
+        },
+        {
+          "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+          "target": [
+            "#consumer-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.27 (foreground color: #898f94, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "target": [
+            "#consumer-readonly"
+          ]
+        }
+      ]
+    }
+  ]
+}

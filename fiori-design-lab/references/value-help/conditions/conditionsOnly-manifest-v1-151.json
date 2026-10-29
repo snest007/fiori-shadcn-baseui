@@ -1,0 +1,39 @@
+{
+	"sap.app": {
+		"id": "sap.ui.comp.sample.valuehelpdialog",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.comp.sample.valuehelpdialog.conditionsOnly.ValueHelpDialogs",
+			"type": "XML",
+			"async": true
+		},
+		"resourceRoots": {
+			"mockserver": "mockserver"
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.f": {},
+				"sap.ui.layout": {},
+				"sap.ui.table": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"ValueHelpDialogs.view.xml",
+					"ValueHelpDialogs.controller.js",
+					"ValueHelpDialogMultipleConditions.fragment.xml",
+					"ValueHelpDialogSingleConditionTab.fragment.xml",
+					"manifest.json"
+				]
+			}
+		}
+	}
+}

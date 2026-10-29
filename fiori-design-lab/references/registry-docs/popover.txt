@@ -1,0 +1,341 @@
+Source: https://ui.shadcn.com/docs/components/base/popover
+
+Sections
+Introduction
+Components
+AI Elements
+Installation
+Theming
+CLI
+Typeset
+Skills
+Registry
+Changelog
+Components
+Accordion
+Alert
+Alert Dialog
+Aspect Ratio
+Attachment
+Avatar
+Badge
+Breadcrumb
+Bubble
+Button
+Button Group
+Calendar
+Card
+Carousel
+Chart
+Checkbox
+Code Block
+Collapsible
+Combobox
+Command
+Context Menu
+Data Table
+Date Picker
+Dialog
+Direction
+Drawer
+Dropdown Menu
+Empty
+Field
+Hover Card
+Input
+Input Group
+Input OTP
+Item
+Kbd
+Label
+Marker
+Menubar
+Message
+Message Scroller
+Native Select
+Navigation Menu
+Pagination
+Popover
+Progress
+Questionnaire
+Radio Group
+Resizable
+Scroll Area
+Select
+Separator
+Sheet
+Sidebar
+Skeleton
+Slider
+Spinner
+Switch
+Table
+Tabs
+Textarea
+Toast
+Toggle
+Toggle Group
+Tooltip
+Trace
+Typography
+AI Elements
+Introduction
+Chain of Thought
+Chat
+Checkpoint
+Confirmation
+Context
+File Tree
+Inline Citation
+Message
+Model Selector
+Plan
+Prompt Input
+Queue
+Reasoning
+Sources
+Stack Trace
+Subagent
+Suggestion
+Task
+Terminal
+Test Results
+Tool
+Get Started
+Installation
+components.json
+Package Imports
+Theming
+Typeset
+Dark Mode
+CLI
+Monorepo
+Skills
+JavaScript
+Figma
+llms.txt
+Legacy Docs
+@shadcn/react
+Message Scroller
+Questionnaire
+@shadcn/helpers
+AI SDK
+TanStack AI
+Forms
+React Hook Form
+TanStack Form
+Formisch
+Utilities
+scroll-fade
+shimmer
+Registry
+Introduction
+Getting Started
+GitHub Registries
+Registry Directory
+Registry Health
+Examples
+Namespaces
+Authentication
+Dynamic Search
+MCP Server
+Open in v0
+FAQ
+API Reference
+registry.json
+registry-item.json
+Popover
+Copy Page
+Previous
+Next
+Displays rich content in a portal, triggered by a button.
+Base UI
+React Aria
+Radix UI
+Open popover
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{ Input }
+from
+"@/components/ui/input"
+import
+{ Label }
+from
+"@/components/ui/label"
+View Code
+Installation
+#
+Command
+Manual
+pnpm
+npm
+yarn
+bun
+pnpm dlx shadcn@latest add popover
+Copy
+Usage
+#
+Copy
+import
+{
+Popover,
+PopoverContent,
+PopoverDescription,
+PopoverHeader,
+PopoverTitle,
+PopoverTrigger,
+}
+from
+"@/components/ui/popover"
+Copy
+<
+Popover
+>
+<
+PopoverTrigger
+render
+={
+<
+Button
+variant
+=
+"outline"
+/>
+}
+>
+Open Popover
+</
+PopoverTrigger
+>
+<
+PopoverContent
+>
+<
+PopoverHeader
+>
+<
+PopoverTitle
+>
+Title
+</
+PopoverTitle
+>
+<
+PopoverDescription
+>
+Description text here.
+</
+PopoverDescription
+>
+</
+PopoverHeader
+>
+</
+PopoverContent
+>
+</
+Popover
+>
+Composition
+#
+Use the following composition to build a
+Popover
+:
+Copy
+Popover
+├── PopoverTrigger
+└── PopoverContent
+Basic
+#
+A simple popover with a header, title, and description.
+Open Popover
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Popover,
+View Code
+Align
+#
+Use the
+align
+prop on
+PopoverContent
+to control the horizontal alignment.
+Start
+Center
+End
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Popover,
+View Code
+With Form
+#
+A popover with form fields inside.
+Open Popover
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{ Field, FieldGroup, FieldLabel }
+from
+"@/components/ui/field"
+import
+{ Input }
+from
+"@/components/ui/input"
+View Code
+RTL
+#
+To enable RTL support in shadcn/ui, see the
+RTL configuration guide
+.
+Arabic (العربية)
+▼
+Toggle
+يسار
+أعلى
+أسفل
+يمين
+بداية السطر
+نهاية السطر
+Copy
+"use client"
+import
+{
+View Code
+API Reference
+#
+See the
+Base UI Popover
+documentation.
+Pagination
+Progress
+On This Page
+Installation
+Usage
+Composition
+Basic
+Align
+With Form
+RTL
+API Reference
+Deploy your shadcn/ui app on Vercel
+Trusted by OpenAI, Sonos, Adobe, and more.
+Vercel provides tools and infrastructure to deploy apps and features at scale.
+Deploy Now
+Deploy to Vercel

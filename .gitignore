@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-ssr/
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tsbuildinfo
+*.zip
+.env
+.env.*
+!.env.example
+.npmrc
+.yarnrc
+*.local

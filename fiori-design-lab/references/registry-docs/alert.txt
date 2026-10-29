@@ -1,0 +1,386 @@
+Source: https://ui.shadcn.com/docs/components/base/alert
+
+Sections
+Introduction
+Components
+AI Elements
+Installation
+Theming
+CLI
+Typeset
+Skills
+Registry
+Changelog
+Components
+Accordion
+Alert
+Alert Dialog
+Aspect Ratio
+Attachment
+Avatar
+Badge
+Breadcrumb
+Bubble
+Button
+Button Group
+Calendar
+Card
+Carousel
+Chart
+Checkbox
+Code Block
+Collapsible
+Combobox
+Command
+Context Menu
+Data Table
+Date Picker
+Dialog
+Direction
+Drawer
+Dropdown Menu
+Empty
+Field
+Hover Card
+Input
+Input Group
+Input OTP
+Item
+Kbd
+Label
+Marker
+Menubar
+Message
+Message Scroller
+Native Select
+Navigation Menu
+Pagination
+Popover
+Progress
+Questionnaire
+Radio Group
+Resizable
+Scroll Area
+Select
+Separator
+Sheet
+Sidebar
+Skeleton
+Slider
+Spinner
+Switch
+Table
+Tabs
+Textarea
+Toast
+Toggle
+Toggle Group
+Tooltip
+Trace
+Typography
+AI Elements
+Introduction
+Chain of Thought
+Chat
+Checkpoint
+Confirmation
+Context
+File Tree
+Inline Citation
+Message
+Model Selector
+Plan
+Prompt Input
+Queue
+Reasoning
+Sources
+Stack Trace
+Subagent
+Suggestion
+Task
+Terminal
+Test Results
+Tool
+Get Started
+Installation
+components.json
+Package Imports
+Theming
+Typeset
+Dark Mode
+CLI
+Monorepo
+Skills
+JavaScript
+Figma
+llms.txt
+Legacy Docs
+@shadcn/react
+Message Scroller
+Questionnaire
+@shadcn/helpers
+AI SDK
+TanStack AI
+Forms
+React Hook Form
+TanStack Form
+Formisch
+Utilities
+scroll-fade
+shimmer
+Registry
+Introduction
+Getting Started
+GitHub Registries
+Registry Directory
+Registry Health
+Examples
+Namespaces
+Authentication
+Dynamic Search
+MCP Server
+Open in v0
+FAQ
+API Reference
+registry.json
+registry-item.json
+Alert
+Copy Page
+Previous
+Next
+Displays a callout for user attention.
+Base UI
+React Aria
+Radix UI
+Payment successful
+Your payment of $29.99 has been processed. A receipt has been sent to your email address.
+New feature available
+We've added dark mode support. You can enable it in your account settings.
+Copy
+import
+{ CheckCircle2Icon, InfoIcon }
+from
+"lucide-react"
+import
+{
+View Code
+Installation
+#
+Command
+Manual
+pnpm
+npm
+yarn
+bun
+pnpm dlx shadcn@latest add alert
+Copy
+Usage
+#
+Copy
+import
+{
+Alert,
+AlertAction,
+AlertDescription,
+AlertTitle,
+}
+from
+"@/components/ui/alert"
+Copy
+<
+Alert
+>
+<
+InfoIcon
+/>
+<
+AlertTitle
+>
+Heads up!
+</
+AlertTitle
+>
+<
+AlertDescription
+>
+You can add components and dependencies to your app using the cli.
+</
+AlertDescription
+>
+<
+AlertAction
+>
+<
+Button
+variant
+=
+"outline"
+>
+Enable
+</
+Button
+>
+</
+AlertAction
+>
+</
+Alert
+>
+Composition
+#
+Use the following composition to build an
+Alert
+:
+Copy
+Alert
+├── Icon
+├── AlertTitle
+├── AlertDescription
+└── AlertAction
+Basic
+#
+A basic alert with an icon, title and description.
+Account updated successfully
+Your profile information has been saved. Changes will be reflected immediately.
+Copy
+import
+{ CheckCircle2Icon }
+from
+"lucide-react"
+import
+{
+View Code
+Destructive
+#
+Use
+variant="destructive"
+to create a destructive alert.
+Payment failed
+Your payment could not be processed. Please check your payment method and try again.
+Copy
+import
+{ AlertCircleIcon }
+from
+"lucide-react"
+import
+{
+View Code
+Action
+#
+Use
+AlertAction
+to add a button or other action element to the alert.
+Dark mode is now available
+Enable it under your profile settings to get started.
+Enable
+Copy
+import
+{
+Alert,
+AlertAction,
+View Code
+Custom Colors
+#
+You can customize the alert colors by adding custom classes such as
+bg-amber-50 dark:bg-amber-950
+to the
+Alert
+component.
+Your subscription will expire in 3 days.
+Renew now to avoid service interruption or upgrade to a paid plan to continue using the service.
+Copy
+import
+{ AlertTriangleIcon }
+from
+"lucide-react"
+import
+{
+View Code
+RTL
+#
+To enable RTL support in shadcn/ui, see the
+RTL configuration guide
+.
+Arabic (العربية)
+▼
+Toggle
+تم الدفع بنجاح
+تمت معالجة دفعتك البالغة 29.99 دولارًا. تم إرسال إيصال إلى عنوان بريدك الإلكتروني.
+ميزة جديدة متاحة
+لقد أضفنا دعم الوضع الداكن. يمكنك تفعيله في إعدادات حسابك.
+Copy
+"use client"
+import
+*
+as
+React
+from
+"react"
+View Code
+API Reference
+#
+Alert
+#
+The
+Alert
+component displays a callout for user attention.
+Prop
+Type
+Default
+variant
+"default" | "destructive"
+"default"
+AlertTitle
+#
+The
+AlertTitle
+component displays the title of the alert.
+Prop
+Type
+Default
+className
+string
+-
+AlertDescription
+#
+The
+AlertDescription
+component displays the description or content of the alert.
+Prop
+Type
+Default
+className
+string
+-
+AlertAction
+#
+The
+AlertAction
+component displays an action element (like a button) positioned absolutely in the top-right corner of the alert.
+Prop
+Type
+Default
+className
+string
+-
+Accordion
+Alert Dialog
+On This Page
+Installation
+Usage
+Composition
+Basic
+Destructive
+Action
+Custom Colors
+RTL
+API Reference
+Alert
+AlertTitle
+AlertDescription
+AlertAction
+Deploy your shadcn/ui app on Vercel
+Trusted by OpenAI, Sonos, Adobe, and more.
+Vercel provides tools and infrastructure to deploy apps and features at scale.
+Deploy Now
+Deploy to Vercel

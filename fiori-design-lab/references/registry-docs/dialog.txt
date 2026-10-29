@@ -1,0 +1,332 @@
+Source: https://ui.shadcn.com/docs/components/base/dialog
+
+Sections
+Introduction
+Components
+AI Elements
+Installation
+Theming
+CLI
+Typeset
+Skills
+Registry
+Changelog
+Components
+Accordion
+Alert
+Alert Dialog
+Aspect Ratio
+Attachment
+Avatar
+Badge
+Breadcrumb
+Bubble
+Button
+Button Group
+Calendar
+Card
+Carousel
+Chart
+Checkbox
+Code Block
+Collapsible
+Combobox
+Command
+Context Menu
+Data Table
+Date Picker
+Dialog
+Direction
+Drawer
+Dropdown Menu
+Empty
+Field
+Hover Card
+Input
+Input Group
+Input OTP
+Item
+Kbd
+Label
+Marker
+Menubar
+Message
+Message Scroller
+Native Select
+Navigation Menu
+Pagination
+Popover
+Progress
+Questionnaire
+Radio Group
+Resizable
+Scroll Area
+Select
+Separator
+Sheet
+Sidebar
+Skeleton
+Slider
+Spinner
+Switch
+Table
+Tabs
+Textarea
+Toast
+Toggle
+Toggle Group
+Tooltip
+Trace
+Typography
+AI Elements
+Introduction
+Chain of Thought
+Chat
+Checkpoint
+Confirmation
+Context
+File Tree
+Inline Citation
+Message
+Model Selector
+Plan
+Prompt Input
+Queue
+Reasoning
+Sources
+Stack Trace
+Subagent
+Suggestion
+Task
+Terminal
+Test Results
+Tool
+Get Started
+Installation
+components.json
+Package Imports
+Theming
+Typeset
+Dark Mode
+CLI
+Monorepo
+Skills
+JavaScript
+Figma
+llms.txt
+Legacy Docs
+@shadcn/react
+Message Scroller
+Questionnaire
+@shadcn/helpers
+AI SDK
+TanStack AI
+Forms
+React Hook Form
+TanStack Form
+Formisch
+Utilities
+scroll-fade
+shimmer
+Registry
+Introduction
+Getting Started
+GitHub Registries
+Registry Directory
+Registry Health
+Examples
+Namespaces
+Authentication
+Dynamic Search
+MCP Server
+Open in v0
+FAQ
+API Reference
+registry.json
+registry-item.json
+Dialog
+Copy Page
+Previous
+Next
+A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+Base UI
+React Aria
+Radix UI
+Open Dialog
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Dialog,
+View Code
+Installation
+#
+Command
+Manual
+pnpm
+npm
+yarn
+bun
+pnpm dlx shadcn@latest add dialog
+Copy
+Usage
+#
+Copy
+import
+{
+Dialog,
+DialogContent,
+DialogDescription,
+DialogHeader,
+DialogTitle,
+DialogTrigger,
+}
+from
+"@/components/ui/dialog"
+Copy
+<
+Dialog
+>
+<
+DialogTrigger
+>
+Open
+</
+DialogTrigger
+>
+<
+DialogContent
+>
+<
+DialogHeader
+>
+<
+DialogTitle
+>
+Are you absolutely sure?
+</
+DialogTitle
+>
+<
+DialogDescription
+>
+This action cannot be undone. This will permanently delete your account
+and remove your data from our servers.
+</
+DialogDescription
+>
+</
+DialogHeader
+>
+</
+DialogContent
+>
+</
+Dialog
+>
+Composition
+#
+Use the following composition to build a
+Dialog
+:
+Copy
+Dialog
+├── DialogTrigger
+└── DialogContent
+├── DialogHeader
+│   ├── DialogTitle
+│   └── DialogDescription
+└── DialogFooter
+Custom Close Button
+#
+Replace the default close control with your own button.
+Share
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Dialog,
+View Code
+No Close Button
+#
+Use
+showCloseButton={false}
+to hide the close button.
+No Close Button
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Dialog,
+View Code
+Sticky Footer
+#
+Keep actions visible while the content scrolls.
+Sticky Footer
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Dialog,
+View Code
+Scrollable Content
+#
+Long content can scroll while the header stays in view.
+Scrollable Content
+Copy
+import
+{ Button }
+from
+"@/components/ui/button"
+import
+{
+Dialog,
+View Code
+RTL
+#
+To enable RTL support in shadcn/ui, see the
+RTL configuration guide
+.
+Arabic (العربية)
+▼
+Toggle
+فتح الحوار
+Copy
+"use client"
+import
+{
+View Code
+API Reference
+#
+See the
+Base UI
+documentation for more information.
+Date Picker
+Direction
+On This Page
+Installation
+Usage
+Composition
+Custom Close Button
+No Close Button
+Sticky Footer
+Scrollable Content
+RTL
+API Reference
+Deploy your shadcn/ui app on Vercel
+Trusted by OpenAI, Sonos, Adobe, and more.
+Vercel provides tools and infrastructure to deploy apps and features at scale.
+Deploy Now
+Deploy to Vercel

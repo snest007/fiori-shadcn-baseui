@@ -1,0 +1,393 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "fiori-design-lab",
+  "homepage": "http://127.0.0.1:4178/",
+  "items": [
+    {
+      "name": "fiori-foundation",
+      "type": "registry:lib",
+      "title": "Fiori Foundation",
+      "description": "Morning Horizon scoped theme, Compact/Cozy provider, static SAP icons and embedded 72 fonts.",
+      "dependencies": [
+        "cn@^0.5.0"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/fiori-context.ts",
+          "type": "registry:component",
+          "target": "@components/fiori/fiori-context.ts"
+        },
+        {
+          "path": "registry/fiori/components/fiori/fiori-provider.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/fiori-provider.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/sap-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/sap-icon.tsx"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/utils.ts",
+          "type": "registry:lib",
+          "target": "@lib/fiori/utils.ts"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/styles/fiori-scoped.css",
+          "type": "registry:file",
+          "target": "@lib/fiori/styles/fiori-scoped.css"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/styles/fiori-fonts.css",
+          "type": "registry:file",
+          "target": "@lib/fiori/styles/fiori-fonts.css"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/styles/SAP-THEME-LICENSE.txt",
+          "type": "registry:file",
+          "target": "@lib/fiori/styles/SAP-THEME-LICENSE.txt"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/styles/FONT-LICENSE.txt",
+          "type": "registry:file",
+          "target": "@lib/fiori/styles/FONT-LICENSE.txt"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/styles/FONT-SOURCES.md",
+          "type": "registry:file",
+          "target": "@lib/fiori/styles/FONT-SOURCES.md"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/licenses/icons-LICENSE.txt",
+          "type": "registry:file",
+          "target": "@lib/fiori/licenses/icons-LICENSE.txt"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/licenses/icons-SOURCES.md",
+          "type": "registry:file",
+          "target": "@lib/fiori/licenses/icons-SOURCES.md"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      },
+      "docs": "Use FioriProvider around Fiori components. The provider imports isolated theme CSS; no UI5 control runtime or network font request is required."
+    },
+    {
+      "name": "fiori-button",
+      "type": "registry:ui",
+      "title": "Fiori Button",
+      "description": "Locally adapted shadcn/Base UI Button with Fiori variants and density.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "class-variance-authority@^0.7.1",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/button.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-input",
+      "type": "registry:ui",
+      "title": "Fiori Input",
+      "description": "Locally adapted shadcn/Base UI Input with Fiori field states.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/input.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-select",
+      "type": "registry:ui",
+      "title": "Fiori Select",
+      "description": "Locally adapted shadcn/Base UI Select, readonly behavior and phone picker.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/select.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-primitives",
+      "type": "registry:lib",
+      "title": "Fiori Supporting Primitives",
+      "description": "Internal local shadcn/Base UI composition dependencies, installed in the Fiori namespace.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "class-variance-authority@^0.7.1",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-input"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/badge.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/checkbox.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/dialog.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/field.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/field.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/input-group.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/input-group.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/table.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/label.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/separator.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/textarea.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/alert.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/popover.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/toggle-group.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/toggle.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/toggle.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon",
+        "internal": true
+      }
+    },
+    {
+      "name": "fiori-message-strip",
+      "type": "registry:component",
+      "title": "Fiori MessageStrip",
+      "description": "Reusable semantic message strip and controlled dismissal.",
+      "dependencies": [
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-primitives"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/message-strip.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/message-strip.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-value-help",
+      "type": "registry:component",
+      "title": "Fiori Value Help",
+      "description": "Controlled single/multiple Value Help using caller items, columns and filters.",
+      "dependencies": [
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-input",
+        "@fiori/fiori-primitives",
+        "@fiori/fiori-select"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/value-help.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/value-help.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/value-help.css",
+          "type": "registry:file",
+          "target": "@components/fiori/value-help.css"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/value-help-query.ts",
+          "type": "registry:lib",
+          "target": "@lib/fiori/value-help-query.ts"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-value-help-conditions",
+      "type": "registry:component",
+      "title": "Fiori Value Help Conditions",
+      "description": "Controlled conditions-only field with inclusion, exclusion and interval validation.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-input",
+        "@fiori/fiori-primitives",
+        "@fiori/fiori-value-help"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/value-help-conditions-field.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/value-help-conditions-field.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/value-help-condition-operator.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/value-help-condition-operator.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/value-help-conditions.css",
+          "type": "registry:file",
+          "target": "@components/fiori/value-help-conditions.css"
+        },
+        {
+          "path": "registry/fiori/lib/fiori/value-help-conditions.ts",
+          "type": "registry:lib",
+          "target": "@lib/fiori/value-help-conditions.ts"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-message-popover",
+      "type": "registry:component",
+      "title": "Fiori Message Popover",
+      "description": "Controlled caller messages, type filters, details, back navigation and target activation.",
+      "dependencies": [
+        "@base-ui/react@^1.9.0",
+        "cn@^0.5.0"
+      ],
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-primitives"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/message-popover.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/message-popover.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/message-popover.css",
+          "type": "registry:file",
+          "target": "@components/fiori/message-popover.css"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-kit",
+      "type": "registry:item",
+      "title": "Fiori Pilot Kit",
+      "description": "First-batch public Fiori source components and their scoped foundation.",
+      "registryDependencies": [
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-button",
+        "@fiori/fiori-input",
+        "@fiori/fiori-select",
+        "@fiori/fiori-message-strip",
+        "@fiori/fiori-value-help",
+        "@fiori/fiori-value-help-conditions",
+        "@fiori/fiori-message-popover"
+      ],
+      "docs": "Import FioriProvider from your components/fiori/fiori-provider and compose installed Fiori components inside it. React 19 and Tailwind 4 are required. Full API contracts are supplied in the authoring project docs."
+    }
+  ]
+}

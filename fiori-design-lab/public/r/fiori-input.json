@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fiori-input",
+  "title": "Fiori Input",
+  "description": "Locally adapted shadcn/Base UI Input with Fiori field states.",
+  "dependencies": [
+    "@base-ui/react@^1.9.0",
+    "cn@^0.5.0"
+  ],
+  "registryDependencies": [
+    "@fiori/fiori-foundation"
+  ],
+  "files": [
+    {
+      "path": "registry/fiori/components/fiori/ui/input.tsx",
+      "content": "import * as React from \"react\"\nimport { Input as InputPrimitive } from \"@base-ui/react/input\"\nimport { cn } from \"cn\"\n\nfunction Input({ className, type, ...props }: React.ComponentProps<\"input\">) {\n  return (\n    <InputPrimitive\n      type={type}\n      data-slot=\"input\"\n      className={cn(\n        \"h-8 w-full min-w-0 rounded-lg border border-fiori-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-fiori-foreground placeholder:text-fiori-muted-foreground focus-visible:border-fiori-ring focus-visible:ring-3 focus-visible:ring-fiori-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-fiori-input/50 disabled:opacity-50 aria-invalid:border-fiori-destructive aria-invalid:ring-3 aria-invalid:ring-fiori-destructive/20 md:text-sm dark:bg-fiori-input/30 dark:disabled:bg-fiori-input/80 dark:aria-invalid:border-fiori-destructive/50 dark:aria-invalid:ring-fiori-destructive/40\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
+      "type": "registry:ui",
+      "target": "@components/fiori/ui/input.tsx"
+    }
+  ],
+  "meta": {
+    "source": "Fiori Design Lab",
+    "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+  },
+  "type": "registry:ui"
+}

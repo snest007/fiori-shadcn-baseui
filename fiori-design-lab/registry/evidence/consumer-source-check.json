@@ -1,0 +1,237 @@
+{
+  "consumer": "fiori-registry-consumer",
+  "importAlias": {
+    "components": "~/components",
+    "utils": "~/lib/utils",
+    "ui": "~/components/ui",
+    "lib": "~/lib",
+    "hooks": "~/hooks"
+  },
+  "installedSourceFiles": 37,
+  "checkedSources": [
+    {
+      "source": "src/components/fiori/fiori-context.ts",
+      "target": "@components/fiori/fiori-context.ts",
+      "installed": "src/components/fiori/fiori-context.ts",
+      "imports": 1
+    },
+    {
+      "source": "src/components/fiori/fiori-provider.tsx",
+      "target": "@components/fiori/fiori-provider.tsx",
+      "installed": "src/components/fiori/fiori-provider.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/fiori/sap-icon.tsx",
+      "target": "@components/fiori/sap-icon.tsx",
+      "installed": "src/components/fiori/sap-icon.tsx",
+      "imports": 2
+    },
+    {
+      "source": "src/lib/utils.ts",
+      "target": "@lib/fiori/utils.ts",
+      "installed": "src/lib/fiori/utils.ts",
+      "imports": 1
+    },
+    {
+      "source": "src/styles/fiori-scoped.css",
+      "target": "@lib/fiori/styles/fiori-scoped.css",
+      "installed": "src/lib/fiori/styles/fiori-scoped.css",
+      "imports": 1
+    },
+    {
+      "source": "src/styles/fiori-fonts.css",
+      "target": "@lib/fiori/styles/fiori-fonts.css",
+      "installed": "src/lib/fiori/styles/fiori-fonts.css",
+      "imports": 0
+    },
+    {
+      "source": "src/styles/SAP-THEME-LICENSE.txt",
+      "target": "@lib/fiori/styles/SAP-THEME-LICENSE.txt",
+      "installed": "src/lib/fiori/styles/SAP-THEME-LICENSE.txt",
+      "imports": 0
+    },
+    {
+      "source": "public/fonts/LICENSE.txt",
+      "target": "@lib/fiori/styles/FONT-LICENSE.txt",
+      "installed": "src/lib/fiori/styles/FONT-LICENSE.txt",
+      "imports": 0
+    },
+    {
+      "source": "public/fonts/SOURCES.md",
+      "target": "@lib/fiori/styles/FONT-SOURCES.md",
+      "installed": "src/lib/fiori/styles/FONT-SOURCES.md",
+      "imports": 0
+    },
+    {
+      "source": "public/icons/LICENSE.txt",
+      "target": "@lib/fiori/licenses/icons-LICENSE.txt",
+      "installed": "src/lib/fiori/licenses/icons-LICENSE.txt",
+      "imports": 0
+    },
+    {
+      "source": "public/icons/SOURCES.md",
+      "target": "@lib/fiori/licenses/icons-SOURCES.md",
+      "installed": "src/lib/fiori/licenses/icons-SOURCES.md",
+      "imports": 0
+    },
+    {
+      "source": "src/components/ui/button.tsx",
+      "target": "@components/fiori/ui/button.tsx",
+      "installed": "src/components/fiori/ui/button.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/ui/input.tsx",
+      "target": "@components/fiori/ui/input.tsx",
+      "installed": "src/components/fiori/ui/input.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/ui/select.tsx",
+      "target": "@components/fiori/ui/select.tsx",
+      "installed": "src/components/fiori/ui/select.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/ui/badge.tsx",
+      "target": "@components/fiori/ui/badge.tsx",
+      "installed": "src/components/fiori/ui/badge.tsx",
+      "imports": 4
+    },
+    {
+      "source": "src/components/ui/checkbox.tsx",
+      "target": "@components/fiori/ui/checkbox.tsx",
+      "installed": "src/components/fiori/ui/checkbox.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/ui/dialog.tsx",
+      "target": "@components/fiori/ui/dialog.tsx",
+      "installed": "src/components/fiori/ui/dialog.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/ui/field.tsx",
+      "target": "@components/fiori/ui/field.tsx",
+      "installed": "src/components/fiori/ui/field.tsx",
+      "imports": 5
+    },
+    {
+      "source": "src/components/ui/input-group.tsx",
+      "target": "@components/fiori/ui/input-group.tsx",
+      "installed": "src/components/fiori/ui/input-group.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/ui/table.tsx",
+      "target": "@components/fiori/ui/table.tsx",
+      "installed": "src/components/fiori/ui/table.tsx",
+      "imports": 2
+    },
+    {
+      "source": "src/components/ui/label.tsx",
+      "target": "@components/fiori/ui/label.tsx",
+      "installed": "src/components/fiori/ui/label.tsx",
+      "imports": 2
+    },
+    {
+      "source": "src/components/ui/separator.tsx",
+      "target": "@components/fiori/ui/separator.tsx",
+      "installed": "src/components/fiori/ui/separator.tsx",
+      "imports": 2
+    },
+    {
+      "source": "src/components/ui/textarea.tsx",
+      "target": "@components/fiori/ui/textarea.tsx",
+      "installed": "src/components/fiori/ui/textarea.tsx",
+      "imports": 2
+    },
+    {
+      "source": "src/components/ui/alert.tsx",
+      "target": "@components/fiori/ui/alert.tsx",
+      "installed": "src/components/fiori/ui/alert.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/ui/popover.tsx",
+      "target": "@components/fiori/ui/popover.tsx",
+      "installed": "src/components/fiori/ui/popover.tsx",
+      "imports": 4
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "@components/fiori/ui/toggle-group.tsx",
+      "installed": "src/components/fiori/ui/toggle-group.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/ui/toggle.tsx",
+      "target": "@components/fiori/ui/toggle.tsx",
+      "installed": "src/components/fiori/ui/toggle.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/fiori/message-strip.tsx",
+      "target": "@components/fiori/message-strip.tsx",
+      "installed": "src/components/fiori/message-strip.tsx",
+      "imports": 5
+    },
+    {
+      "source": "src/components/fiori/value-help.tsx",
+      "target": "@components/fiori/value-help.tsx",
+      "installed": "src/components/fiori/value-help.tsx",
+      "imports": 15
+    },
+    {
+      "source": "src/components/fiori/value-help.css",
+      "target": "@components/fiori/value-help.css",
+      "installed": "src/components/fiori/value-help.css",
+      "imports": 0
+    },
+    {
+      "source": "src/lib/value-help-query.ts",
+      "target": "@lib/fiori/value-help-query.ts",
+      "installed": "src/lib/fiori/value-help-query.ts",
+      "imports": 0
+    },
+    {
+      "source": "src/components/fiori/value-help-conditions-field.tsx",
+      "target": "@components/fiori/value-help-conditions-field.tsx",
+      "installed": "src/components/fiori/value-help-conditions-field.tsx",
+      "imports": 14
+    },
+    {
+      "source": "src/components/fiori/value-help-condition-operator.tsx",
+      "target": "@components/fiori/value-help-condition-operator.tsx",
+      "installed": "src/components/fiori/value-help-condition-operator.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/fiori/value-help-conditions.css",
+      "target": "@components/fiori/value-help-conditions.css",
+      "installed": "src/components/fiori/value-help-conditions.css",
+      "imports": 0
+    },
+    {
+      "source": "src/lib/value-help-conditions.ts",
+      "target": "@lib/fiori/value-help-conditions.ts",
+      "installed": "src/lib/fiori/value-help-conditions.ts",
+      "imports": 0
+    },
+    {
+      "source": "src/components/fiori/message-popover.tsx",
+      "target": "@components/fiori/message-popover.tsx",
+      "installed": "src/components/fiori/message-popover.tsx",
+      "imports": 9
+    },
+    {
+      "source": "src/components/fiori/message-popover.css",
+      "target": "@components/fiori/message-popover.css",
+      "installed": "src/components/fiori/message-popover.css",
+      "imports": 0
+    }
+  ],
+  "failures": [],
+  "boundary": "Source/import validation only; browser interaction, assistive technology and physical device results are recorded separately."
+}

@@ -1,0 +1,26 @@
+{
+  "version": "SAPUI5 1.151.0",
+  "theme": "sap_horizon",
+  "files": [
+    {
+      "file": "Switch-library-v1-151.css",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/themes/sap_horizon/library.css",
+      "sha256": "4cc54a4c9af0117d8c6932f7b577193f1cacb72951ee5eeac4638dab0a2d7064"
+    },
+    {
+      "file": "Switch-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Switch-dbg.js",
+      "sha256": "b4e9f8ea66d87951378e07b0c1a1640f01ea0ad8c2c8f1e92ff3485802ac09be"
+    },
+    {
+      "file": "SwitchRenderer-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/SwitchRenderer-dbg.js",
+      "sha256": "2e58db2843b3e5caf6c1c46f716079d2937fc462873efab86d4217e1cbc48a36"
+    },
+    {
+      "file": "Switch-messagebundle-v1-151.properties",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/messagebundle.properties",
+      "sha256": "3baa7d7b99de9270f9c0fc5b7d1f78fbbef3b48f36678b1a45df810690a7006d"
+    }
+  ]
+}

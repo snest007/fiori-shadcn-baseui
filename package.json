@@ -1,0 +1,19 @@
+{
+  "name": "fiori-shadcn-baseui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:lab": "npm --prefix fiori-design-lab run dev",
+    "dev:consumer": "npm --prefix fiori-registry-consumer run dev",
+    "build": "npm --prefix fiori-design-lab run build && npm --prefix fiori-registry-consumer run build",
+    "preview:lab": "npm --prefix fiori-design-lab run preview",
+    "preview:consumer": "npm --prefix fiori-registry-consumer run preview",
+    "verify:lab": "npm --prefix fiori-design-lab run lint && npm --prefix fiori-design-lab run build && npm --prefix fiori-design-lab run theme:check && npm --prefix fiori-design-lab run foundation:check && npm --prefix fiori-design-lab run registry:check && npm --prefix fiori-design-lab run test:contracts",
+    "verify:consumer": "npm --prefix fiori-registry-consumer run lint && npm --prefix fiori-registry-consumer run build",
+    "verify:installation": "npm --prefix fiori-design-lab run registry:verify-consumer -- ../fiori-registry-consumer",
+    "verify": "npm run verify:lab && npm run verify:consumer && npm run verify:installation"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

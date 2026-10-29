@@ -1,0 +1,42 @@
+name: Verify source and registry
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            fiori-design-lab/package-lock.json
+            fiori-registry-consumer/package-lock.json
+
+      - name: Install design lab dependencies
+        run: npm ci
+        working-directory: fiori-design-lab
+
+      - name: Install consumer dependencies
+        run: npm ci
+        working-directory: fiori-registry-consumer
+
+      - name: Verify design lab and generated registry
+        run: npm run verify:lab
+
+      - name: Verify independent consumer
+        run: npm run verify:consumer
+
+      - name: Verify installed source closure
+        run: npm run verify:installation

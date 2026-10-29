@@ -1,0 +1,1655 @@
+{
+  "version": "1.151.0",
+  "source": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/designtime/api.json",
+  "symbol": {
+    "kind": "class",
+    "name": "sap.ui.comp.valuehelpdialog.ValueHelpDialog",
+    "basename": "ValueHelpDialog",
+    "resource": "sap/ui/comp/valuehelpdialog/ValueHelpDialog.js",
+    "module": "sap/ui/comp/valuehelpdialog/ValueHelpDialog",
+    "export": "",
+    "static": true,
+    "visibility": "public",
+    "extends": "sap.m.Dialog",
+    "description": "<h3>Overview</h3> The <codeph>ValueHelpDialog</codeph> helps the user to find and select single and multiple values. The user can also define and select multiple conditions. The control is generally called from an input field or a multi-input field by clicking the selection icon (value help icon) of the input field.\n\nThis control only supports OData V2 model (see {@link sap.ui.model.odata.v2.ODataModel})\n\n<h3>Usage</h3> <h4>When to use:</h4> <ul> <li>The user is searching within a very large dataset </li> <li>The user needs to use different attributes to find an object (such as city, company name, and so on). </li> <li>The user needs to define conditions, such as ranges and exclusions. </li> </ul> <h4>When not to use:</h4> <li>There is a simpler control that fits the use case. Always start with the least complex control. For example, use the select control if the user needs to select only one item from a short list. </li>",
+    "ui5-metadata": {
+      "stereotype": "control",
+      "properties": [
+        {
+          "name": "basicSearchText",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Defines the value for the basic search field. The value is set into the basic search field of the filter bar used.",
+          "methods": [
+            "getBasicSearchText",
+            "setBasicSearchText"
+          ]
+        },
+        {
+          "name": "supportMultiselect",
+          "type": "boolean",
+          "defaultValue": true,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Enables multi-selection in the table used.",
+          "methods": [
+            "getSupportMultiselect",
+            "setSupportMultiselect"
+          ]
+        },
+        {
+          "name": "supportRanges",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Enables the ranges (conditions) feature in the dialog.",
+          "methods": [
+            "getSupportRanges",
+            "setSupportRanges"
+          ]
+        },
+        {
+          "name": "supportRangesOnly",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "If this property is set to <code>true</code>, the value help dialog only supports the ranges (conditions) feature.",
+          "methods": [
+            "getSupportRangesOnly",
+            "setSupportRangesOnly"
+          ]
+        },
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Defines the key of the column used for the internal key handling. The value of the column is used for the token key and also to identify the row in the table.",
+          "methods": [
+            "getKey",
+            "setKey"
+          ]
+        },
+        {
+          "name": "keys",
+          "type": "string[]",
+          "defaultValue": null,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Defines the list of additional keys of the column used for the internal key handling.",
+          "methods": [
+            "getKeys",
+            "setKeys"
+          ]
+        },
+        {
+          "name": "descriptionKey",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Defines the key of the column used for the token text.",
+          "methods": [
+            "getDescriptionKey",
+            "setDescriptionKey"
+          ]
+        },
+        {
+          "name": "maxIncludeRanges",
+          "type": "string",
+          "defaultValue": "-1",
+          "group": "Misc",
+          "visibility": "public",
+          "description": "Defines the maximum number of include ranges. If value is 0 - the include group of operators should not be displayed.",
+          "deprecated": {
+            "since": "1.84.1",
+            "text": "replaced by <code>maxConditions</code>."
+          },
+          "methods": [
+            "getMaxIncludeRanges",
+            "setMaxIncludeRanges"
+          ]
+        },
+        {
+          "name": "maxExcludeRanges",
+          "type": "string",
+          "defaultValue": "-1",
+          "group": "Misc",
+          "visibility": "public",
+          "description": "Defines the maximum number of exclude ranges. If value is 0 - the exclude group of operators should not be displayed.",
+          "deprecated": {
+            "since": "1.84.1",
+            "text": "replaced by <code>maxConditions</code>."
+          },
+          "methods": [
+            "getMaxExcludeRanges",
+            "setMaxExcludeRanges"
+          ]
+        },
+        {
+          "name": "maxConditions",
+          "type": "string",
+          "defaultValue": "-1",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.84.1",
+          "description": "Defines the maximum number of conditions allowed to be added.",
+          "methods": [
+            "getMaxConditions",
+            "setMaxConditions"
+          ]
+        },
+        {
+          "name": "displayFormat",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Represents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered value of the range (condition) is converted to uppercase letters.",
+          "methods": [
+            "getDisplayFormat",
+            "setDisplayFormat"
+          ]
+        },
+        {
+          "name": "tokenDisplayBehaviour",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Represents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code> values.",
+          "methods": [
+            "getTokenDisplayBehaviour",
+            "setTokenDisplayBehaviour"
+          ]
+        },
+        {
+          "name": "filterMode",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "Sets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.",
+          "methods": [
+            "getFilterMode",
+            "setFilterMode"
+          ]
+        },
+        {
+          "name": "_enhancedExcludeOperations",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "hidden",
+          "since": "1.74",
+          "description": "Used by the ValueHelpProvider to enable enhanced exclude operations",
+          "methods": [
+            "get_enhancedExcludeOperations",
+            "set_enhancedExcludeOperations"
+          ]
+        },
+        {
+          "name": "conditionPanelDefaultOperation",
+          "type": "string",
+          "defaultValue": null,
+          "group": "Misc",
+          "visibility": "restricted",
+          "allowedFor": [
+            "sap.ui.comp.valuehelpdialog.ValueHelpDialog"
+          ],
+          "since": "1.99",
+          "description": "Sets default operation for Condition Panel of the value help dialog. In case the newly set default operation is not valid for the filter's EDM data type, then it is ignored. expected sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation",
+          "methods": [
+            "getConditionPanelDefaultOperation",
+            "setConditionPanelDefaultOperation"
+          ]
+        },
+        {
+          "name": "enabledMultiSelectionPlugin",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "public",
+          "since": "1.113",
+          "description": "Sets usage of <code>MultiSelectionPlugin</code>. If enabled the default behaviour is changed and the <code>ValueHelpDialog</code> table uses the plugin which provides only \"Deselect all\" option and the ability for range selection. Also a limit of 200 items that are able to be selected as a restriction.\n\nNote: Using <code>MultiSelectionPlugin</code> mode the method <code>update</code> will return a promise.",
+          "methods": [
+            "getEnabledMultiSelectionPlugin",
+            "setEnabledMultiSelectionPlugin"
+          ]
+        },
+        {
+          "name": "_conditionPanelCalendarWeekSettings",
+          "type": "string",
+          "defaultValue": "",
+          "group": "Misc",
+          "visibility": "hidden",
+          "since": "1.119",
+          "description": "Used by the ValueHelpProvider to set calendar week setting to date controls in condition panel",
+          "methods": [
+            "get_conditionPanelCalendarWeekSettings",
+            "set_conditionPanelCalendarWeekSettings"
+          ]
+        },
+        {
+          "name": "_conditionPanelShowCurrentDateButton",
+          "type": "boolean",
+          "defaultValue": false,
+          "group": "Misc",
+          "visibility": "hidden",
+          "since": "1.122",
+          "description": "Used by the <code>ValueHelpProvider</code> to set the <code>showCurrentDateButton</code> property settings to the date controls in the condition panel.",
+          "methods": [
+            "get_conditionPanelShowCurrentDateButton",
+            "set_conditionPanelShowCurrentDateButton"
+          ]
+        }
+      ],
+      "aggregations": [
+        {
+          "name": "filterBar",
+          "singularName": "filterBar",
+          "type": "sap.ui.comp.filterbar.FilterBar",
+          "cardinality": "0..1",
+          "visibility": "public",
+          "description": "Allows you to add a {@link sap.ui.comp.filterbar.FilterBar FilterBar} or {@link sap.ui.comp.smartfilterbar.SmartFilterBar SmartFilterBar} control to the value help dialog.",
+          "methods": [
+            "getFilterBar",
+            "destroyFilterBar",
+            "setFilterBar"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "name": "ok",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "This event is fired when the OK button is pressed.",
+          "parameters": {
+            "tokens": {
+              "name": "tokens",
+              "type": "sap.m.Token[]",
+              "description": "The array of tokens created or modified on the ValueHelpDialog."
+            }
+          },
+          "methods": [
+            "attachOk",
+            "detachOk",
+            "fireOk"
+          ]
+        },
+        {
+          "name": "cancel",
+          "visibility": "public",
+          "since": "1.24",
+          "description": "This event is fired when the Cancel button is pressed.",
+          "methods": [
+            "attachCancel",
+            "detachCancel",
+            "fireCancel"
+          ]
+        },
+        {
+          "name": "selectionChange",
+          "visibility": "public",
+          "since": "1.32",
+          "description": "This event is fired when the user selects an item in the items table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.",
+          "parameters": {
+            "tableSelectionParams": {
+              "name": "tableSelectionParams",
+              "type": "object",
+              "description": "The RowSelectionChange event parameter from the hosted table that contains the selected items."
+            },
+            "updateTokens": {
+              "name": "updateTokens",
+              "type": "object[]",
+              "description": "Returns an array of objects which represents all selected row tokens. The object contains the token key, the row object data from the model, and the information if the token is selected. <code> [{sKey, oRow, bSelect}, ...] </code>"
+            },
+            "useDefault": {
+              "name": "useDefault",
+              "type": "boolean",
+              "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+            },
+            "table": {
+              "name": "table",
+              "type": "object",
+              "since": "1.58",
+              "description": "The table instance used"
+            }
+          },
+          "methods": [
+            "attachSelectionChange",
+            "detachSelectionChange",
+            "fireSelectionChange"
+          ]
+        },
+        {
+          "name": "tokenRemove",
+          "visibility": "public",
+          "since": "1.32",
+          "description": "This event is fired when the user removes one or multiple existing token(s) from the dialog.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.",
+          "parameters": {
+            "tokenKeys": {
+              "name": "tokenKeys",
+              "type": "string[]",
+              "description": "The array of token keys that has been removed."
+            },
+            "useDefault": {
+              "name": "useDefault",
+              "type": "boolean",
+              "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+            }
+          },
+          "methods": [
+            "attachTokenRemove",
+            "detachTokenRemove",
+            "fireTokenRemove"
+          ]
+        },
+        {
+          "name": "updateSelection",
+          "visibility": "public",
+          "since": "1.32",
+          "description": "This event is fired when the table gets an update and all existing tokens must be selected in the table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.",
+          "parameters": {
+            "tokenKeys": {
+              "name": "tokenKeys",
+              "type": "string[]",
+              "description": "The array of existing token keys for which the selection in the table has to be updated."
+            },
+            "useDefault": {
+              "name": "useDefault",
+              "type": "boolean",
+              "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+            }
+          },
+          "methods": [
+            "attachUpdateSelection",
+            "detachUpdateSelection",
+            "fireUpdateSelection"
+          ]
+        }
+      ]
+    },
+    "constructor": {
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "sId",
+          "type": "string",
+          "optional": true,
+          "description": "ID for the new control, generated automatically if no ID is given"
+        },
+        {
+          "name": "mSettings",
+          "type": "object",
+          "optional": true,
+          "description": "Initial settings for the new control"
+        }
+      ],
+      "description": "Constructor for a new valuehelpdialog/ValueHelpDialog.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
+    },
+    "events": [
+      {
+        "name": "cancel",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "oControlEvent",
+            "type": "sap.ui.base.Event",
+            "parameterProperties": {
+              "getSource": {
+                "name": "getSource",
+                "type": "sap.ui.base.EventProvider",
+                "optional": false
+              },
+              "getParameters": {
+                "name": "getParameters",
+                "type": "object",
+                "optional": false
+              }
+            }
+          }
+        ],
+        "description": "This event is fired when the Cancel button is pressed."
+      },
+      {
+        "name": "ok",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "oControlEvent",
+            "type": "sap.ui.base.Event",
+            "parameterProperties": {
+              "getSource": {
+                "name": "getSource",
+                "type": "sap.ui.base.EventProvider",
+                "optional": false
+              },
+              "getParameters": {
+                "name": "getParameters",
+                "type": "object",
+                "optional": false,
+                "parameterProperties": {
+                  "tokens": {
+                    "name": "tokens",
+                    "type": "sap.m.Token[]",
+                    "optional": false,
+                    "description": "The array of tokens created or modified on the ValueHelpDialog."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "This event is fired when the OK button is pressed."
+      },
+      {
+        "name": "selectionChange",
+        "visibility": "public",
+        "since": "1.32",
+        "parameters": [
+          {
+            "name": "oControlEvent",
+            "type": "sap.ui.base.Event",
+            "parameterProperties": {
+              "getSource": {
+                "name": "getSource",
+                "type": "sap.ui.base.EventProvider",
+                "optional": false
+              },
+              "getParameters": {
+                "name": "getParameters",
+                "type": "object",
+                "optional": false,
+                "parameterProperties": {
+                  "tableSelectionParams": {
+                    "name": "tableSelectionParams",
+                    "type": "object",
+                    "optional": false,
+                    "description": "The RowSelectionChange event parameter from the hosted table that contains the selected items."
+                  },
+                  "updateTokens": {
+                    "name": "updateTokens",
+                    "type": "object[]",
+                    "optional": false,
+                    "description": "Returns an array of objects which represents all selected row tokens. The object contains the token key, the row object data from the model, and the information if the token is selected. <code> [{sKey, oRow, bSelect}, ...] </code>"
+                  },
+                  "useDefault": {
+                    "name": "useDefault",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+                  },
+                  "table": {
+                    "name": "table",
+                    "type": "object",
+                    "optional": false,
+                    "description": "The table instance used"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "This event is fired when the user selects an item in the items table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      },
+      {
+        "name": "tokenRemove",
+        "visibility": "public",
+        "since": "1.32",
+        "parameters": [
+          {
+            "name": "oControlEvent",
+            "type": "sap.ui.base.Event",
+            "parameterProperties": {
+              "getSource": {
+                "name": "getSource",
+                "type": "sap.ui.base.EventProvider",
+                "optional": false
+              },
+              "getParameters": {
+                "name": "getParameters",
+                "type": "object",
+                "optional": false,
+                "parameterProperties": {
+                  "tokenKeys": {
+                    "name": "tokenKeys",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "The array of token keys that has been removed."
+                  },
+                  "useDefault": {
+                    "name": "useDefault",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "This event is fired when the user removes one or multiple existing token(s) from the dialog.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      },
+      {
+        "name": "updateSelection",
+        "visibility": "public",
+        "since": "1.32",
+        "parameters": [
+          {
+            "name": "oControlEvent",
+            "type": "sap.ui.base.Event",
+            "parameterProperties": {
+              "getSource": {
+                "name": "getSource",
+                "type": "sap.ui.base.EventProvider",
+                "optional": false
+              },
+              "getParameters": {
+                "name": "getParameters",
+                "type": "object",
+                "optional": false,
+                "parameterProperties": {
+                  "tokenKeys": {
+                    "name": "tokenKeys",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "The array of existing token keys for which the selection in the table has to be updated."
+                  },
+                  "useDefault": {
+                    "name": "useDefault",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "This event is fired when the table gets an update and all existing tokens must be selected in the table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      }
+    ],
+    "methods": [
+      {
+        "name": "attachCancel",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oData",
+            "type": "object",
+            "optional": true,
+            "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+          },
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself"
+          }
+        ],
+        "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:cancel cancel} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself.\n\nThis event is fired when the Cancel button is pressed."
+      },
+      {
+        "name": "attachOk",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oData",
+            "type": "object",
+            "optional": true,
+            "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+          },
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself"
+          }
+        ],
+        "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:ok ok} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself.\n\nThis event is fired when the OK button is pressed."
+      },
+      {
+        "name": "attachSelectionChange",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oData",
+            "type": "object",
+            "optional": true,
+            "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+          },
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself"
+          }
+        ],
+        "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself.\n\nThis event is fired when the user selects an item in the items table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      },
+      {
+        "name": "attachTokenRemove",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oData",
+            "type": "object",
+            "optional": true,
+            "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+          },
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself"
+          }
+        ],
+        "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:tokenRemove tokenRemove} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself.\n\nThis event is fired when the user removes one or multiple existing token(s) from the dialog.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      },
+      {
+        "name": "attachUpdateSelection",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oData",
+            "type": "object",
+            "optional": true,
+            "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+          },
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself"
+          }
+        ],
+        "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:updateSelection updateSelection} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code> itself.\n\nThis event is fired when the table gets an update and all existing tokens must be selected in the table.\n\n<b>Note:</b> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>."
+      },
+      {
+        "name": "destroyFilterBar",
+        "visibility": "public",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "description": "Destroys the filterBar in the aggregation {@link #getFilterBar filterBar}."
+      },
+      {
+        "name": "detachCancel",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called, when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object on which the given function had to be called"
+          }
+        ],
+        "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:cancel cancel} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+      },
+      {
+        "name": "detachOk",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called, when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object on which the given function had to be called"
+          }
+        ],
+        "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:ok ok} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+      },
+      {
+        "name": "detachSelectionChange",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called, when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object on which the given function had to be called"
+          }
+        ],
+        "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+      },
+      {
+        "name": "detachTokenRemove",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called, when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object on which the given function had to be called"
+          }
+        ],
+        "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:tokenRemove tokenRemove} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+      },
+      {
+        "name": "detachUpdateSelection",
+        "visibility": "public",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "fnFunction",
+            "type": "function(sap.ui.base.Event) : void",
+            "optional": false,
+            "description": "The function to be called, when the event occurs"
+          },
+          {
+            "name": "oListener",
+            "type": "object",
+            "optional": true,
+            "description": "Context object on which the given function had to be called"
+          }
+        ],
+        "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:updateSelection updateSelection} event of this <code>sap.ui.comp.valuehelpdialog.ValueHelpDialog</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+      },
+      {
+        "name": "extend",
+        "visibility": "public",
+        "static": true,
+        "returnValue": {
+          "type": "function",
+          "description": "Created class / constructor function"
+        },
+        "parameters": [
+          {
+            "name": "sClassName",
+            "type": "string",
+            "optional": false,
+            "description": "Name of the class being created"
+          },
+          {
+            "name": "oClassInfo",
+            "type": "object",
+            "optional": true,
+            "description": "Object literal with information about the class"
+          },
+          {
+            "name": "FNMetaImpl",
+            "type": "function",
+            "optional": true,
+            "description": "Constructor function for the metadata object; if not given, it defaults to the metadata implementation used by this class"
+          }
+        ],
+        "description": "Creates a new subclass of class sap.ui.comp.valuehelpdialog.ValueHelpDialog with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.m.Dialog.extend}."
+      },
+      {
+        "name": "fireCancel",
+        "visibility": "protected",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "mParameters",
+            "type": "object",
+            "optional": true,
+            "description": "Parameters to pass along with the event"
+          }
+        ],
+        "description": "Fires event {@link #event:cancel cancel} to attached listeners."
+      },
+      {
+        "name": "fireOk",
+        "visibility": "protected",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "mParameters",
+            "type": "object",
+            "optional": true,
+            "parameterProperties": {
+              "tokens": {
+                "name": "tokens",
+                "type": "sap.m.Token[]",
+                "optional": true,
+                "description": "The array of tokens created or modified on the ValueHelpDialog."
+              }
+            },
+            "description": "Parameters to pass along with the event"
+          }
+        ],
+        "description": "Fires event {@link #event:ok ok} to attached listeners."
+      },
+      {
+        "name": "fireSelectionChange",
+        "visibility": "protected",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "mParameters",
+            "type": "object",
+            "optional": true,
+            "parameterProperties": {
+              "tableSelectionParams": {
+                "name": "tableSelectionParams",
+                "type": "object",
+                "optional": true,
+                "description": "The RowSelectionChange event parameter from the hosted table that contains the selected items."
+              },
+              "updateTokens": {
+                "name": "updateTokens",
+                "type": "object[]",
+                "optional": true,
+                "description": "Returns an array of objects which represents all selected row tokens. The object contains the token key, the row object data from the model, and the information if the token is selected. <code> [{sKey, oRow, bSelect}, ...] </code>"
+              },
+              "useDefault": {
+                "name": "useDefault",
+                "type": "boolean",
+                "optional": true,
+                "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+              },
+              "table": {
+                "name": "table",
+                "type": "object",
+                "optional": true,
+                "description": "The table instance used"
+              }
+            },
+            "description": "Parameters to pass along with the event"
+          }
+        ],
+        "description": "Fires event {@link #event:selectionChange selectionChange} to attached listeners."
+      },
+      {
+        "name": "fireTokenRemove",
+        "visibility": "protected",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "mParameters",
+            "type": "object",
+            "optional": true,
+            "parameterProperties": {
+              "tokenKeys": {
+                "name": "tokenKeys",
+                "type": "string[]",
+                "optional": true,
+                "description": "The array of token keys that has been removed."
+              },
+              "useDefault": {
+                "name": "useDefault",
+                "type": "boolean",
+                "optional": true,
+                "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+              }
+            },
+            "description": "Parameters to pass along with the event"
+          }
+        ],
+        "description": "Fires event {@link #event:tokenRemove tokenRemove} to attached listeners."
+      },
+      {
+        "name": "fireUpdateSelection",
+        "visibility": "protected",
+        "since": "1.32",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "mParameters",
+            "type": "object",
+            "optional": true,
+            "parameterProperties": {
+              "tokenKeys": {
+                "name": "tokenKeys",
+                "type": "string[]",
+                "optional": true,
+                "description": "The array of existing token keys for which the selection in the table has to be updated."
+              },
+              "useDefault": {
+                "name": "useDefault",
+                "type": "boolean",
+                "optional": true,
+                "description": "When the value is <code>true</code>, then the default behavior of <code>ValueHelpDialog</code> will be executed."
+              }
+            },
+            "description": "Parameters to pass along with the event"
+          }
+        ],
+        "description": "Fires event {@link #event:updateSelection updateSelection} to attached listeners."
+      },
+      {
+        "name": "getBasicSearchText",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>basicSearchText</code>"
+        },
+        "description": "Gets current value of property {@link #getBasicSearchText basicSearchText}.\n\nDefines the value for the basic search field. The value is set into the basic search field of the filter bar used.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "getConditionPanelDefaultOperation",
+        "visibility": "restricted",
+        "allowedFor": [
+          "sap.ui.comp.valuehelpdialog.ValueHelpDialog"
+        ],
+        "since": "1.99",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>conditionPanelDefaultOperation</code>"
+        },
+        "description": "Gets current value of property {@link #getConditionPanelDefaultOperation conditionPanelDefaultOperation}.\n\nSets default operation for Condition Panel of the value help dialog. In case the newly set default operation is not valid for the filter's EDM data type, then it is ignored. expected sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation"
+      },
+      {
+        "name": "getDescriptionKey",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>descriptionKey</code>"
+        },
+        "description": "Gets current value of property {@link #getDescriptionKey descriptionKey}.\n\nDefines the key of the column used for the token text.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "getDisplayFormat",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>displayFormat</code>"
+        },
+        "description": "Gets current value of property {@link #getDisplayFormat displayFormat}.\n\nRepresents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered value of the range (condition) is converted to uppercase letters.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "getEnabledMultiSelectionPlugin",
+        "visibility": "public",
+        "since": "1.113",
+        "returnValue": {
+          "type": "boolean",
+          "description": "Value of property <code>enabledMultiSelectionPlugin</code>"
+        },
+        "description": "Gets current value of property {@link #getEnabledMultiSelectionPlugin enabledMultiSelectionPlugin}.\n\nSets usage of <code>MultiSelectionPlugin</code>. If enabled the default behaviour is changed and the <code>ValueHelpDialog</code> table uses the plugin which provides only \"Deselect all\" option and the ability for range selection. Also a limit of 200 items that are able to be selected as a restriction.\n\nNote: Using <code>MultiSelectionPlugin</code> mode the method <code>update</code> will return a promise.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "getFilterBar",
+        "visibility": "public",
+        "returnValue": {
+          "type": "sap.ui.comp.filterbar.FilterBar"
+        },
+        "description": "Gets content of aggregation {@link #getFilterBar filterBar}.\n\nAllows you to add a {@link sap.ui.comp.filterbar.FilterBar FilterBar} or {@link sap.ui.comp.smartfilterbar.SmartFilterBar SmartFilterBar} control to the value help dialog."
+      },
+      {
+        "name": "getFilterMode",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "boolean",
+          "description": "Value of property <code>filterMode</code>"
+        },
+        "description": "Gets current value of property {@link #getFilterMode filterMode}.\n\nSets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "getKey",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>key</code>"
+        },
+        "description": "Gets current value of property {@link #getKey key}.\n\nDefines the key of the column used for the internal key handling. The value of the column is used for the token key and also to identify the row in the table.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "getKeys",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string[]",
+          "description": "Value of property <code>keys</code>"
+        },
+        "description": "Gets current value of property {@link #getKeys keys}.\n\nDefines the list of additional keys of the column used for the internal key handling."
+      },
+      {
+        "name": "getMaxConditions",
+        "visibility": "public",
+        "since": "1.84.1",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>maxConditions</code>"
+        },
+        "description": "Gets current value of property {@link #getMaxConditions maxConditions}.\n\nDefines the maximum number of conditions allowed to be added.\n\nDefault value is <code>'-1'</code>."
+      },
+      {
+        "name": "getMaxExcludeRanges",
+        "visibility": "public",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>maxExcludeRanges</code>"
+        },
+        "description": "Gets current value of property {@link #getMaxExcludeRanges maxExcludeRanges}.\n\nDefines the maximum number of exclude ranges. If value is 0 - the exclude group of operators should not be displayed.\n\nDefault value is <code>'-1'</code>.",
+        "deprecated": {
+          "since": "1.84.1",
+          "text": "replaced by <code>maxConditions</code>."
+        }
+      },
+      {
+        "name": "getMaxIncludeRanges",
+        "visibility": "public",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>maxIncludeRanges</code>"
+        },
+        "description": "Gets current value of property {@link #getMaxIncludeRanges maxIncludeRanges}.\n\nDefines the maximum number of include ranges. If value is 0 - the include group of operators should not be displayed.\n\nDefault value is <code>'-1'</code>.",
+        "deprecated": {
+          "since": "1.84.1",
+          "text": "replaced by <code>maxConditions</code>."
+        }
+      },
+      {
+        "name": "getMetadata",
+        "visibility": "public",
+        "static": true,
+        "returnValue": {
+          "type": "sap.ui.core.ElementMetadata",
+          "description": "Metadata object describing this class"
+        },
+        "description": "Returns a metadata object for class sap.ui.comp.valuehelpdialog.ValueHelpDialog."
+      },
+      {
+        "name": "getSupportMultiselect",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "boolean",
+          "description": "Value of property <code>supportMultiselect</code>"
+        },
+        "description": "Gets current value of property {@link #getSupportMultiselect supportMultiselect}.\n\nEnables multi-selection in the table used.\n\nDefault value is <code>true</code>."
+      },
+      {
+        "name": "getSupportRanges",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "boolean",
+          "description": "Value of property <code>supportRanges</code>"
+        },
+        "description": "Gets current value of property {@link #getSupportRanges supportRanges}.\n\nEnables the ranges (conditions) feature in the dialog.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "getSupportRangesOnly",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "boolean",
+          "description": "Value of property <code>supportRangesOnly</code>"
+        },
+        "description": "Gets current value of property {@link #getSupportRangesOnly supportRangesOnly}.\n\nIf this property is set to <code>true</code>, the value help dialog only supports the ranges (conditions) feature.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "getTable",
+        "visibility": "public",
+        "since": "1.28",
+        "returnValue": {
+          "type": "sap.m.Table|sap.ui.table.Table|sap.ui.comp.smarttable.SmartTable",
+          "description": "the used table instance"
+        },
+        "description": "Gives access to the internal table instance.",
+        "deprecated": {
+          "since": "1.60.0",
+          "text": "replaced by {@link sap.ui.comp.valuehelpdialog.ValueHelpDialog#getTableAsync} to prevent synchronous calls."
+        }
+      },
+      {
+        "name": "getTableAsync",
+        "visibility": "public",
+        "since": "1.58",
+        "returnValue": {
+          "type": "Promise<Object<(sap.m.Table|sap.ui.table.Table|sap.ui.comp.smarttable.SmartTable)>>",
+          "description": "Promise that, if resolved, returns the table object"
+        },
+        "description": "Gives access to the internal table instance."
+      },
+      {
+        "name": "getTokenDisplayBehaviour",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "string",
+          "description": "Value of property <code>tokenDisplayBehaviour</code>"
+        },
+        "description": "Gets current value of property {@link #getTokenDisplayBehaviour tokenDisplayBehaviour}.\n\nRepresents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code> values.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setBasicSearchText",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sBasicSearchText",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "\"\"",
+            "description": "New value for property <code>basicSearchText</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getBasicSearchText basicSearchText}.\n\nDefines the value for the basic search field. The value is set into the basic search field of the filter bar used.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setConditionPanelDefaultOperation",
+        "visibility": "restricted",
+        "allowedFor": [
+          "sap.ui.comp.valuehelpdialog.ValueHelpDialog"
+        ],
+        "since": "1.99",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sConditionPanelDefaultOperation",
+            "type": "string",
+            "optional": true,
+            "defaultValue": null,
+            "description": "New value for property <code>conditionPanelDefaultOperation</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getConditionPanelDefaultOperation conditionPanelDefaultOperation}.\n\nSets default operation for Condition Panel of the value help dialog. In case the newly set default operation is not valid for the filter's EDM data type, then it is ignored. expected sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+      },
+      {
+        "name": "setDescriptionKey",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sDescriptionKey",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "\"\"",
+            "description": "New value for property <code>descriptionKey</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getDescriptionKey descriptionKey}.\n\nDefines the key of the column used for the token text.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setDisplayFormat",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sDisplayFormat",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "\"\"",
+            "description": "New value for property <code>displayFormat</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getDisplayFormat displayFormat}.\n\nRepresents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered value of the range (condition) is converted to uppercase letters.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setEnabledMultiSelectionPlugin",
+        "visibility": "public",
+        "since": "1.113",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "bEnabledMultiSelectionPlugin",
+            "type": "boolean",
+            "optional": true,
+            "defaultValue": false,
+            "description": "New value for property <code>enabledMultiSelectionPlugin</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getEnabledMultiSelectionPlugin enabledMultiSelectionPlugin}.\n\nSets usage of <code>MultiSelectionPlugin</code>. If enabled the default behaviour is changed and the <code>ValueHelpDialog</code> table uses the plugin which provides only \"Deselect all\" option and the ability for range selection. Also a limit of 200 items that are able to be selected as a restriction.\n\nNote: Using <code>MultiSelectionPlugin</code> mode the method <code>update</code> will return a promise.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "setExcludeRangeOperations",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "aOperation",
+            "type": "sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation[]",
+            "optional": false,
+            "description": "An array of range operations"
+          },
+          {
+            "name": "sType",
+            "type": "string",
+            "optional": false,
+            "description": "the type for which the operations are defined"
+          }
+        ],
+        "description": "Sets the array for the supported exclude range operations."
+      },
+      {
+        "name": "setFilterBar",
+        "visibility": "public",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "oFilterBar",
+            "type": "sap.ui.comp.filterbar.FilterBar",
+            "optional": false,
+            "description": "The filterBar to set"
+          }
+        ],
+        "description": "Sets the aggregated {@link #getFilterBar filterBar}."
+      },
+      {
+        "name": "setFilterMode",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "bFilterMode",
+            "type": "boolean",
+            "optional": true,
+            "defaultValue": false,
+            "description": "New value for property <code>filterMode</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getFilterMode filterMode}.\n\nSets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "setIncludeRangeOperations",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "aOperation",
+            "type": "sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation[]",
+            "optional": false,
+            "description": "An array of range operations"
+          },
+          {
+            "name": "sType",
+            "type": "string",
+            "optional": false,
+            "description": "the type for which the operations are defined"
+          }
+        ],
+        "description": "Sets the array for the supported include range operations."
+      },
+      {
+        "name": "setKey",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sKey",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "\"\"",
+            "description": "New value for property <code>key</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getKey key}.\n\nDefines the key of the column used for the internal key handling. The value of the column is used for the token key and also to identify the row in the table.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setKeys",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sKeys",
+            "type": "string[]",
+            "optional": true,
+            "defaultValue": null,
+            "description": "New value for property <code>keys</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getKeys keys}.\n\nDefines the list of additional keys of the column used for the internal key handling.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+      },
+      {
+        "name": "setMaxConditions",
+        "visibility": "public",
+        "since": "1.84.1",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sMaxConditions",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "'-1'",
+            "description": "New value for property <code>maxConditions</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getMaxConditions maxConditions}.\n\nDefines the maximum number of conditions allowed to be added.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>'-1'</code>."
+      },
+      {
+        "name": "setMaxExcludeRanges",
+        "visibility": "public",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sMaxExcludeRanges",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "'-1'",
+            "description": "New value for property <code>maxExcludeRanges</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getMaxExcludeRanges maxExcludeRanges}.\n\nDefines the maximum number of exclude ranges. If value is 0 - the exclude group of operators should not be displayed.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>'-1'</code>.",
+        "deprecated": {
+          "since": "1.84.1",
+          "text": "replaced by <code>maxConditions</code>."
+        }
+      },
+      {
+        "name": "setMaxIncludeRanges",
+        "visibility": "public",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sMaxIncludeRanges",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "'-1'",
+            "description": "New value for property <code>maxIncludeRanges</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getMaxIncludeRanges maxIncludeRanges}.\n\nDefines the maximum number of include ranges. If value is 0 - the include group of operators should not be displayed.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>'-1'</code>.",
+        "deprecated": {
+          "since": "1.84.1",
+          "text": "replaced by <code>maxConditions</code>."
+        }
+      },
+      {
+        "name": "setRangeKeyFields",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "aRangeKeyFields",
+            "type": "Object<Object[]>",
+            "optional": false,
+            "description": "An array of range KeyFields <code>[{key: \"CompanyCode\", label: \"ID\"}, {key:\"CompanyName\", label : \"Name\"}]</code>"
+          }
+        ],
+        "description": "Sets a RangeKeyFields array. This method allows you to specify the KeyFields for the ranges. You can set an array of objects with Key and Label properties to define the key fields."
+      },
+      {
+        "name": "setSupportMultiselect",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "bSupportMultiselect",
+            "type": "boolean",
+            "optional": true,
+            "defaultValue": true,
+            "description": "New value for property <code>supportMultiselect</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getSupportMultiselect supportMultiselect}.\n\nEnables multi-selection in the table used.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>true</code>."
+      },
+      {
+        "name": "setSupportRanges",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "bSupportRanges",
+            "type": "boolean",
+            "optional": true,
+            "defaultValue": false,
+            "description": "New value for property <code>supportRanges</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getSupportRanges supportRanges}.\n\nEnables the ranges (conditions) feature in the dialog.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "setSupportRangesOnly",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "bSupportRangesOnly",
+            "type": "boolean",
+            "optional": true,
+            "defaultValue": false,
+            "description": "New value for property <code>supportRangesOnly</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getSupportRangesOnly supportRangesOnly}.\n\nIf this property is set to <code>true</code>, the value help dialog only supports the ranges (conditions) feature.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+      },
+      {
+        "name": "setTable",
+        "visibility": "public",
+        "since": "1.32",
+        "parameters": [
+          {
+            "name": "oTable",
+            "type": "sap.m.Table|sap.ui.table.Table|sap.ui.comp.smarttable.SmartTable",
+            "optional": false,
+            "description": "The used table control instance"
+          }
+        ],
+        "description": "Sets the table used in the value help dialog. If not used, the dialog creates a sap.ui.table.Table or sap.m.Table instance internally."
+      },
+      {
+        "name": "setTokenDisplayBehaviour",
+        "visibility": "public",
+        "since": "1.24",
+        "returnValue": {
+          "type": "this",
+          "description": "Reference to <code>this</code> in order to allow method chaining"
+        },
+        "parameters": [
+          {
+            "name": "sTokenDisplayBehaviour",
+            "type": "string",
+            "optional": true,
+            "defaultValue": "\"\"",
+            "description": "New value for property <code>tokenDisplayBehaviour</code>"
+          }
+        ],
+        "description": "Sets a new value for property {@link #getTokenDisplayBehaviour tokenDisplayBehaviour}.\n\nRepresents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code> values.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+      },
+      {
+        "name": "setTokens",
+        "visibility": "public",
+        "since": "1.24",
+        "parameters": [
+          {
+            "name": "aTokens",
+            "type": "sap.m.Token[]",
+            "optional": false,
+            "description": "An array of token controls"
+          }
+        ],
+        "description": "Sets the array of tokens. The <code>sap.m.Token</code>s are added to the dialog tokenizer. Normal tokens are selected in the table. <code>new sap.m.Token({key: \"0001\", text:\"SAP A.G. (0001)\"});</code> Tokens with the extra data with value 'range' are handled as range tokens or exclude range tokens. <code> new sap.m.Token({key: \"i1\", text: \"ID: a..z\"}).data(\"range\", { \"exclude\": false, \"operation\": sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation.BT, \"keyField\": \"CompanyCode\", \"value1\": \"a\", \"value2\": \"z\"}); </code> The selected items or range tokens are returned in the event parameters of the Ok event."
+      },
+      {
+        "name": "update",
+        "visibility": "public",
+        "since": "1.24",
+        "description": "Updates the selection of rows in the table. This function must be called after a first binding or binding update of the table. It will set a table row as selected if a token for this row exists."
+      }
+    ]
+  }
+}

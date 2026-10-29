@@ -1,0 +1,47 @@
+[
+  {
+    "file": "Table.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/Table-dbg.js",
+    "sha256": "867dfb9e5aed69344b922f3cbc6aefdbf5cd61921bfa9147512161ffdb6d1738"
+  },
+  {
+    "file": "ListBase.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ListBase-dbg.js",
+    "sha256": "14c2bebcb8fd748f442f2b6485b1b76f7d0149f085a936473faee1836b05bcc6"
+  },
+  {
+    "file": "ColumnListItem.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ColumnListItem-dbg.js",
+    "sha256": "8e7952316b8c802289eb7189b62df69a948540f3f9ea7451f302448f90807dba"
+  },
+  {
+    "file": "ListItemBase.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/ListItemBase-dbg.js",
+    "sha256": "49fb603faf327f75022f9af5c66134afebcab36cc8daa19059629f1aa0a73a51"
+  },
+  {
+    "file": "ItemNavigation.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/core/delegate/ItemNavigation-dbg.js",
+    "sha256": "ba6b07bfe4b739d8c32b1483ef7aec86b8746c2e3657225d126d98ae50e37b0f"
+  },
+  {
+    "file": "table-shadcn-docs.html",
+    "url": "https://ui.shadcn.com/docs/components/base/table",
+    "sha256": "7ea63f5f35dfcb78febd8eb908fed3a80f62eb9a95af5f73206092a782e9acdd"
+  },
+  {
+    "file": "checkbox-shadcn-docs.html",
+    "url": "https://ui.shadcn.com/docs/components/base/checkbox",
+    "sha256": "66381fc029ec6a93a5fd61a1d5867f864a83256c6ebbec21e69f1d6f05add085"
+  },
+  {
+    "file": "dialog-shadcn-docs.html",
+    "url": "https://ui.shadcn.com/docs/components/base/dialog",
+    "sha256": "3f6afe2445f40ba52661ce3b5cf594c76f11d30f6e906d6e551b34f60fe81ee7"
+  },
+  {
+    "file": "menu-shadcn-docs.html",
+    "url": "https://ui.shadcn.com/docs/components/base/dropdown-menu",
+    "sha256": "5295c3decce514744a5cd1bfe92ae9635de3d8c5d386658b4dadf5c6f7fd9e94"
+  }
+]

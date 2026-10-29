@@ -1,0 +1,331 @@
+.message-view-spacer {
+  flex: 1;
+}
+.message-indicator[data-message-type="error"] {
+  --message-button-background: var(--sapButton_Negative_Background);
+  --message-button-border: var(--sapButton_Negative_BorderColor);
+  --message-button-text: var(--sapButton_Negative_TextColor);
+  --message-button-hover-background: var(--sapButton_Negative_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Negative_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Negative_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Negative_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Negative_BorderColor);
+  --message-button-active-text: var(--sapButton_Negative_Active_TextColor);
+}
+.message-indicator[data-message-type="warning"] {
+  --message-button-background: var(--sapButton_Critical_Background);
+  --message-button-border: var(--sapButton_Critical_BorderColor);
+  --message-button-text: var(--sapButton_Critical_TextColor);
+  --message-button-hover-background: var(--sapButton_Critical_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Critical_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Critical_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Critical_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Critical_BorderColor);
+  --message-button-active-text: var(--sapButton_Critical_Active_TextColor);
+}
+.message-indicator[data-message-type="success"] {
+  --message-button-background: var(--sapButton_Success_Background);
+  --message-button-border: var(--sapButton_Success_BorderColor);
+  --message-button-text: var(--sapButton_Success_TextColor);
+  --message-button-hover-background: var(--sapButton_Success_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Success_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Success_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Success_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Success_BorderColor);
+  --message-button-active-text: var(--sapButton_Success_Active_TextColor);
+}
+.message-indicator[data-message-type="information"] {
+  --message-button-background: var(--sapButton_Neutral_Background);
+  --message-button-border: var(--sapButton_Neutral_BorderColor);
+  --message-button-text: var(--sapButton_Neutral_TextColor);
+  --message-button-hover-background: var(--sapButton_Neutral_Hover_Background);
+  --message-button-hover-border: var(--sapButton_Neutral_Hover_BorderColor);
+  --message-button-hover-text: var(--sapButton_Neutral_Hover_TextColor);
+  --message-button-active-background: var(
+    --sapButton_Neutral_Active_Background
+  );
+  --message-button-active-border: var(--sapButton_Neutral_Active_BorderColor);
+  --message-button-active-text: var(--sapButton_Neutral_Active_TextColor);
+}
+.message-indicator[data-message-type] {
+  background: var(--message-button-background);
+  border-color: var(--message-button-border);
+  color: var(--message-button-text);
+  text-shadow: var(--sapContent_ContrastTextShadow);
+}
+.message-indicator[data-message-type="information"] {
+  text-shadow: var(--sapContent_TextShadow);
+}
+.message-indicator[data-message-type]:hover {
+  background: var(--message-button-hover-background);
+  border-color: var(--message-button-hover-border);
+  color: var(--message-button-hover-text);
+}
+.message-indicator[data-message-type]:active {
+  background: var(--message-button-active-background);
+  border-color: var(--message-button-active-border);
+  color: var(--message-button-active-text);
+  text-shadow: none;
+}
+.message-indicator:not(
+    [data-message-type="information"]
+  ):focus-visible::before {
+  border-color: var(--sapContent_ContrastFocusColor);
+}
+.message-popover-popup[data-slot="popover-content"] {
+  display: flex;
+  width: 440px;
+  height: 320px;
+  max-width: calc(100vw - 32px);
+  max-height: min(480px, calc(100dvh - 48px));
+  padding: 0;
+  gap: 0;
+  overflow: visible;
+  background: var(--sapGroup_ContentBackground);
+  border-color: var(--sapGroup_ContentBorderColor, var(--border));
+  border-radius: var(--sapPopover_BorderCornerRadius, 8px);
+}
+.message-popover-popup > .message-view {
+  border-radius: inherit;
+  overflow: hidden;
+}
+.message-popover-arrow {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 8px;
+  overflow: clip;
+}
+.message-popover-arrow[data-side="top"] {
+  bottom: -8px;
+  rotate: 180deg;
+}
+.message-popover-arrow[data-side="bottom"] {
+  top: -8px;
+}
+.message-popover-arrow[data-side="left"] {
+  right: -12px;
+  rotate: 90deg;
+}
+.message-popover-arrow[data-side="right"] {
+  left: -12px;
+  rotate: -90deg;
+}
+.message-popover-arrow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(8px * sqrt(2));
+  height: calc(8px * sqrt(2));
+  background: var(--sapGroup_ContentBackground);
+  border: 1px solid var(--sapGroup_ContentBorderColor, var(--border));
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.message-view {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.message-view-header,
+.message-view-filterbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 8px;
+  padding: 0 16px;
+  background: var(--sapGroup_ContentBackground);
+  border-bottom: 1px solid var(--sapList_BorderColor);
+}
+.message-view-header .message-view-heading,
+.message-view-header [data-slot="dialog-title"] {
+  color: var(--sapGroup_TitleTextColor);
+  font-family: var(--sapFontHeaderFamily);
+  font-size: 16px;
+  font-weight: normal;
+}
+.message-type-filters[data-slot="toggle-group"] {
+  flex-shrink: 0;
+}
+.message-type-filters [data-slot="toggle-group-item-inner"] {
+  padding-inline: 9px;
+}
+.message-type-filters[data-slot="toggle-group"] [data-message-type="error"] svg,
+[data-message-type="error"] > .message-item-icon,
+[data-message-type="error"] > .message-detail-icon {
+  color: var(--sapNegativeElementColor);
+}
+.message-type-filters[data-slot="toggle-group"]
+  [data-message-type="warning"]
+  svg,
+[data-message-type="warning"] > .message-item-icon,
+[data-message-type="warning"] > .message-detail-icon {
+  color: var(--sapCriticalElementColor);
+}
+.message-type-filters[data-slot="toggle-group"]
+  [data-message-type="success"]
+  svg,
+[data-message-type="success"] > .message-item-icon,
+[data-message-type="success"] > .message-detail-icon {
+  color: var(--sapPositiveElementColor);
+}
+.message-type-filters[data-slot="toggle-group"]
+  [data-message-type="information"]
+  svg,
+[data-message-type="information"] > .message-item-icon,
+[data-message-type="information"] > .message-detail-icon {
+  color: var(--sapInformativeElementColor);
+}
+.message-view-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+}
+.message-view-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px 8px 24px;
+  min-height: 52px;
+  border-bottom: 1px solid var(--sapList_BorderColor);
+  color: var(--sapList_TextColor);
+  background: var(--sapList_Background);
+}
+.message-item-content {
+  min-width: 0;
+  flex: 1;
+  font-size: var(--sapFontHeader6Size, 14px);
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+.message-item-content small {
+  display: block;
+  margin-top: 4px;
+  color: var(--sapContent_LabelColor);
+  font-size: 14px;
+  line-height: 20px;
+}
+.message-view-item .message-item-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.message-view-item a,
+.message-detail-title[href] {
+  color: var(--sapLinkColor);
+  text-decoration: none;
+}
+.message-view-item a:hover,
+.message-detail-title[href]:hover {
+  color: var(--sapLink_Hover_Color, var(--sapLinkColor));
+  text-decoration: underline;
+}
+.message-view-item:focus-visible {
+  outline: 2px solid var(--sapContent_FocusColor);
+  outline-offset: -3px;
+  border-radius: 6px;
+}
+.message-view-item a:focus-visible,
+.message-detail-title[href]:focus-visible {
+  outline: 2px solid var(--sapContent_FocusColor);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+@media (hover: hover) {
+  .message-view-item:hover {
+    background: var(--sapList_Hover_Background);
+  }
+}
+.message-view-details {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  overflow: auto;
+}
+.message-detail-icon {
+  position: absolute;
+  left: 24px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+}
+.message-detail-title {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 16px 40px;
+  color: var(--sapGroup_TitleTextColor);
+}
+.message-detail-subtitle {
+  margin: 0 0 16px 40px;
+  color: var(--sapContent_LabelColor);
+  font-size: 14px;
+}
+.message-detail-description {
+  margin: 0 0 16px 40px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--sapTextColor);
+}
+.message-view-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--sapContent_LabelColor);
+}
+html[data-density="cozy"] .message-view-header {
+  min-height: 44px;
+}
+@media (max-width: 599px) {
+  .message-popover-dialog[data-slot="dialog-content"] {
+    --tw-translate-x: 0px;
+    --tw-translate-y: 0px;
+    display: flex;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    translate: none;
+    transform: none;
+    border-radius: 0;
+    border: 0;
+    animation: none;
+    overflow: hidden;
+  }
+  .message-popover-dialog .message-view-header {
+    min-height: 48px;
+  }
+  .message-popover-dialog .message-view-header [data-slot="dialog-title"] {
+    flex: 1;
+    font-size: 18px;
+  }
+  .message-popover-dialog .message-view-filterbar {
+    min-height: 48px;
+  }
+  .message-popover-dialog .message-type-filters[data-slot="toggle-group"] {
+    width: 100%;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .message-popover-dialog
+    .message-type-filters
+    [data-slot="toggle-group-item-inner"] {
+    padding-inline: 6px;
+  }
+}

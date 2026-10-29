@@ -1,0 +1,71 @@
+.sapMMsgStrip{border:var(--sapMessage_BorderWidth) solid;border-radius:var(--sapPopover_BorderCornerRadius);box-sizing:border-box;font-size:.875rem;font-weight:normal;padding:0.4375rem 1rem;position:relative;min-height:2rem}
+.sapMMsgStrip[data-sap-ui-ms-closable='true']>.sapMMsgStripMessage{margin-right:1.25rem}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme1{background-color:var(--sapIndicationColor_1_Background);border-color:var(--sapIndicationColor_1_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme2{background-color:var(--sapIndicationColor_2_Background);border-color:var(--sapIndicationColor_2_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme3{background-color:var(--sapIndicationColor_3_Background);border-color:var(--sapIndicationColor_3_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme4{background-color:var(--sapIndicationColor_4_Background);border-color:var(--sapIndicationColor_4_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme5{background-color:var(--sapIndicationColor_5_Background);border-color:var(--sapIndicationColor_5_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme6{background-color:var(--sapIndicationColor_6_Background);border-color:var(--sapIndicationColor_6_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme7{background-color:var(--sapIndicationColor_7_Background);border-color:var(--sapIndicationColor_7_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme8{background-color:var(--sapIndicationColor_8_Background);border-color:var(--sapIndicationColor_8_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme9{background-color:var(--sapIndicationColor_9_Background);border-color:var(--sapIndicationColor_9_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1.sapMMsgStripColorScheme10{background-color:var(--sapIndicationColor_10_Background);border-color:var(--sapIndicationColor_10_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1 .sapMText{color:var(--sapContent_ContrastTextColor);text-shadow:var(--sapContent_ContrastTextShadow)}
+.sapMMsgStrip.sapMMsgStripColorSet1 .sapLink,.sapMMsgStrip.sapMMsgStripColorSet1 .sapLink:hover,.sapMMsgStrip.sapMMsgStripColorSet1 .sapLink:focus,.sapMMsgStrip.sapMMsgStripColorSet1 .sapLink:active,.sapMMsgStrip.sapMMsgStripColorSet1 .sapMMsgStripMessage>.sapMLnk:not(.sapMLnkDsbl){color:var(--sapContent_ContrastTextColor) !important;text-decoration:underline !important;text-shadow:var(--sapContent_ContrastTextShadow)}
+.sapMMsgStrip.sapMMsgStripColorSet1 .sapMMsgStripIcon,.sapMMsgStrip.sapMMsgStripColorSet1 .sapMBtnIcon::before,.sapMMsgStrip.sapMMsgStripColorSet1 .sapMBtn:hover>.sapMBtnHoverable{color:var(--sapContent_ContrastIconColor);text-shadow:var(--sapContent_ContrastTextShadow)}
+.sapMMsgStrip.sapMMsgStripColorSet1 .sapMBtn:hover>.sapMBtnHoverable{background-color:var(--sapMessage_Button_Hover_Background);border-color:var(--sapContent_ContrastIconColor)}
+.sapMMsgStrip.sapMMsgStripColorSet1 .sapMBtn:focus-visible>.sapMFocusable:not(.sapMBadgeIndicator)::before,.sapMMsgStrip.sapMMsgStripColorSet1 .sapMBtn:focus>.sapMFocusable:not(.sapMBadgeIndicator)::before{border-color:var(--sapContent_ContrastFocusColor) !important}
+.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled)>.sapMBtnBack.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled):hover>.sapMBtnBack.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled)>.sapMBtnTransparent.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled):hover>.sapMBtnTransparent.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled)>.sapMBtnGhost.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet1 :not(.sapMBtnDisabled):hover>.sapMBtnGhost.sapMBtnActive{color:var(--sapContent_ContrastIconColor);text-shadow:var(--sapContent_ContrastTextShadow);background:none;border-color:var(--sapContent_ContrastIconColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme1{background-color:var(--sapIndicationColor_1b_Background);border-color:var(--sapIndicationColor_1b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme2{background-color:var(--sapIndicationColor_2b_Background);border-color:var(--sapIndicationColor_2b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme3{background-color:var(--sapIndicationColor_3b_Background);border-color:var(--sapIndicationColor_3b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme4{background-color:var(--sapIndicationColor_4b_Background);border-color:var(--sapIndicationColor_4b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme5{background-color:var(--sapIndicationColor_5b_Background);border-color:var(--sapIndicationColor_5b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme6{background-color:var(--sapIndicationColor_6b_Background);border-color:var(--sapIndicationColor_6b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme7{background-color:var(--sapIndicationColor_7b_Background);border-color:var(--sapIndicationColor_7b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme8{background-color:var(--sapIndicationColor_8b_Background);border-color:var(--sapIndicationColor_8b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme9{background-color:var(--sapIndicationColor_9b_Background);border-color:var(--sapIndicationColor_9b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2.sapMMsgStripColorScheme10{background-color:var(--sapIndicationColor_10b_Background);border-color:var(--sapIndicationColor_10b_BorderColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapMText{color:var(--sapTextColor);text-shadow:none !important}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapLink,.sapMMsgStrip.sapMMsgStripColorSet2 .sapLink:hover,.sapMMsgStrip.sapMMsgStripColorSet2 .sapLink:focus,.sapMMsgStrip.sapMMsgStripColorSet2 .sapLink:active,.sapMMsgStrip.sapMMsgStripColorSet2 .sapMMsgStripMessage>.sapMLnk:not(.sapMLnkDsbl){color:var(--sapLink_SubtleColor) !important;text-decoration:underline !important;text-shadow:none !important}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapMMsgStripIcon,.sapMMsgStrip.sapMMsgStripColorSet2 .sapMBtnIcon::before,.sapMMsgStrip.sapMMsgStripColorSet2 .sapMBtn:hover>.sapMBtnHoverable{color:var(--sapContent_IconColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapMBtn:hover>.sapMBtnHoverable{background-color:var(--sapMessage_Button_Hover_Background);border-color:var(--sapContent_IconColor)}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapMBtn:focus-visible>.sapMFocusable:not(.sapMBadgeIndicator)::before,.sapMMsgStrip.sapMMsgStripColorSet2 .sapMBtn:focus>.sapMFocusable:not(.sapMBadgeIndicator)::before{border-color:var(--sapContent_FocusColor) !important;background:none !important}
+.sapMMsgStrip.sapMMsgStripColorSet2 .sapMLnk:not(.sapMLnkDsbl):focus{color:var(--sapContent_ContrastFocusColor) !important}
+.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled)>.sapMBtnBack.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled):hover>.sapMBtnBack.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled)>.sapMBtnTransparent.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled):hover>.sapMBtnTransparent.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled)>.sapMBtnGhost.sapMBtnActive,.sapMMsgStrip.sapMMsgStripColorSet2 :not(.sapMBtnDisabled):hover>.sapMBtnGhost.sapMBtnActive{color:var(--sapContent_IconColor);text-shadow:none;background:none;border-color:var(--sapContent_IconColor)}
+html[data-sap-ui-animation='on'] .sapMMsgStrip{transition:opacity 0.2s}
+html[data-sap-ui-animation='on'] .sapMMsgStripCloseButton{transition:color 0.1s}
+.sapMMsgStripClosing{opacity:0}
+.sapMMsgStripIcon{position:absolute;left:0;width:2.5rem;font-size:1rem;text-align:center}
+.sapMMsgStripIcon~.sapMMsgStripMessage{margin-left:1.5rem}
+.sapMMsgStripMessage{max-height:10rem;overflow:auto}
+.sapMMsgStripMessage>.sapMText,.sapMMsgStripMessage>.sapMFT,.sapMMsgStripMessage>.sapMLnk{display:inline}
+.sapMMsgStripMessage>.sapMLnk{margin-left:0.25rem}
+.sapMMsgStripMessage>.sapMLnk:not(.sapMLnkDsbl){text-shadow:var(--sapContent_TextShadow)}
+.sapMMsgStripMessage>.sapMText{line-height:1.2}
+.sapMMsgStripMessage .sapMMsgStripInlineIcon{font-family:'SAP-icons';color:inherit}
+.sapMMsgStripCloseButton{position:absolute;top:-0.5625rem;right:0.125rem}
+.sapUiSizeCompact .sapMMsgStripCloseButton{top:-0.0625rem}
+.sapMMsgStripCloseButton{position:absolute;top:-0.5625rem;right:0.125rem}
+.sapMMsgStripInformation{background-color:var(--sapNeutralBackground);border-color:var(--sapNeutralBorderColor);color:var(--sapTextColor)}
+.sapMMsgStripInformation .sapMMsgStripIcon{color:var(--sapNeutralElementColor)}
+.sapMMsgStripSuccess{background-color:var(--sapSuccessBackground);border-color:var(--sapSuccessBorderColor);color:var(--sapTextColor)}
+.sapMMsgStripSuccess .sapMMsgStripIcon{color:var(--sapPositiveElementColor)}
+.sapMMsgStripWarning{background-color:var(--sapWarningBackground);border-color:var(--sapWarningBorderColor);color:var(--sapTextColor)}
+.sapMMsgStripWarning .sapMMsgStripIcon{color:var(--sapCriticalElementColor)}
+.sapMMsgStripError{background-color:var(--sapErrorBackground);border-color:var(--sapErrorBorderColor);color:var(--sapTextColor)}
+.sapMMsgStripError .sapMMsgStripIcon{color:var(--sapNegativeElementColor)}
+.sapMNLI .sapMMsgStrip{margin-bottom:1rem}
+.sapMSticky:has(> .sapMListHdr):not(:has(> .sapMMsgStrip))::before{position:sticky;content:'';display:block;background:var(--sapGroup_ContentBackground);height:var(--sapElement_BorderCornerRadius);margin-bottom:calc(var(--sapElement_BorderCornerRadius) * -1);top:0;z-index:2}
+.sapUiTableOnObjectPageAdjustmentsForSection.sapUxAPObjectPageSection .sapUxAPObjectPageSectionContainer .sapUxAPObjectPageSubSection .sapUxAPBlockContainer .sapMSticky:has(> .sapMListHdr):not(:has(> .sapMMsgStrip))::before{background:transparent}
+.sapMMsgStripInformation{background-color:var(--sapInformationBackground);border-color:var(--sapMessage_InformationBorderColor);color:var(--sapTextColor)}
+.sapMMsgStripInformation .sapMBtnTransparent{background-color:var(--sapInformationBackground);border-color:var(--sapInformationBackground)}
+.sapMMsgStripInformation .sapMMsgStripIcon{color:var(--sapInformativeElementColor)}
+.sapMMsgStripError{border-color:var(--sapMessage_ErrorBorderColor)}
+.sapMMsgStripError .sapMBtnTransparent{background-color:var(--sapErrorBackground);border-color:var(--sapErrorBackground)}
+.sapMMsgStripSuccess{border-color:var(--sapMessage_SuccessBorderColor)}
+.sapMMsgStripSuccess .sapMBtnTransparent{background-color:var(--sapSuccessBackground);border-color:var(--sapSuccessBackground)}
+.sapMMsgStripWarning{border-color:var(--sapMessage_WarningBorderColor)}
+.sapMMsgStripWarning .sapMBtnTransparent{background-color:var(--sapWarningBackground);border-color:var(--sapWarningBackground)}
+.sapMMsgStripMessage>.sapMLnk{padding-right:0.25rem;padding-left:0.25rem}
+.sapMMsgStripCloseButton{top:-0.4375rem}

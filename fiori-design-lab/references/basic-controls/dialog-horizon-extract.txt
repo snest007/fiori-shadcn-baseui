@@ -1,0 +1,186 @@
+.sapMActionSheetDialog.sapMDialog{top:auto !important;bottom:0;width:100%;max-width:20rem;border-radius:0.25rem 0.25rem 0 0}
+.sapMActionSheetDialog.sapMDialog.sapMDialogPhone{overflow:visible}
+.sapMActionSheetDialog .sapMDialogScroll{display:block}
+.sapMDialog.sapMActionSheetDialog{background-color:transparent;box-shadow:none;border:none}
+.sapMDialog.sapMActionSheetDialog>.sapMDialogSection{background-color:var(--sapGroup_ContentBackground);border-radius:0.25rem 0.25rem 0 0}
+.sapMActionSheetDialog .sapMBar.sapMHeader-CTX>.sapMBarMiddle>.sapMBarPH>.sapMDialogTitle{color:#fff;font-size:.875rem}
+.sapMDialog.sapMActionSheetDialog>.sapMDialogSection{box-shadow:0 0 0 .0625rem rgba(34,53,72,0.42),0 .125rem .5rem 0 rgba(34,53,72,0.3)}
+.sapMDialog.sapMActionSheetDialog>.sapMDialogSection{padding:0.25rem 0.5rem}
+.sapMDialog.sapMActionSheetDialog.sapMDialogPhone .sapMIBar.sapMHeader-CTX{background:transparent;box-shadow:none}
+.sapMBusyDialog.sapMDialog{min-width:18.75rem !important;text-align:center;width:18.75rem !important}
+.sapMBusyDialog.sapMDialog .sapMBusyIndicator{margin:1.5rem 0}
+.sapMBusyDialog.sapMDialog.sapUiPopupWithPadding .sapMDialogScrollCont{padding:0 !important}
+.sapMBusyDialog.sapMDialog .sapMDialogSection{overflow:hidden !important}
+.sapMBusyDialog.sapMDialog.sapMBusyDialog-Light{box-shadow:none;background:transparent;border:none}
+.sapMBusyDialog.sapMDialog.sapMBusyDialog-Light .sapMDialogSection{background:transparent}
+.sapMTCMenuPopup.sapMDialog .sapMTCMenuQAForm,.sapMTCMenuPopup.sapMDialog .sapMTCMenuContainerWrapper{width:100%}
+.sap-phone .sapMColorPaletteContainer .sapMDialogScroll{height:100%}
+.sap-phone .sapMColorPaletteContainer .sapMDialogScroll .sapMDialogScrollCont.sapMDialogStretchContent{padding:0}
+html.sap-desktop .sapMDialog.CPDialog{min-width:18rem}
+html.sap-desktop .sapMDialog.CPDialog .sapUiColorPicker-ColorPickerMatrix.sapUiRespGrid.sapUiRespGridHSpace1{padding-bottom:0.5rem}
+html.sap-desktop .sapMDialog.CPDialog .sapUiColorPicker-ColorPickerMatrix.sapUnifiedColorPicker.sapUiRespGrid.sapUiRespGridHSpace1>div:first-child{height:auto;padding-top:0}
+[data-sap-ui-popup].sapMRPCalendar.sapMDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont{padding:0}
+[data-sap-ui-popup].sapMRPCalendar .sapMDialogScroll,[data-sap-ui-popup].sapMRPCalendar .sapMDialogScrollCont,[data-sap-ui-popup].sapMRPCalendar .sapUiCal{min-height:100%}
+[data-sap-ui-popup].sapMRPCalendar.sapMDialog{padding-bottom:0}
+[data-sap-ui-popup].sapMRPCalendar.sapMDialog.sapMDialogStretched{max-height:none !important}
+.sapMDateTimePopup.sapUiPopupWithPadding>.sapMDialogSection>.sapMDialogScroll>.sapMDialogScrollCont{padding:0}
+.sapMDateTimePopup.sapMDialogPhone>.sapMDialogSection>.sapMDialogScroll>.sapMDialogScrollCont{height:100%}
+html.sap-phone .sapMDialogScroll,html.sap-phone .sapMDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont.sapMDialogStretchContent{height:100%}
+.sapMDialog,.sapMMessageDialog .sapMDialogScrollCont,.sapMDialogSection{box-sizing:border-box}
+.sapMDialog{-webkit-transform:scale(1) translateZ(0);background-clip:padding-box;min-height:6rem;outline:none;position:fixed !important;display:flex !important;flex-direction:column;opacity:0;transition:opacity 0.15s;border-radius:var(--sapElement_BorderCornerRadius);padding-inline:0}
+.sapMDialog:not(.sapMDialogHighPixelDensity){filter:blur(0)}
+.sapMDialog,.sapMDialog.sapUiShd{box-shadow:var(--sapContent_Shadow3)}
+.sapMDialog>.sapMDialogSection{max-width:100%;background:var(--sapGroup_ContentBackground)}
+.sapMDialog .sapMDialogScrollCont>*{vertical-align:middle}
+.sapMDialog.sapMDialogStretched{inset-inline-end:0 !important;bottom:0 !important;height:auto !important;width:auto !important;min-width:0 !important;min-height:0 !important}
+html.sap-phone .sapMDialog.sapMDialogStretched{border:none;box-shadow:none;border-radius:0}
+html:not(.sap-phone) .sapMDialog .sapMDialogHeader .sapMHeader-CTX{border-radius:var(--sapElement_BorderCornerRadius) var(--sapElement_BorderCornerRadius) 0 0}
+html:not(.sap-phone) .sapMDialog.sapMDialog-NoHeader .sapMDialogHeader .sapMSubHeader-CTX{border-radius:var(--sapElement_BorderCornerRadius) var(--sapElement_BorderCornerRadius) 0 0}
+html:not(.sap-phone) .sapMDialog.sapMDialog-NoHeader:not(.sapMDialogWithSubHeader) .sapMDialogSection{border-top-right-radius:var(--sapElement_BorderCornerRadius);border-top-left-radius:var(--sapElement_BorderCornerRadius)}
+html:not(.sap-phone) .sapMDialog .sapMDialogFooter .sapMFooter-CTX{border-radius:0 0 var(--sapElement_BorderCornerRadius) var(--sapElement_BorderCornerRadius)}
+html:not(.sap-phone) .sapMDialog.sapMDialog-NoFooter .sapMDialogSection{border-bottom-right-radius:var(--sapElement_BorderCornerRadius);border-bottom-left-radius:var(--sapElement_BorderCornerRadius)}
+html.sap-phone .sapMDialog{min-width:18rem;overflow:hidden}
+html.sap-phone .sapMDialog>.sapMDialogFooter .sapMFooter-CTX{display:flex;padding:0 0.25rem}
+html.sap-tablet .sapMDialog,html.sap-desktop .sapMDialog{min-width:20rem}
+html.sap-phone .sapMDialog{min-width:100%}
+html.sap-tablet .sapMDialog,html.sap-desktop .sapMDialog{min-width:100%}
+.sapMDialog .sapMIBar{position:relative;width:auto}
+.sapMDialog .sapMDialogSection{overflow:hidden;position:relative}
+.sapMDialog .sapMDialogSection:focus{outline:var(--sapContent_FocusWidth) var(--sapContent_FocusStyle) var(--sapContent_FocusColor);outline-offset:calc(-1 * var(--sapContent_FocusWidth))}
+.sapMDialogScroll{display:inline-block;height:auto;width:100%;vertical-align:middle;box-sizing:border-box}
+.sapMDialog.sapMDialogVerticalScrollIncluded .sapMDialogScroll{width:auto}
+html[data-sap-ui-browser^='sf'] .sapMDialog.sapMDialogVerticalScrollIncluded .sapMDialogSection{overflow-y:overlay !important;padding-right:0px !important}
+.sapMDialogVerScrollDisabled .sapMDialogScroll{height:100%}
+.sapMDialogHorScrollDisabled .sapMDialogScroll{display:block;width:100%}
+.sapMDialogHidden{visibility:hidden}
+.sapMDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont{padding:1rem}
+.sapMDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont.sapMDialogStretchContent{height:calc(100% - 2 *  1rem)}
+.sapMDialogScrollCont.sapMDialogStretchContent{height:100%}
+.sapMMessageDialog .sapMDialogScrollCont{box-sizing:border-box;padding:1rem}
+.sapMActionSheetDialog .sapMDialogScrollCont{padding:0}
+.sapMDialogOpen{opacity:1}
+.sapMDialog.sapUiContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:1rem;box-sizing:border-box}
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont,.sapMSplitContainerPortrait>.sapMSplitContainerDetail .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont,.sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:0}
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont,.sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:1rem;box-sizing:border-box}
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont,.sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:1rem 2rem;box-sizing:border-box}
+.sapMSplitContainerMaster .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:0}
+.sapMSplitContainerDetail .sapMDialog.sapUiResponsiveContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:1rem}
+.sapMDialog.sapUiNoContentPadding > .sapMDialogSection > .sapMDialogScroll > .sapMDialogScrollCont{padding:0}
+.sapMDialog.sapMMessageDialog{font-size:0.875rem}
+.sapMDialog>.sapMDialogHeader .sapMDialogTitleGroup,.sapMDialog>.sapMDialogHeader .sapMDialogSubHeader{font-size:1rem}
+.sapMDialog:not(.sapMDialogWithSubHeader) .sapMDialogSubHeader{display:none}
+.sapMDialogIcon~.sapMDialogTitle{display:inline}
+.sapMDialog .sapMIBar.sapMPageHeader::before{border-top:none}
+.sapMMessageDialog.sapMPopup-CTX>.sapMDialogHeader .sapMDialogTitleGroup{background-image:none;filter:none}
+.sapMDialog>.sapMDialogHeader .sapMDialogTitleGroup .sapMTitle{color:var(--sapPageHeader_TextColor);vertical-align:middle}
+.sapMDialog>.sapMDialogHeader .sapMDialogTitleGroup .sapMImg{height:2.25rem;margin-right:0.625rem;vertical-align:middle;width:2.25rem}
+.sapMDialog>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{font-size:1.25rem;vertical-align:middle}
+.sapUiSizeCompact.sapMDialog,.sapUiSizeCompact .sapMDialog{min-height:2.5rem;padding-bottom:2.5rem}
+.sapUiSizeCompact.sapMDialog.sapMDialogWithSubHeader.sapMDialog-NoHeader .sapMDialogSubHeader,.sapUiSizeCompact .sapMDialog.sapMDialogWithSubHeader.sapMDialog-NoHeader .sapMDialogSubHeader{top:0}
+.sapUiSizeCompact.sapMDialog .sapMDialogTitleGroup,.sapUiSizeCompact .sapMDialog .sapMDialogTitleGroup{min-height:2.5rem}
+.sapUiSizeCompact.sapMDialog .sapMDialogTitleGroup .sapMHeader-CTX,.sapUiSizeCompact .sapMDialog .sapMDialogTitleGroup .sapMHeader-CTX,.sapUiSizeCompact.sapMDialog .sapMDialogTitleGroup .sapMSubHeader-CTX,.sapUiSizeCompact .sapMDialog .sapMDialogTitleGroup .sapMSubHeader-CTX{height:2.5rem;padding-top:0.25rem;padding-bottom:0.25rem;box-sizing:border-box}
+.sapUiSizeCompact.sapMDialog>.sapMDialogSection,.sapUiSizeCompact .sapMDialog>.sapMDialogSection{min-height:2.5rem}
+.sapUiSizeCompact.sapMDialog>.sapMDialogFooter,.sapUiSizeCompact .sapMDialog>.sapMDialogFooter{height:2.5rem}
+.sapUiSizeCompact.sapMDialog>.sapMDialogFooter .sapMFooter-CTX,.sapUiSizeCompact .sapMDialog>.sapMDialogFooter .sapMFooter-CTX{height:2.5rem}
+.sapUiSizeCompact.sapMDialog .sapMDialogSubHeader,.sapUiSizeCompact .sapMDialog .sapMDialogSubHeader{height:2.25rem;top:2.5rem}
+.sapMDialogDisableSelection{-webkit-user-select:none;user-select:none}
+.sapMDialogResizeHandle{position:absolute;inset-inline-end:-0.5rem;bottom:-0.5rem;width:1.5rem;height:1.5rem;z-index:2;line-height:1rem;cursor:se-resize;border-radius:50%}
+.sapMDialogResizeHandle .sapMDialogResizeHandleIcon{position:relative;left:0;top:0;width:1rem;height:1rem;color:var(--sapButton_Lite_TextColor);cursor:inherit}
+.sapMDialog{box-sizing:content-box;min-height:2.75rem;padding-bottom:2.75rem}
+.sapMDialog .sapMDialogFooter .sapMTB.sapMFooter-CTX{border-bottom:none}
+.sapMDialog.sapMDialog-NoFooter{padding-bottom:0}
+.sapMDialog.sapMDialogWithSubHeader.sapMDialogSubHeaderInfoBar .sapMDialogSubHeader{height:2rem}
+.sapMDialog.sapMDialogWithSubHeader.sapMDialog-NoHeader .sapMDialogSubHeader{top:0}
+.sapMDialog .sapMDialogTitleGroup{min-height:2.75rem;left:0;position:absolute;right:0;top:0}
+.sapMDialog .sapMDialogTitleGroup .sapMBarLeft.sapMBarEmpty{padding:0}
+.sapMDialog:has(.sapMDialogDragAndResizeHandler:focus)::before{content:'';position:absolute;inset:.0625rem;border:var(--sapContent_FocusWidth) var(--sapContent_FocusStyle) var(--sapContent_FocusColor);border-radius:var(--sapElement_BorderCornerRadius);pointer-events:none;z-index:5}
+.sapMDialog:has(.sapMDialogDragAndResizeHandler:focus).sapMDialogResizable::before{border-radius:var(--sapElement_BorderCornerRadius) var(--sapElement_BorderCornerRadius) 1.75rem var(--sapElement_BorderCornerRadius)}
+.sapMDialog>.sapMDialogSection{flex:1 1 100%;min-height:2.75rem}
+.sapMDialog>.sapMDialogFooter{bottom:0;height:2.75rem;left:0;position:absolute;right:0}
+.sapMDialog.sapMDialogDraggable>.sapMDialogHeader{cursor:move}
+.sapMDialog .sapMDialogSubHeader{cursor:default;height:3rem;left:0;position:absolute;right:0;top:2.75rem;z-index:2}
+html[data-sap-ui-animation='off'] .sapMDialog{transition:none}
+.sapMDialog.sapMDialogWithSubHeader .sapMDialogTitleGroup .sapMIBar{box-shadow:none}
+.sapMDialog>.sapMDialogHeader>div:last-of-type .sapMIBar{box-shadow:var(--sapContent_HeaderShadow)}
+.sapMDialogWarning>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{color:var(--sapCriticalElementColor)}
+.sapMDialogWarning>.sapMDialogHeader>div:last-of-type .sapMIBar{box-shadow:inset 0 -0.0625rem var(--sapWarningBorderColor),var(--sapContent_HeaderShadow)}
+.sapMDialogError>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{color:var(--sapNegativeElementColor)}
+.sapMDialogError>.sapMDialogHeader>div:last-of-type .sapMIBar{box-shadow:inset 0 -0.0625rem var(--sapErrorBorderColor),var(--sapContent_HeaderShadow)}
+.sapMDialogSuccess>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{color:var(--sapPositiveElementColor)}
+.sapMDialogSuccess>.sapMDialogHeader>div:last-of-type .sapMIBar{box-shadow:inset 0 -0.0625rem var(--sapSuccessBorderColor),var(--sapContent_HeaderShadow)}
+.sapMDialogInformation>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{color:var(--sapInformativeElementColor)}
+.sapMDialogInformation>.sapMDialogHeader>div:last-of-type .sapMIBar{box-shadow:inset 0 -0.0625rem var(--sapInformationBorderColor),var(--sapContent_HeaderShadow)}
+.sapMDialog .sapMDialogFirstFE,.sapMDialog .sapMDialogLastFE{font-size:0}
+.sapMDialog .sapUiLocalBusyIndicator{z-index:4}
+div.sapMComboBoxBasePicker .sapMDialogScrollCont{padding:0}
+.sapUiSizeCompact .sapMIBar-CTX.sapMPageHeader .sapMLabel,.sapUiSizeCondensed.sapUiTable .sapMIBar-CTX.sapMPageHeader .sapMLabel,.sapUiSizeCondensed .sapUiTable .sapMIBar-CTX.sapMPageHeader .sapMLabel,.sapUiSizeCompact .sapMDialog-CTX .sapMIBar-CTX .sapMLabel,.sapUiSizeCondensed.sapUiTable .sapMDialog-CTX .sapMIBar-CTX .sapMLabel,.sapUiSizeCondensed .sapUiTable .sapMDialog-CTX .sapMIBar-CTX .sapMLabel{font-size:var(--sapFontHeader6Size)}
+.sapMMenu.sapMDialog .sapMMenuItem{padding:0 0.875rem}
+.sapMMenu.sapMDialog .sapMMenuItemIcon{min-width:1rem;max-width:1rem;padding-inline-end:0.875rem}
+.sapMMenu.sapMDialog .sapMMenuItemIcon:empty{min-width:0;width:0}
+.sapMMenu.sapMDialog .sapMDialogHeader .sapMBarLeft:not(:empty)~.sapMBarMiddle>.sapMBarPH{padding-left:0.25rem}
+.sapMMenu.sapMDialog>.sapMDialogHeader:last-of-type .sapMIBar{box-shadow:inset 0 -1px #ebebeb}
+.sapMDialog.sapMMessageBoxInfo .sapMDialogIcon.sapUiIcon{color:var(--sapNeutralElementColor)}
+.sapMDialog.sapMMessageBoxWarning .sapMDialogIcon.sapUiIcon{color:var(--sapCriticalElementColor)}
+.sapMDialog.sapMMessageBoxError .sapMDialogIcon.sapUiIcon{color:var(--sapNegativeElementColor)}
+.sapMDialog.sapMMessageBoxSuccess .sapMDialogIcon.sapUiIcon{color:var(--sapPositiveElementColor)}
+.sapMDialog.sapMMessageBoxQuestion .sapMDialogIcon.sapUiIcon{color:var(--sapNeutralElementColor)}
+.sapMDialog.sapMMessageDialog.sapMMessageBoxInfo .sapMDialogTitleGroup>.sapMBar{box-shadow:var(--sapContent_Information_HeaderShadow)}
+.sapMDialog.sapMMessageDialog.sapMMessageBoxWarning .sapMDialogTitleGroup>.sapMBar{box-shadow:var(--sapContent_Warning_HeaderShadow)}
+.sapMDialog.sapMMessageDialog.sapMMessageBoxError .sapMDialogTitleGroup>.sapMBar{box-shadow:var(--sapContent_Error_HeaderShadow)}
+.sapMDialog.sapMMessageDialog.sapMMessageBoxSuccess .sapMDialogTitleGroup>.sapMBar{box-shadow:var(--sapContent_Success_HeaderShadow)}
+.sapMDialog.sapMMessageDialog.sapMMessageBoxQuestion .sapMDialogTitleGroup>.sapMBar{box-shadow:var(--sapContent_HeaderShadow)}
+.sapMMsgView .sapMDialogScrollCont{padding:0}
+.sapMDialog .sapMOH.sapMOHC{padding:1rem}
+.sapMP13nDialog.sapMDialog>.sapMDialogSection{background-color:var(--sapBackgroundColor)}
+.sapMP13nDialog .sapMBarLeft,.sapMP13nDialog.sapMDialog .sapMBarLeft{padding-left:0}
+.sapMSltPicker-CTX.sapMDialogPhone{max-width:100%}
+.sapMSltPicker-CTX.sapMDialogPhone .sapMSelectList:not(.sapMSelectListWrappedItems){max-width:100%}
+.sapMSltPicker-CTX.sapMDialogPhone .sapMSelectList:not(.sapMSelectListWrappedItems) .sapMSelectListRow{max-width:100%}
+div.sapMSltPicker.sapUiPopupWithPadding .sapMDialogScrollCont.sapMDialogStretchContent{height:100%}
+div.sapMSltPicker .sapMDialogScrollCont{padding:0}
+.sapMSelectDialog.sapMDialog .sapMDialogScrollCont{padding:0px}
+.sapMSelectDialog.sapMDialog .sapMDialogScroll{width:100% !important}
+.sapMSelectDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont{padding:0}
+.sapMSD .sapMDialogStretchContent{padding:0px}
+.sapMSD .sapMDialogStretchContent.sapMDialogScrollCont{height:100%}
+.sapMDialog.sapMSuggestionsPopover .sapMDialogScroll .sapMDialogScrollCont{padding:0}
+html.sap-phone .sapMSupport .sapMDialogScrollCont{padding:0}
+.sapMTableSelectDialog.sapMDialog .sapMDialogScrollCont{padding:0}
+html.sap-phone .sapMTimePickerDropDown .sapMDialogScrollCont{height:100%;padding:0}
+.sapMVSD.sapMDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont,.sapMVSD.sapMDialog .sapMDialogScrollCont{padding:0}
+.sapMVSD.sapUiPopupWithPadding .sapMDialogScrollCont.sapMDialogStretchContent{height:inherit}
+.sapMWizard .sapMDialogSection{height:auto}
+.sapMActionSheetDialog .sapMBar.sapMHeader-CTX>.sapMBarMiddle>.sapMBarPH>.sapMDialogTitle{color:var(--sapPageHeader_TextColor);font-size:var(--sapFontHeader5Size);font-family:var(--sapFontHeaderFamily)}
+.sapMDialog.sapMActionSheetDialog{background-color:var(--sapPageHeader_Background);border-top-left-radius:var(--sapElement_BorderCornerRadius);border-top-right-radius:var(--sapElement_BorderCornerRadius);box-shadow:var(--sapContent_Shadow3)}
+.sapMDialog.sapMActionSheetDialog.sapMDialogPhone .sapMIBar.sapMHeader-CTX{box-shadow:var(--sapContent_HeaderShadow);background-color:var(--sapPageHeader_Background);border-top-left-radius:var(--sapElement_BorderCornerRadius);border-top-right-radius:var(--sapElement_BorderCornerRadius)}
+.sapMDialog.sapMActionSheetDialog.sapUiPopupWithPadding:not(.sapUiNoContentPadding) .sapMDialogScrollCont{padding:0}
+.sapMDialog.sapMActionSheetDialog>.sapMDialogSection{box-shadow:none}
+.sapMDialog.sapMActionSheetDialog:not(.sapUiResponsiveContentPadding):not(.sapUiContentPadding).sapMDialog-NoFooter .sapMDialogScroll{padding-bottom:0}
+.sapMDialogSubHeader .sapMIBar{height:100%;padding-bottom:0.25rem;box-sizing:border-box}
+.sapMDialog>.sapMDialogHeader .sapMDialogTitleGroup .sapMDialogIcon.sapUiIcon{font-size:1rem}
+.sapMDialogBeginButton,.sapMDialogEndButton{min-width:4rem}
+.sapMDialogTitleGroup{z-index:3}
+html.sap-phone .sapMDialog>.sapMDialogFooter .sapMFooter-CTX{justify-content:flex-end}
+.sapMDialog .sapMDialogHeader .sapMBarLeft,.sapMDialog .sapMDialogHeader .sapMBarPH{padding-left:1rem}
+.sapMDialog .sapMDialogHeader .sapMBarRight,.sapMDialog .sapMDialogHeader .sapMBarPH{padding-right:1rem}
+.sapMDialog .sapMDialogHeader .sapMTB,.sapMDialog .sapMDialogFooter .sapMTB{padding:0 1rem}
+.sapMDialogTitleGroup .sapUi-Std-PaddingS.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogSubHeader .sapUi-Std-PaddingS.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogTitleGroup .sapUi-Std-PaddingM.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogSubHeader .sapUi-Std-PaddingM.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogTitleGroup .sapUi-Std-PaddingL.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogSubHeader .sapUi-Std-PaddingL.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogTitleGroup .sapUi-Std-PaddingXL.sapMIBar .sapMBarMiddle .sapMBarPH,.sapMDialogSubHeader .sapUi-Std-PaddingXL.sapMIBar .sapMBarMiddle .sapMBarPH{padding-left:0;padding-right:0}
+.sapMDialogTitleGroup .sapUi-Std-PaddingS.sapMIBar .sapMBarLeft,.sapMDialogSubHeader .sapUi-Std-PaddingS.sapMIBar .sapMBarLeft,.sapMDialogTitleGroup .sapUi-Std-PaddingM.sapMIBar .sapMBarLeft,.sapMDialogSubHeader .sapUi-Std-PaddingM.sapMIBar .sapMBarLeft,.sapMDialogTitleGroup .sapUi-Std-PaddingL.sapMIBar .sapMBarLeft,.sapMDialogSubHeader .sapUi-Std-PaddingL.sapMIBar .sapMBarLeft,.sapMDialogTitleGroup .sapUi-Std-PaddingXL.sapMIBar .sapMBarLeft,.sapMDialogSubHeader .sapUi-Std-PaddingXL.sapMIBar .sapMBarLeft{padding-left:inherit}
+.sapMDialogTitleGroup .sapUi-Std-PaddingS.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingS.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingM.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingM.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingL.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingL.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingXL.sapMIBar .sapMBarLeft .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingXL.sapMIBar .sapMBarLeft .sapMBarChild{padding-right:0.5rem}
+.sapMDialogTitleGroup .sapUi-Std-PaddingS.sapMIBar .sapMBarRight,.sapMDialogSubHeader .sapUi-Std-PaddingS.sapMIBar .sapMBarRight,.sapMDialogTitleGroup .sapUi-Std-PaddingM.sapMIBar .sapMBarRight,.sapMDialogSubHeader .sapUi-Std-PaddingM.sapMIBar .sapMBarRight,.sapMDialogTitleGroup .sapUi-Std-PaddingL.sapMIBar .sapMBarRight,.sapMDialogSubHeader .sapUi-Std-PaddingL.sapMIBar .sapMBarRight,.sapMDialogTitleGroup .sapUi-Std-PaddingXL.sapMIBar .sapMBarRight,.sapMDialogSubHeader .sapUi-Std-PaddingXL.sapMIBar .sapMBarRight{padding-right:inherit}
+.sapMDialogTitleGroup .sapUi-Std-PaddingS.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingS.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingM.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingM.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingL.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingL.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogTitleGroup .sapUi-Std-PaddingXL.sapMIBar .sapMBarRight .sapMBarChild,.sapMDialogSubHeader .sapUi-Std-PaddingXL.sapMIBar .sapMBarRight .sapMBarChild{padding-left:0.5rem}
+.sapMDialog:not(.sapUiResponsiveContentPadding):not(.sapUiContentPadding).sapMDialog-NoHeader .sapMDialogScroll{padding-top:0.25rem}
+html.sap-phone .sapMDialogStretched.sapMDialog:not(.sapUiResponsiveContentPadding):not(.sapUiContentPadding).sapMDialog-NoHeader .sapMDialogScroll{padding-top:0}
+.sapMDialog:not(.sapUiResponsiveContentPadding):not(.sapUiContentPadding).sapMDialog-NoFooter .sapMDialogScroll{padding-bottom:0.25rem}
+html.sap-phone .sapMDialogStretched.sapMDialog:not(.sapUiResponsiveContentPadding):not(.sapUiContentPadding).sapMDialog-NoFooter .sapMDialogScroll{padding-bottom:0}
+.sapMDialog.sapMMessageBoxInfo .sapMDialogIcon.sapUiIcon{color:var(--sapInformativeElementColor)}
+.sapMMessageBox .sapMDialogFooter .sapMBtn{min-width:4rem}
+.sapMResponsivePopover.sapMDialog .sapMIBar.sapMPageHeader:before{border-top:none}
+.sapMSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingS{padding-left:0rem !important;padding-right:0rem !important}
+.sapMSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingM,.sapMSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingL{padding-left:1rem !important;padding-right:1rem !important}
+.sapMSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingXL{padding-left:2rem !important;padding-right:2rem !important}
+.sapMTableSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingS{padding-left:0rem !important;padding-right:0rem !important}
+.sapMTableSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingM,.sapMTableSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingL{padding-left:1rem !important;padding-right:1rem !important}
+.sapMTableSelectDialog.sapUiResponsivePadding--content .sapMDialogScrollCont.sapUi-Std-PaddingXL{padding-left:2rem !important;padding-right:2rem !important}
+.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMHeader-CTX,.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMSubHeader-CTX{background-color:var(--sapGroup_ContentBackground)}
+.sapMVSDBarWithSearch.sapMBar,.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMHeader-CTX .sapMVSDBarWithSearch,.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMSubHeader-CTX .sapMVSDBarWithSearch{box-shadow:none}

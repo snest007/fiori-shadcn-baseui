@@ -1,0 +1,68 @@
+[
+  {
+    "file": "P13nConditionPanel-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/p13n/P13nConditionPanel-dbg.js",
+    "sha256": "17a3719ea5888b148adda0c858fb0ee2b5a07c095049be4c6b034842fd3f3305",
+    "bytes": 83458
+  },
+  {
+    "file": "P13nOperationsHelper-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/p13n/P13nOperationsHelper-dbg.js",
+    "sha256": "cfc18f1835f8f950399f33662a39fdff25f3e92ea13bcae5edb7ba1aa627a319",
+    "bytes": 4288
+  },
+  {
+    "file": "comp-horizon-v1-151.css",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/themes/sap_horizon/library.css",
+    "sha256": "a6c46bc5196117d2c6329ad3d606778a1bf70a03d05625d84054f4d2ac7f0c0e",
+    "bytes": 32826
+  },
+  {
+    "file": "P13nOperationsHelperBase-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/p13n/P13nOperationsHelperBase-dbg.js",
+    "sha256": "461150af6afa3681d9b3ffcdf48a7a65f556d7585e448d7481ad161ba5c51951",
+    "bytes": 4486
+  },
+  {
+    "file": "FormatUtil-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/util/FormatUtil-dbg.js",
+    "sha256": "9c99111feb36ae77715acdde681cc712a90d4b6bd1c4040d30c991e43f63f326",
+    "bytes": 36236
+  },
+  {
+    "file": "sap-m-messagebundle-v1-151.properties",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/m/messagebundle.properties",
+    "sha256": "3baa7d7b99de9270f9c0fc5b7d1f78fbbef3b48f36678b1a45df810690a7006d",
+    "bytes": 142086
+  },
+  {
+    "file": "P13nConditionPanelBase-v1-151-dbg.js",
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/p13n/P13nConditionPanelBase-dbg.js",
+    "sha256": "ee739be0bde6b0ec5cc74fd536baaabc73af838e466867bf71fd9dc1460ec09a",
+    "bytes": 105259
+  },
+  {
+    "file": "conditionsOnly-manifest-v1-151.json",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/conditionsOnly/manifest.json",
+    "sha256": "cc0b6e8401af3b8ea78b32381c51e9a49ccfe1d22b0dc2e460840d371cadbacc",
+    "bytes": 766
+  },
+  {
+    "file": "conditionsOnly-view-v1-151.xml",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/conditionsOnly/ValueHelpDialogs.view.xml",
+    "sha256": "0a9647bc4dbdc59cef783d02d8f6418a33cba8164c0cc00e0678db80ad6bd555",
+    "bytes": 897
+  },
+  {
+    "file": "conditionsOnly-controller-v1-151.js",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/conditionsOnly/ValueHelpDialogs.controller.js",
+    "sha256": "277978d1bf8b1621016aa9a69f65b67630c69e1cf7562d7619fc705ed794b928",
+    "bytes": 3414
+  },
+  {
+    "file": "conditionsOnly-multiple-v1-151.fragment.xml",
+    "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/conditionsOnly/ValueHelpDialogMultipleConditions.fragment.xml",
+    "sha256": "1f76b84677c04420ab946c7a59b2fbf9a0fc0944e916bf38af56e236f2d08171",
+    "bytes": 382
+  }
+]

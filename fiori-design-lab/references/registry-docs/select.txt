@@ -1,0 +1,443 @@
+Source: https://ui.shadcn.com/docs/components/base/select
+
+Sections
+Introduction
+Components
+AI Elements
+Installation
+Theming
+CLI
+Typeset
+Skills
+Registry
+Changelog
+Components
+Accordion
+Alert
+Alert Dialog
+Aspect Ratio
+Attachment
+Avatar
+Badge
+Breadcrumb
+Bubble
+Button
+Button Group
+Calendar
+Card
+Carousel
+Chart
+Checkbox
+Code Block
+Collapsible
+Combobox
+Command
+Context Menu
+Data Table
+Date Picker
+Dialog
+Direction
+Drawer
+Dropdown Menu
+Empty
+Field
+Hover Card
+Input
+Input Group
+Input OTP
+Item
+Kbd
+Label
+Marker
+Menubar
+Message
+Message Scroller
+Native Select
+Navigation Menu
+Pagination
+Popover
+Progress
+Questionnaire
+Radio Group
+Resizable
+Scroll Area
+Select
+Separator
+Sheet
+Sidebar
+Skeleton
+Slider
+Spinner
+Switch
+Table
+Tabs
+Textarea
+Toast
+Toggle
+Toggle Group
+Tooltip
+Trace
+Typography
+AI Elements
+Introduction
+Chain of Thought
+Chat
+Checkpoint
+Confirmation
+Context
+File Tree
+Inline Citation
+Message
+Model Selector
+Plan
+Prompt Input
+Queue
+Reasoning
+Sources
+Stack Trace
+Subagent
+Suggestion
+Task
+Terminal
+Test Results
+Tool
+Get Started
+Installation
+components.json
+Package Imports
+Theming
+Typeset
+Dark Mode
+CLI
+Monorepo
+Skills
+JavaScript
+Figma
+llms.txt
+Legacy Docs
+@shadcn/react
+Message Scroller
+Questionnaire
+@shadcn/helpers
+AI SDK
+TanStack AI
+Forms
+React Hook Form
+TanStack Form
+Formisch
+Utilities
+scroll-fade
+shimmer
+Registry
+Introduction
+Getting Started
+GitHub Registries
+Registry Directory
+Registry Health
+Examples
+Namespaces
+Authentication
+Dynamic Search
+MCP Server
+Open in v0
+FAQ
+API Reference
+registry.json
+registry-item.json
+Select
+Copy Page
+Previous
+Next
+Displays a list of options for the user to pick from—triggered by a button.
+Base UI
+React Aria
+Radix UI
+Select a fruit
+▼
+Copy
+import
+{
+Select,
+SelectContent,
+View Code
+Installation
+#
+Command
+Manual
+pnpm
+npm
+yarn
+bun
+pnpm dlx shadcn@latest add select
+Copy
+Usage
+#
+Copy
+import
+{
+Select,
+SelectContent,
+SelectGroup,
+SelectItem,
+SelectTrigger,
+SelectValue,
+}
+from
+"@/components/ui/select"
+Copy
+const
+items
+=
+[
+{ label:
+"Light"
+, value:
+"light"
+},
+{ label:
+"Dark"
+, value:
+"dark"
+},
+{ label:
+"System"
+, value:
+"system"
+},
+]
+<
+Select
+items
+={
+items
+}
+>
+<
+SelectTrigger
+className
+=
+"w-[180px]"
+>
+<
+SelectValue
+placeholder
+=
+"Theme"
+/>
+</
+SelectTrigger
+>
+<
+SelectContent
+>
+<
+SelectGroup
+>
+{
+items.
+map
+((
+item
+)
+=>
+(
+<
+SelectItem
+key
+={
+item.value
+}
+value
+={
+item.value
+}
+>
+{
+item.label
+}
+</
+SelectItem
+>
+))
+}
+</
+SelectGroup
+>
+</
+SelectContent
+>
+</
+Select
+>
+Composition
+#
+Use the following composition to build a
+Select
+:
+Copy
+Select
+├── SelectTrigger
+│   └── SelectValue
+└── SelectContent
+├── SelectGroup
+│   ├── SelectLabel
+│   ├── SelectItem
+│   └── SelectItem
+├── SelectSeparator
+└── SelectGroup
+├── SelectLabel
+├── SelectItem
+└── SelectItem
+Align Item With Trigger
+#
+Use
+alignItemWithTrigger
+on
+SelectContent
+to control whether the selected item aligns with the trigger. When
+true
+(default), the popup positions so the selected item appears over the trigger. When
+false
+, the popup aligns to the trigger edge.
+Align Item
+Toggle to align the item with the trigger.
+Banana
+▼
+Copy
+"use client"
+import
+*
+as
+React
+from
+"react"
+View Code
+Groups
+#
+Use
+SelectGroup
+,
+SelectLabel
+, and
+SelectSeparator
+to organize items.
+Select a fruit
+▼
+Copy
+import
+{
+Select,
+SelectContent,
+View Code
+Scrollable
+#
+A select with many items that scrolls.
+Select a timezone
+▼
+Copy
+import
+{
+Select,
+SelectContent,
+View Code
+Disabled
+#
+Select a fruit
+▼
+Copy
+import
+{
+Select,
+SelectContent,
+View Code
+Invalid
+#
+Add the
+data-invalid
+attribute to the
+Field
+component and the
+aria-invalid
+attribute to the
+SelectTrigger
+component to show an error state.
+Copy
+<
+Field
+data-invalid
+>
+<
+FieldLabel
+>
+Fruit
+</
+FieldLabel
+>
+<
+SelectTrigger
+aria-invalid
+>
+<
+SelectValue
+/>
+</
+SelectTrigger
+>
+</
+Field
+>
+Fruit
+Select a fruit
+▼
+Please select a fruit.
+Copy
+import
+{ Field, FieldError, FieldLabel }
+from
+"@/components/ui/field"
+import
+{
+Select,
+View Code
+RTL
+#
+To enable RTL support in shadcn/ui, see the
+RTL configuration guide
+.
+Arabic (العربية)
+▼
+Toggle
+اختر فاكهة
+▼
+Copy
+"use client"
+import
+*
+as
+React
+from
+"react"
+View Code
+API Reference
+#
+See the
+Base UI Select
+documentation.
+Scroll Area
+Separator
+On This Page
+Installation
+Usage
+Composition
+Align Item With Trigger
+Groups
+Scrollable
+Disabled
+Invalid
+RTL
+API Reference
+Deploy your shadcn/ui app on Vercel
+Trusted by OpenAI, Sonos, Adobe, and more.
+Vercel provides tools and infrastructure to deploy apps and features at scale.
+Deploy Now
+Deploy to Vercel

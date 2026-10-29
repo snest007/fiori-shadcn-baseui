@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fiori-button",
+  "title": "Fiori Button",
+  "description": "Locally adapted shadcn/Base UI Button with Fiori variants and density.",
+  "dependencies": [
+    "@base-ui/react@^1.9.0",
+    "class-variance-authority@^0.7.1",
+    "cn@^0.5.0"
+  ],
+  "registryDependencies": [
+    "@fiori/fiori-foundation"
+  ],
+  "files": [
+    {
+      "path": "registry/fiori/components/fiori/ui/button.tsx",
+      "content": "import { Button as ButtonPrimitive } from \"@base-ui/react/button\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"cn\"\n\nconst buttonVariants = cva(\"fiori-button\", {\n  variants: {\n    variant: {\n      default: \"\",\n      outline: \"\",\n      secondary: \"\",\n      ghost: \"\",\n      destructive: \"\",\n      link: \"\",\n      accept: \"\",\n      reject: \"\",\n    },\n    size: {\n      default: \"\",\n      xs: \"\",\n      sm: \"\",\n      lg: \"\",\n      icon: \"\",\n      \"icon-xs\": \"\",\n      \"icon-sm\": \"\",\n      \"icon-lg\": \"\",\n    },\n  },\n  defaultVariants: { variant: \"default\", size: \"default\" },\n})\nfunction Button({\n  className,\n  variant = \"default\",\n  size = \"default\",\n  ...props\n}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {\n  return (\n    <ButtonPrimitive\n      data-slot=\"button\"\n      data-variant={variant}\n      data-size={size}\n      className={cn(buttonVariants({ variant, size, className }))}\n      {...props}\n    />\n  )\n}\nexport { Button, buttonVariants }\n",
+      "type": "registry:ui",
+      "target": "@components/fiori/ui/button.tsx"
+    }
+  ],
+  "meta": {
+    "source": "Fiori Design Lab",
+    "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+  },
+  "type": "registry:ui"
+}

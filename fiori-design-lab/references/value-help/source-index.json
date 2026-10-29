@@ -1,0 +1,79 @@
+{
+  "retrieved": "2026-10-29",
+  "sapui5Version": "1.151.0",
+  "files": [
+    {
+      "file": "sapui5-v1-151-version.json",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap-ui-version.json",
+      "sha256": "3dd6fd96334f0051adfa311ac0d8460bb18fc76a0b4502055e7596b38255f1d0",
+      "bytes": 130554
+    },
+    {
+      "file": "ValueHelpDialog-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/valuehelpdialog/ValueHelpDialog-dbg.js",
+      "sha256": "908ad136e12dc8baad2ca5c872fd15f4ee09291d954fb6f3de46306aadbf9a8a",
+      "bytes": 134581
+    },
+    {
+      "file": "ValueHelpDialog-v1-151.controller.js",
+      "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/recommended/ValueHelpDialog.controller.js",
+      "sha256": "3ddbf2bc550156a177ae1c6c15888a008e93fa13d12039839f8128f4c42711fc",
+      "bytes": 16860
+    },
+    {
+      "file": "ValueHelpDialogFilterbar-v1-151.fragment.xml",
+      "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/recommended/ValueHelpDialogFilterbar.fragment.xml",
+      "sha256": "228e63cfe791dafe0df400e9868eadf77c14c6ea9a39cae702e0fc80b8a20280",
+      "bytes": 1089
+    },
+    {
+      "file": "ValueHelpDialog-v1-151.view.xml",
+      "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/recommended/ValueHelpDialog.view.xml",
+      "sha256": "a8170127963f237f66a93977c1d9aed6b0e7062e18ff0a78d5d9a630a2f6bdab",
+      "bytes": 2094
+    },
+    {
+      "file": "manifest-v1-151.json",
+      "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/demokit/sample/valuehelpdialog/recommended/manifest.json",
+      "sha256": "c04ca2496d668870704ed8a43a2f76174780ba39188fd5803bad536d1e9a1a19",
+      "bytes": 969
+    },
+    {
+      "file": "api-ValueHelpDialog-v1-151.json",
+      "url": "https://ui5.sap.com/1.151.0/test-resources/sap/ui/comp/designtime/api.json",
+      "sha256": "5a4a208c11b3c7b554edf14c983ace711e6ee61f5d56ae211840b1639b95e9bd",
+      "bytes": 72542,
+      "transformation": "Extracted exact sap.ui.comp.valuehelpdialog.ValueHelpDialog symbol from versioned library API JSON; added source/version wrapper"
+    },
+    {
+      "file": "FilterBar-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/filterbar/FilterBar-dbg.js",
+      "sha256": "fbf6ce594df8a088d9faa82956fce005d4055928204c029d02af244271bfb54d",
+      "bytes": 199491
+    },
+    {
+      "file": "messagebundle-v1-151.properties",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/ui/comp/messagebundle.properties",
+      "sha256": "640149986f8bc6cabf43c35f475fdb1abcb0a43355ee7bfc4fd0a95099089e50",
+      "bytes": 41291
+    },
+    {
+      "file": "SearchField-v1-151-dbg.js",
+      "url": "https://ui5.sap.com/1.151.0/resources/sap/m/SearchField-dbg.js",
+      "sha256": "50cf61b82ec900404f7950230ca4a51fc13372cee4a2578b610c85ed3b86c2a3",
+      "bytes": 30333
+    }
+  ],
+  "guidelines": [
+    {
+      "url": "https://www.sap.com/design-system/fiori-design-web/v1-151/ui-elements/value-help-dialog",
+      "status": "live search service extraction only wrapper (11 lines); no Usage body verified",
+      "localFile": "guideline-v1-151-wrapper.md"
+    },
+    {
+      "url": "https://www.sap.com/design-system/fiori-design-web/v1-148/ui-elements/value-help-dialog",
+      "status": "complete Usage available in official-page search index; focused paraphrase saved, earlier guideline version",
+      "localFile": "guideline-v1-148-usage-notes.md"
+    }
+  ]
+}
