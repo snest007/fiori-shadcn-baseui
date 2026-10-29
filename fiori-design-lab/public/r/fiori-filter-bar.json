@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fiori-filter-bar",
+  "title": "Fiori Filter Bar",
+  "description": "Caller-defined filter fields, basic search and actions in the Fiori filter layout.",
+  "registryDependencies": [
+    "@fiori/fiori-dynamic-page",
+    "@fiori/fiori-foundation",
+    "@fiori/fiori-primitives"
+  ],
+  "files": [
+    {
+      "path": "registry/fiori/components/fiori/filter-bar.tsx",
+      "content": "\"use client\"\n\nimport type { FormEventHandler, ReactNode } from \"react\"\nimport { Field, FieldGroup, FieldLabel } from \"@/components/fiori/ui/field\"\nimport \"./list-report.css\"\n\nexport type FilterBarField = {\n  id: string\n  label: ReactNode\n  control: ReactNode\n  invalid?: boolean\n}\nexport type FilterBarProps = {\n  fields: FilterBarField[]\n  search?: ReactNode\n  actions?: ReactNode\n  label?: string\n  onSubmit?: FormEventHandler<HTMLFormElement>\n}\n\n/** Field values, update mode, validation and query execution belong to the caller. */\nexport function FilterBar({\n  fields,\n  search,\n  actions,\n  label = \"筛选器\",\n  onSubmit,\n}: FilterBarProps) {\n  return (\n    <form\n      className=\"filter-bar\"\n      aria-label={label}\n      onSubmit={onSubmit ?? ((event) => event.preventDefault())}\n    >\n      <FieldGroup className=\"filter-grid\">\n        {search != null && <Field className=\"basic-search\">{search}</Field>}\n        {fields.map(({ id, label: fieldLabel, control, invalid }) => (\n          <Field key={id} data-invalid={invalid || undefined}>\n            <FieldLabel htmlFor={id}>{fieldLabel}</FieldLabel>\n            {control}\n          </Field>\n        ))}\n        {actions != null && <div className=\"filter-actions\">{actions}</div>}\n      </FieldGroup>\n    </form>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "@components/fiori/filter-bar.tsx"
+    }
+  ],
+  "meta": {
+    "source": "Fiori Design Lab",
+    "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+  },
+  "type": "registry:component"
+}

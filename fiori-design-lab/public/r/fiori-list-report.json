@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fiori-list-report",
+  "title": "Fiori List Report",
+  "description": "Composable Fiori list report layout using caller filter bar, toolbar and responsive table.",
+  "registryDependencies": [
+    "@fiori/fiori-dynamic-page",
+    "@fiori/fiori-foundation"
+  ],
+  "files": [
+    {
+      "path": "registry/fiori/components/fiori/list-report.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useRef, type ReactNode, type RefObject } from \"react\"\nimport { DynamicPage, type DynamicPageProps } from \"./dynamic-page\"\n\nexport type ListReportProps = DynamicPageProps & {\n  contentLabel: string\n  toolbar?: ReactNode\n  /** Override floorplan focus for manual Go or an empty mandatory field. */\n  initialFocusRef?: RefObject<HTMLElement | null>\n}\n\n/** A single-table List Report composition; data and business actions stay in the app. */\nexport function ListReport({\n  contentLabel,\n  toolbar,\n  initialFocusRef,\n  children,\n  ref,\n  ...props\n}: ListReportProps) {\n  const rootRef = useRef<HTMLDivElement>(null)\n  useEffect(() => {\n    const root = rootRef.current\n    if (!root || root.closest(\"[hidden]\")) return\n    const frame = requestAnimationFrame(() => {\n      const target =\n        initialFocusRef?.current ??\n        (props.expanded && root.clientWidth >= 600\n          ? root.querySelector<HTMLElement>(\n              \".filter-bar input:not([disabled]),.filter-bar button:not([disabled]),.filter-bar [tabindex='0']\"\n            )\n          : root.querySelector<HTMLElement>(\n              \".orders-table tbody [data-grid-row]\"\n            ))\n      target?.focus({ preventScroll: true })\n    })\n    return () => cancelAnimationFrame(frame)\n    // Initial focus is a mount-time floorplan decision, not a response to every query/header change.\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [])\n  return (\n    <DynamicPage\n      {...props}\n      ref={(node) => {\n        rootRef.current = node\n        if (typeof ref === \"function\") ref(node)\n        else if (ref) ref.current = node\n      }}\n    >\n      <section className=\"list-content\" aria-label={contentLabel}>\n        <div className=\"order-worklist\">\n          {toolbar}\n          {children}\n        </div>\n      </section>\n    </DynamicPage>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "@components/fiori/list-report.tsx"
+    }
+  ],
+  "meta": {
+    "source": "Fiori Design Lab",
+    "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+  },
+  "docs": "Provide application-owned filters, rows, selection and action callbacks. Use inside FioriProvider; no OData or UI5 control runtime is included. See docs/list-report-api.md.",
+  "type": "registry:block"
+}

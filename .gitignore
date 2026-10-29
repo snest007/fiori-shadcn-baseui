@@ -13,3 +13,6 @@ dist-ssr/
 .npmrc
 .yarnrc
 *.local
+
+.playwright-cli/
+output/playwright/current/

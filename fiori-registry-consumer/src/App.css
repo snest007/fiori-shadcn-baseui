@@ -26,6 +26,11 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.consumer-header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
 .consumer-eyebrow {
   margin-bottom: 8px;
 }

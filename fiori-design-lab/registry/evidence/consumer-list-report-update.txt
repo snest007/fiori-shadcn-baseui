@@ -1,0 +1,257 @@
+2026-10-29: targeted List Report DynamicPage update through shadcn 4.23.0.
+
+Registry: http://127.0.0.1:4279/r/{name}.json (temporary test service; restored components.json to 4178).
+
+Dry run: ../fiori-design-lab/node_modules/.bin/shadcn add @fiori/fiori-dynamic-page --dry-run
+
+- Resolving items.
+┌ shadcn add @fiori/fiori-dynamic-page (dry run)
+│
+├ Files (14) ~1 overwrite, =13 skip
+│ = src/components/fiori/fiori-context.ts       skip (identical)
+│ = src/components/fiori/fiori-provider.tsx     skip (identical)
+│ = src/components/fiori/sap-icon.tsx           skip (identical)
+│ = src/lib/fiori/utils.ts                      skip (identical)
+│ = src/lib/fiori/styles/fiori-scoped.css       skip (identical)
+│ = src/lib/fiori/styles/fiori-fonts.css        skip (identical)
+│ = src/lib/fiori/styles/SAP-THEME-LICENSE.txt  skip (identical)
+│ = src/lib/fiori/styles/FONT-LICENSE.txt       skip (identical)
+│ = src/lib/fiori/styles/FONT-SOURCES.md        skip (identical)
+│ = src/lib/fiori/licenses/icons-LICENSE.txt    skip (identical)
+│ = src/lib/fiori/licenses/icons-SOURCES.md     skip (identical)
+│ = src/components/fiori/ui/button.tsx          skip (identical)
+│ ~ src/components/fiori/dynamic-page.tsx       overwrite
+│ = src/components/fiori/list-report.css        skip (identical)
+│
+├ Dependencies (3)
+│ + cn@^0.5.0
+│ + @base-ui/react@^1.9.0
+│ + class-variance-authority@^0.7.1
+│
+⚠ 1 file will be overwritten.
+│
+│ 14 files, 3 deps
+│
+│ Run with --diff to view changes.
+│ Run with --view to view file contents.
+└ Run without --dry-run to apply.
+
+
+Targeted diff review: ../fiori-design-lab/node_modules/.bin/shadcn add @fiori/fiori-dynamic-page --diff src/components/fiori/dynamic-page.tsx
+
+- Resolving items.
+┌ shadcn add @fiori/fiori-dynamic-page (dry run)
+│
+├ src/components/fiori/dynamic-page.tsx (overwrite)
+│ ┌──────────────────────────────────────────────
+│ │ --- a/src/components/fiori/dynamic-page.tsx
+│ │ +++ b/src/components/fiori/dynamic-page.tsx
+│ │ @@ -1,6 +1,7 @@
+│ │  import {
+│ │    useCallback,
+│ │    useEffect,
+│ │ +  useLayoutEffect,
+│ │    useRef,
+│ │    useState,
+│ │    type ComponentProps,
+│ │ @@ -64,13 +65,24 @@
+│ │  }: DynamicPageProps) {
+│ │    const rootRef = useRef<HTMLDivElement>(null)
+│ │    const headerRef = useRef<HTMLElement>(null)
+│ │ +  const headerContentRef = useRef<HTMLDivElement>(null)
+│ │ +  const pendingScrollRef = useRef<number | null>(null)
+│ │ +  const suppressedScrollPositionRef = useRef<number | null>(null)
+│ │    const [geometry, setGeometry] = useState({
+│ │      width: 1024,
+│ │      headerHeight: 96,
+│ │ +    headerContentHeight: 0,
+│ │ +    rootRem: 16,
+│ │      viewportHeight: 720,
+│ │      canScroll: true,
+│ │    })
+│ │    const phone = geometry.width < 600
+│ │ +  // SAPUI5 1.151 DynamicPage: ceil(DynamicPageHeader height) - 1rem.
+│ │ +  // Keep this content measurement when collapsed; the title is not part of it.
+│ │ +  const snapThreshold = Math.max(
+│ │ +    Math.ceil(geometry.headerContentHeight) - geometry.rootRem,
+│ │ +    0
+│ │ +  )
+│ │    const shownExpanded = expanded && !phone && header != null
+│ │    const pinAvailable =
+│ │      shownExpanded &&
+│ │ @@ -95,14 +107,23 @@
+│ │        if (root.closest("[hidden]")) return
+│ │        const scroll = findPageScrollContainer(root, scrollContainerRef)
+│ │        const width = root.clientWidth
+│ │ -      setGeometry({
+│ │ +      const contentHeight =
+│ │ +        headerContentRef.current?.getBoundingClientRect().height ?? 0
+│ │ +      const rootRem =
+│ │ +        parseFloat(
+│ │ +          getComputedStyle(root.ownerDocument.documentElement).fontSize
+│ │ +        ) || 16
+│ │ +      setGeometry((previous) => ({
+│ │          width,
+│ │ -        headerHeight: heading.offsetHeight,
+│ │ +        headerHeight: heading.getBoundingClientRect().height,
+│ │ +        headerContentHeight:
+│ │ +          contentHeight > 0 ? contentHeight : previous.headerContentHeight,
+│ │ +        rootRem,
+│ │          viewportHeight: scroll?.clientHeight ?? window.innerHeight,
+│ │          canScroll: scroll
+│ │            ? scroll.scrollHeight > scroll.clientHeight + 1
+│ │            : document.documentElement.scrollHeight > window.innerHeight + 1,
+│ │ -      })
+│ │ +      }))
+│ │        onWidthChange?.(
+│ │          root.querySelector<HTMLElement>(".order-worklist")?.clientWidth ?? width
+│ │        )
+│ │ @@ -110,41 +131,65 @@
+│ │      const observer = new ResizeObserver(measure)
+│ │      observer.observe(root)
+│ │      observer.observe(heading)
+│ │ +    if (headerContentRef.current) observer.observe(headerContentRef.current)
+│ │      const scroll = findPageScrollContainer(root, scrollContainerRef)
+│ │      if (scroll) observer.observe(scroll)
+│ │      measure()
+│ │      return () => observer.disconnect()
+│ │    }, [onWidthChange, scrollContainerRef])
+│ │
+│ │ +  useLayoutEffect(() => {
+│ │ +    const requestedPosition = pendingScrollRef.current,
+│ │ +      root = rootRef.current
+│ │ +    if (requestedPosition == null || !root) return
+│ │ +    const scroll = findPageScrollContainer(root, scrollContainerRef)
+│ │ +    const before = scroll?.scrollTop ?? window.scrollY
+│ │ +    if (scroll) scroll.scrollTop = requestedPosition
+│ │ +    else window.scrollTo({ top: requestedPosition, behavior: "instant" })
+│ │ +    const after = scroll?.scrollTop ?? window.scrollY
+│ │ +    // Ignore only a scroll at the compensated position, never a later user scroll.
+│ │ +    suppressedScrollPositionRef.current = after !== before ? after : null
+│ │ +    pendingScrollRef.current = null
+│ │ +  }, [expanded, scrollContainerRef])
+│ │ +
+│ │    useEffect(() => {
+│ │      const root = rootRef.current
+│ │      if (!root) return
+│ │      const scroll = findPageScrollContainer(root, scrollContainerRef)
+│ │      const target = scroll ?? window
+│ │ -    let previous = scroll?.scrollTop ?? window.scrollY,
+│ │ -      changeAt = 0
+│ │      const onScroll = () => {
+│ │        const y = scroll?.scrollTop ?? window.scrollY
+│ │ -        delta = y - previous
+│ │ +      const suppressedPosition = suppressedScrollPositionRef.current
+│ │ -      previous = y
+│ │ +      suppressedScrollPositionRef.current = null
+│ │        if (
+│ │          effectivePinned ||
+│ │          phone ||
+│ │          root.closest("[hidden]") ||
+│ │ -        performance.now() - changeAt < 300
+│ │ +        pendingScrollRef.current != null ||
+│ │ +        (suppressedPosition != null && y === suppressedPosition)
+│ │        )
+│ │          return
+│ │ -      if (delta > 12 && expanded) {
+│ │ +      if (y >= snapThreshold && expanded) {
+│ │ -        changeAt = performance.now()
+│ │          onExpandedChange(false)
+│ │ -      } else if ((delta < -20 || y === 0) && !expanded && delta < 0) {
+│ │ +      } else if (
+│ │ -        changeAt = performance.now        ()
+│ │ +        (y === 0 || y < snapThreshold) &&
+│ │ +        !expanded &&
+│ │ +        geometry.canScroll
+│ │ +      ) {
+│ │          onExpandedChange(true)
+│ │        }
+│ │      }
+│ │      target.addEventListener("scroll", onScroll, { passive: true })
+│ │      return () => target.removeEventListener("scroll", onScroll)
+│ │ -  }, [expanded, effectivePinned, phone, onExpandedChange, scrollContainerRef])
+│ │ +  }, [
+│ │ +    expanded,
+│ │ +    effectivePinned,
+│ │ +    phone,
+│ │ +    snapThreshold,
+│ │ +    geometry.canScroll,
+│ │ +    onExpandedChange,
+│ │ +    scrollContainerRef,
+│ │ +  ])
+│ │
+│ │    useEffect(() => {
+│ │      if (pinned && !pinAvailable) onPinnedChange(false)
+│ │ @@ -152,6 +197,19 @@
+│ │
+│ │    const toggleHeader = () => {
+│ │      if (phone || header == null) return
+│ │ +    const root = rootRef.current
+│ │ +    if (root && geometry.canScroll) {
+│ │ +      const scroll = findPageScrollContainer(root, scrollContainerRef)
+│ │ +      const y = scroll?.scrollTop ?? window.scrollY
+│ │ +      // UI5's unpinned top collapse moves to ceil(H); collapsing a pinned header
+│ │ +      // releases it at T. Preserve the position for other manual toggles because
+│ │ +      // this layout keeps its sticky header in normal flow rather than moving it.
+│ │ +      pendingScrollRef.current = shownExpanded
+│ │ +        ? effectivePinned
+│ │ +          ? snapThreshold
+│ │ +          : Math.max(y, Math.ceil(geometry.headerContentHeight))
+│ │ +        : y
+│ │ +    }
+│ │      onExpandedChange(!shownExpanded)
+│ │      if (shownExpanded) onPinnedChange(false)
+│ │    }
+│ │ @@ -169,6 +227,7 @@
+│ │        className={cn("list-report", className)}
+│ │        data-header-expanded={shownExpanded}
+│ │        data-header-pinned={effectivePinned}
+│ │ +      data-header-snap-threshold={snapThreshold}
+│ │        style={
+│ │          {
+│ │            "--list-header-height": `${geometry.headerHeight}px`,
+│ │ @@ -199,7 +258,9 @@
+│ │              <p className="collapsed-summary">{summary}</p>
+│ │            )}
+│ │          </div>
+│ │ -{shownExpanded && header}
+│ │ +        <div ref={headerContentRef} hidden={!shownExpanded}>
+│ │ +          {header}
+│ │ +        </div>
+│ │          {!phone && header != null && (
+│ │            <div className="header-features">
+│ │              <Button
+│ └──────────────────────────────────────────────
+│
+└ Run without --dry-run to apply.
+
+
+Apply: ../fiori-design-lab/node_modules/.bin/shadcn add @fiori/fiori-dynamic-page
+
+Answered yes only to the reviewed dynamic-page.tsx overwrite prompt; no --overwrite flag.
+
+- Checking registry.
+✔ Checking registry.
+- Installing dependencies.
+- Installing dependencies.
+✔ Installing dependencies.
+- Updating files.
+? The file dynamic-page.tsx already exists. Would you like to overwrite? › (y/N)✔ The file dynamic-page.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+ℹ Updated 1 file:
+  - src/components/fiori/dynamic-page.tsx
+ℹ Skipped 13 files: (files might be identical, use --overwrite to overwrite)
+  - src/components/fiori/fiori-context.ts
+  - src/components/fiori/fiori-provider.tsx
+  - src/components/fiori/sap-icon.tsx
+  - src/lib/fiori/utils.ts
+  - src/lib/fiori/styles/fiori-scoped.css
+  - src/lib/fiori/styles/fiori-fonts.css
+  - src/lib/fiori/styles/SAP-THEME-LICENSE.txt
+  - src/lib/fiori/styles/FONT-LICENSE.txt
+  - src/lib/fiori/styles/FONT-SOURCES.md
+  - src/lib/fiori/licenses/icons-LICENSE.txt
+  - src/lib/fiori/licenses/icons-SOURCES.md
+  - src/components/fiori/ui/button.tsx
+  - src/components/fiori/list-report.css
+Use FioriProvider around Fiori components. The provider imports isolated theme CSS; no UI5 control runtime or network font request is required.

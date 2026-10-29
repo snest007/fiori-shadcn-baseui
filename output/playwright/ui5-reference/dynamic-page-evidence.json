@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-29",
+  "scope": "Live official DynamicPage FreeStyle sample, desktop browser; not a full ListReport fidelity or table-toolbar audit.",
+  "sampleUrl": "https://ui5.sap.com/1.151.0/#/entity/sap.f.DynamicPage/sample/sap.f.sample.DynamicPageFreeStyle",
+  "sampleFrameUrl": "https://ui5.sap.com/1.151.0/resources/sap/ui/documentation/sdk/index.html?sap-ui-xx-sample-id=sap.f.sample.DynamicPageFreeStyle&sap-ui-xx-sample-lib=sap.f&sap-ui-xx-sample-origin=.&sap-ui-xx-dk-origin=https://ui5.sap.com",
+  "runtime": {
+    "sapUiVersion": "1.151.0",
+    "theme": "sap_horizon",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "mode": "SDK full-screen sample"
+  },
+  "source": {
+    "url": "https://ui5.sap.com/1.151.0/resources/sap/f/DynamicPage-dbg.js",
+    "sha256": "b777ff0b9d53bb9a8dee3eb0421bb877ee64e9280acadd236777b029ee4a8ff3",
+    "methods": [
+      "_getSnappingHeight",
+      "_getHeaderHeight",
+      "_getHeight",
+      "_shouldSnapOnScroll",
+      "_shouldExpandOnScroll",
+      "_titleExpandCollapseWhenAllowed",
+      "_offsetContentOnMoveHeader"
+    ]
+  },
+  "geometry": {
+    "headerContentHeight": 82.4140625,
+    "rootRem": 16,
+    "snapThreshold": 67,
+    "formula": "max(ceil(DynamicPageHeader content height) - 1rem, 0)",
+    "titleExcludedFromThreshold": true
+  },
+  "cases": [
+    {
+      "id": "expanded",
+      "action": "Initial full-screen sample at top",
+      "readback": {
+        "scrollTop": 0,
+        "headerExpanded": true,
+        "pinPressed": false
+      },
+      "screenshot": "dynamic-page-expanded-1280.png"
+    },
+    {
+      "id": "scroll-collapse",
+      "action": "Pointer inside content; wheel down 500",
+      "readback": {
+        "scrollTop": 500,
+        "headerExpanded": false
+      },
+      "screenshot": "dynamic-page-scrolled-collapsed-1280.png"
+    },
+    {
+      "id": "upscroll-midpoint",
+      "action": "From scrollTop500 wheel up200",
+      "readback": {
+        "scrollTop": 300,
+        "headerExpanded": false,
+        "snapThreshold": 67
+      },
+      "screenshot": "dynamic-page-upscroll-300-still-collapsed-1280.png"
+    },
+    {
+      "id": "threshold-below",
+      "action": "From collapsed scrollTop67 wheel up1",
+      "readback": {
+        "scrollTop": 66,
+        "headerExpanded": true,
+        "snapThreshold": 67
+      },
+      "screenshot": "dynamic-page-threshold-66-expanded-1280.png"
+    },
+    {
+      "id": "threshold-at",
+      "action": "From expanded scrollTop66 wheel down1",
+      "readback": {
+        "scrollTop": 67,
+        "headerExpanded": false,
+        "snapThreshold": 67
+      },
+      "screenshot": "dynamic-page-threshold-67-collapsed-1280.png"
+    },
+    {
+      "id": "pinned-scroll",
+      "action": "Return to top, click Pin Header, wheel down500",
+      "readback": {
+        "scrollTop": 500,
+        "headerExpanded": true,
+        "pinPressed": true,
+        "headerContentHeight": 82.4140625
+      },
+      "screenshot": "dynamic-page-pinned-scrolled-1280.png"
+    },
+    {
+      "id": "pinned-manual-collapse",
+      "action": "From pinned scrollTop500 click Collapse Header",
+      "readback": {
+        "scrollTop": 67,
+        "headerExpanded": false,
+        "headerPinned": false,
+        "pinVisible": false
+      },
+      "screenshot": "dynamic-page-manually-collapsed-after-pin-1280.png"
+    },
+    {
+      "id": "unpinned-top-manual-collapse",
+      "action": "Return to top, unpinned expanded; click Collapse Header",
+      "readback": {
+        "scrollTop": 83,
+        "headerExpanded": false,
+        "headerPinned": false,
+        "snapThreshold": 67
+      },
+      "screenshot": "dynamic-page-manually-collapsed-top-1280.png"
+    },
+    {
+      "id": "midpoint-manual-expand",
+      "action": "At collapsed scrollTop500 click Expand Header",
+      "readback": {
+        "scrollTop": 417,
+        "headerExpanded": true,
+        "headerPinned": false,
+        "snapThreshold": 67
+      },
+      "screenshot": "dynamic-page-manually-expanded-midscroll-1280.png"
+    }
+  ],
+  "reactImplementationBoundary": {
+    "automaticRules": "Shared DynamicPage uses the same measured-content T threshold; no upward-delta expansion and no 300ms suppression timer.",
+    "manualRules": "Unpinned top collapse targets ceil(H); pinned collapse unpins and targets T. React retains its current position on mid-content expansion because its sticky header remains in normal flow, whereas UI5 moves Header content between scroll and title areas and offsets by ceil(H).",
+    "regressionOwnership": "Author and separately CLI-installed consumer regression run by root agent; results are not asserted by this reference evidence."
+  },
+  "limitations": [
+    "SDK outer page reported 9 console errors during the session; the sample remained functional. These are not claimed to be an app console audit.",
+    "No VoiceOver, physical phone, complete ListReport, or table toolbar acceptance is implied."
+  ]
+}

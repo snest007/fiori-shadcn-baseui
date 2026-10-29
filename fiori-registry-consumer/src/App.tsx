@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { Button as HostButton } from "~/components/ui/button"
 import { FioriProvider } from "~/components/fiori/fiori-provider"
 import { Button } from "~/components/fiori/ui/button"
@@ -52,6 +52,7 @@ import {
   type MessageStripTone,
 } from "~/components/fiori/message-strip"
 import "./App.css"
+import { InventoryDemo } from "./inventory/InventoryDemo"
 
 const warehouses: ValueHelpItem[] = [
   {
@@ -552,7 +553,7 @@ function ComparisonRegion({ density }: { density: "compact" | "cozy" }) {
   )
 }
 
-export function App() {
+function ComponentDemo() {
   const [density, setDensity] = useState<"compact" | "cozy">("compact")
   const [warehouseIds, setWarehouseIds] = useState<string[]>(["wh-hz-01"])
   const [materialIds, setMaterialIds] = useState<string[]>(["mat-a01"])
@@ -579,7 +580,10 @@ export function App() {
             React 项目通过 shadcn CLI 安装源码，使用自己的仓库、物料与库存数据。
           </p>
         </div>
-        <a href="http://127.0.0.1:4178/#/components">返回作者预览</a>
+        <nav className="consumer-header-links" aria-label="消费示例导航">
+          <a href="#/inventory">物料库存列表</a>
+          <a href="http://127.0.0.1:4178/#/components">返回作者预览</a>
+        </nav>
       </header>
       <section className="consumer-host" aria-labelledby="host-title">
         <div>
@@ -886,6 +890,27 @@ export function App() {
         />
       </div>
     </div>
+  )
+}
+
+export function App() {
+  const [path, setPath] = useState(
+    () => window.location.hash.slice(1) || "/components"
+  )
+  useEffect(() => {
+    const update = () => setPath(window.location.hash.slice(1) || "/components")
+    window.addEventListener("hashchange", update)
+    return () => window.removeEventListener("hashchange", update)
+  }, [])
+  return path === "/inventory" || path.startsWith("/inventory/") ? (
+    <InventoryDemo
+      path={path}
+      onNavigate={(next) => {
+        window.location.hash = next
+      }}
+    />
+  ) : (
+    <ComponentDemo />
   )
 }
 

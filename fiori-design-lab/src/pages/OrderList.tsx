@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useRef, useState } from "react"
+import { useMemo, useState } from "react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,15 +18,6 @@ import {
 } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Separator } from "@/components/ui/separator"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 import {
   Dialog,
   DialogContent,
@@ -43,7 +34,10 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu"
 import { SapIcon } from "@/components/fiori/sap-icon"
-import { useResponsiveTableNavigation } from "@/components/fiori/use-responsive-table-navigation"
+import { ListReport } from "@/components/fiori/list-report"
+import { FilterBar } from "@/components/fiori/filter-bar"
+import { TableToolbar } from "@/components/fiori/table-toolbar"
+import { ResponsiveTable } from "@/components/fiori/responsive-table"
 import { ObjectStatus } from "@/components/fiori/object-status"
 import {
   EMPTY_PURCHASE_ORDER_FILTERS as EMPTY_FILTERS,
@@ -314,15 +308,12 @@ export function OrderList({
   orders: Order[]
   onOpen: (id: string) => void
 }) {
-  const reportRef = useRef<HTMLDivElement>(null),
-    headerRef = useRef<HTMLElement>(null),
-    loadRef = useRef<HTMLDivElement>(null)
   const [filters, setFilters] = useState<Filters>({ ...EMPTY_FILTERS })
+  const [width, setWidth] = useState(1024)
+  const phone = width < 600
   const [fields, setFields] = useState<FilterKey[]>(DEFAULT_FIELDS)
   const [expanded, setExpanded] = useState(false),
     [pinned, setPinned] = useState(false)
-  const [width, setWidth] = useState(1024),
-    [headerHeight, setHeaderHeight] = useState(96)
   const [columns, setColumns] = useState<Column[]>(DEFAULT_COLUMNS),
     [columnDraft, setColumnDraft] = useState<Column[]>(DEFAULT_COLUMNS)
   const [sort, setSort] = useState<Sort>(DEFAULT_SORT),
@@ -331,7 +322,6 @@ export function OrderList({
     [settingsTab, setSettingsTab] = useState("columns")
   const [selected, setSelected] = useState<string[]>([]),
     [selectionResults, setSelectionResults] = useState<Order[] | null>(null)
-  const [loaded, setLoaded] = useState(LOAD_SIZE)
   const [views, setViews] = useState<View[]>(readViews),
     [activeView, setActiveView] = useState<View>(STANDARD)
   const [saveOpen, setSaveOpen] = useState(false),
@@ -344,7 +334,6 @@ export function OrderList({
   const [adaptScope, setAdaptScope] = useState("全部筛选器"),
     [showValues, setShowValues] = useState(false),
     [dateError, setDateError] = useState("")
-  const phone = width < 600
   const viewDirty =
     JSON.stringify({ filters, fields, columns, sort }) !==
     JSON.stringify({
@@ -375,12 +364,6 @@ export function OrderList({
       current.filter((id) => results.some((o) => o.id === id))
     )
   }
-  const visible = results.slice(0, loaded)
-  const mainColumns = columns.filter((c) => width >= COLUMN_WIDTH[c]),
-    popinColumns = columns.filter((c) => width < COLUMN_WIDTH[c])
-  const allSelected =
-      results.length > 0 && results.every((o) => selected.includes(o.id)),
-    someSelected = results.some((o) => selected.includes(o.id))
   const filterCount = FILTER_KEYS.filter((key) =>
     activeFilter(key, filters)
   ).length
@@ -393,71 +376,6 @@ export function OrderList({
   const summary = activeTokens.length
     ? `${activeTokens.length} 个筛选器已激活：${activeTokens.slice(0, 5).join("，")}${activeTokens.length > 5 ? "，…" : ""}`
     : "没有激活的筛选器"
-  useEffect(() => {
-    const report = reportRef.current,
-      header = headerRef.current
-    if (!report || !header) return
-    const observer = new ResizeObserver(() => {
-      if (!report.closest("[hidden]")) {
-        setWidth(
-          report.querySelector<HTMLElement>(".order-worklist")?.clientWidth ??
-            report.clientWidth
-        )
-        setHeaderHeight(header.offsetHeight)
-      }
-    })
-    observer.observe(report)
-    observer.observe(header)
-    if (!report.closest("[hidden]"))
-      report
-        .querySelector<HTMLElement>(".order-row")
-        ?.focus({ preventScroll: true })
-    return () => observer.disconnect()
-  }, [])
-  useEffect(() => {
-    const scroll = reportRef.current?.closest(".page-scroll")
-    if (!scroll) return
-    let last = scroll.scrollTop,
-      changeAt = 0
-    const onScroll = () => {
-      const y = scroll.scrollTop,
-        delta = y - last
-      last = y
-      if (
-        pinned ||
-        phone ||
-        reportRef.current?.closest("[hidden]") ||
-        performance.now() - changeAt < 300
-      )
-        return
-      if (delta > 12 && expanded) {
-        changeAt = performance.now()
-        setExpanded(false)
-      } else if ((delta < -20 || y === 0) && !expanded && delta < 0) {
-        changeAt = performance.now()
-        setExpanded(true)
-      }
-    }
-    scroll.addEventListener("scroll", onScroll, { passive: true })
-    return () => scroll.removeEventListener("scroll", onScroll)
-  }, [expanded, pinned, phone])
-  useEffect(() => {
-    const target = loadRef.current,
-      root = reportRef.current?.closest(".page-scroll")
-    if (!target || !root || loaded >= results.length) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (
-          entries.some((e) => e.isIntersecting) &&
-          !reportRef.current?.closest("[hidden]")
-        )
-          setLoaded((n) => Math.min(n + LOAD_SIZE, results.length))
-      },
-      { root, rootMargin: "0px 0px 100px 0px" }
-    )
-    observer.observe(target)
-    return () => observer.disconnect()
-  }, [loaded, results.length])
   function setFilter(key: keyof Filters, value: string) {
     const next = { ...filters, [key]: value }
     if (next.from && next.to && next.from > next.to) {
@@ -466,7 +384,6 @@ export function OrderList({
     }
     setFilters((f) => ({ ...f, [key]: value }))
     setSelected([])
-    setLoaded(LOAD_SIZE)
   }
   function chooseView(v: View) {
     setActiveView(v)
@@ -475,7 +392,6 @@ export function OrderList({
     setColumns([...v.columns])
     setSort({ ...v.sort })
     setSelected([])
-    setLoaded(LOAD_SIZE)
   }
   function openSave() {
     setViewName("")
@@ -554,25 +470,6 @@ export function OrderList({
     URL.revokeObjectURL(url)
     toast.success(`已导出 ${results.length} 条订单`)
   }
-  function toggle(id: string, checked: boolean) {
-    setSelected((s) =>
-      checked ? [...new Set([...s, id])] : s.filter((x) => x !== id)
-    )
-  }
-  function toggleAll() {
-    setSelected((selection) =>
-      allSelected
-        ? selection.filter((id) => !results.some((order) => order.id === id))
-        : [...new Set([...selection, ...results.map((order) => order.id)])]
-    )
-  }
-  const tableNavigation = useResponsiveTableNavigation({
-    firstRow: visible[0]?.id,
-    rowIds: visible.map((order) => order.id),
-    columnIds: mainColumns,
-    open: onOpen,
-    selectAll: toggleAll,
-  })
   const adaptRows = [
     ...adaptFields,
     ...FILTER_KEYS.filter((key) => !adaptFields.includes(key)),
@@ -587,417 +484,169 @@ export function OrderList({
           : activeFilter(key, adaptFilters)))
   )
   return (
-    <div
-      className="list-report"
-      ref={reportRef}
-      style={
-        { "--list-header-height": `${headerHeight}px` } as React.CSSProperties
-      }
-    >
-      <header className="list-page-header" ref={headerRef}>
-        <div className="page-title-area">
-          <div className="page-title-row">
-            <h1>
-              <DropdownMenu>
-                <DropdownMenuTrigger
-                  render={
-                    <Button variant="ghost" className="variant-trigger" />
-                  }
-                  aria-label="选择订单视图"
-                >
-                  {activeView.name}
-                  {viewDirty && <span aria-label="视图已修改"> *</span>}
-                  <SapIcon name="slim-arrow-down" data-icon="inline-end" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="view-menu">
-                  <DropdownMenuGroup>
-                    <span className="menu-section-label">我的视图</span>
-                    {[STANDARD, ...views].map((v) => (
-                      <DropdownMenuItem
-                        key={v.id}
-                        onClick={() => chooseView(v)}
-                      >
-                        <span>{v.name}</span>
-                        {activeView.id === v.id && <SapIcon name="accept" />}
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuGroup>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem onClick={openSave}>
-                      另存为
-                    </DropdownMenuItem>
-                    {activeView.id !== "standard" && (
-                      <DropdownMenuItem
-                        onClick={() => {
-                          const next = views.filter(
-                            (v) => v.id !== activeView.id
-                          )
-                          setViews(next)
-                          commitViews(next)
-                          chooseView(STANDARD)
-                          toast.success("已删除视图")
-                        }}
-                      >
-                        删除当前视图
-                      </DropdownMenuItem>
-                    )}
-                  </DropdownMenuGroup>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </h1>
-            {(!expanded || phone) && (
-              <Button variant="ghost" onClick={openAdapt}>
+    <>
+      <ListReport
+        title={
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              render={<Button variant="ghost" className="variant-trigger" />}
+              aria-label="选择订单视图"
+            >
+              {activeView.name}
+              {viewDirty && <span aria-label="视图已修改"> *</span>}
+              <SapIcon name="slim-arrow-down" data-icon="inline-end" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="view-menu">
+              <DropdownMenuGroup>
+                <span className="menu-section-label">我的视图</span>
+                {[STANDARD, ...views].map((v) => (
+                  <DropdownMenuItem key={v.id} onClick={() => chooseView(v)}>
+                    <span>{v.name}</span>
+                    {activeView.id === v.id && <SapIcon name="accept" />}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuGroup>
+              <DropdownMenuSeparator />
+              <DropdownMenuGroup>
+                <DropdownMenuItem onClick={openSave}>另存为</DropdownMenuItem>
+                {activeView.id !== "standard" && (
+                  <DropdownMenuItem
+                    onClick={() => {
+                      const next = views.filter((v) => v.id !== activeView.id)
+                      setViews(next)
+                      commitViews(next)
+                      chooseView(STANDARD)
+                      toast.success("已删除视图")
+                    }}
+                  >
+                    删除当前视图
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        }
+        summary={summary}
+        titleActions={({ expanded, phone }) =>
+          (!expanded || phone) && (
+            <Button variant="ghost" onClick={openAdapt}>
+              调整筛选 ({filterCount})
+            </Button>
+          )
+        }
+        expanded={expanded}
+        pinned={pinned}
+        onExpandedChange={setExpanded}
+        onPinnedChange={setPinned}
+        onWidthChange={setWidth}
+        labels={{
+          expand: "展开筛选栏",
+          collapse: "收起筛选栏",
+          pin: "固定页头",
+          unpin: "取消固定页头",
+        }}
+        contentLabel="Purchase Orders"
+        header={
+          <FilterBar
+            label="Purchase Order Filters"
+            search={
+              <InputGroup>
+                <InputGroupInput
+                  aria-label="Search Purchase Orders"
+                  placeholder="搜索"
+                  value={filters.search}
+                  onChange={(e) => setFilter("search", e.target.value)}
+                />
+                <InputGroupAddon align="inline-end">
+                  <SapIcon name="search" />
+                </InputGroupAddon>
+              </InputGroup>
+            }
+            fields={fields.map((field) => ({
+              id: `筛选-${field}`,
+              label: FILTER_LABELS[field],
+              invalid:
+                (field === "from" || field === "to") &&
+                !!filters.from &&
+                !!filters.to &&
+                filters.from > filters.to,
+              control: (
+                <FilterControl
+                  field={field}
+                  filters={filters}
+                  prefix="筛选"
+                  onChange={setFilter}
+                />
+              ),
+            }))}
+            actions={
+              <Button variant="ghost" type="button" onClick={openAdapt}>
                 调整筛选 ({filterCount})
               </Button>
-            )}
-          </div>
-          {(!expanded || phone) && (
-            <p className="collapsed-summary">{summary}</p>
-          )}
-        </div>
-        {expanded && !phone && (
-          <form className="filter-bar" onSubmit={(e) => e.preventDefault()}>
-            <FieldGroup className="filter-grid">
-              <Field className="basic-search">
-                <InputGroup>
-                  <InputGroupInput
-                    aria-label="Search Purchase Orders"
-                    placeholder="搜索"
-                    value={filters.search}
-                    onChange={(e) => setFilter("search", e.target.value)}
-                  />
-                  <InputGroupAddon align="inline-end">
-                    <SapIcon name="search" />
-                  </InputGroupAddon>
-                </InputGroup>
-              </Field>
-              {fields.map((field) => (
-                <Field
-                  key={field}
-                  data-invalid={
-                    (field === "from" || field === "to") &&
-                    !!filters.from &&
-                    !!filters.to &&
-                    filters.from > filters.to
-                  }
-                >
-                  <FieldLabel htmlFor={`筛选-${field}`}>
-                    {FILTER_LABELS[field]}
-                  </FieldLabel>
-                  <FilterControl
-                    field={field}
-                    filters={filters}
-                    prefix="筛选"
-                    onChange={setFilter}
-                  />
-                </Field>
-              ))}
-              <div className="filter-actions">
-                <Button variant="ghost" type="button" onClick={openAdapt}>
-                  调整筛选 ({filterCount})
-                </Button>
-              </div>
-            </FieldGroup>
-          </form>
-        )}
-        {!phone && (
-          <div className="header-features">
-            <Button
-              variant="outline"
-              size="icon-xs"
-              aria-label={expanded ? "收起筛选栏" : "展开筛选栏"}
-              aria-expanded={expanded}
-              title={expanded ? "收起筛选栏" : "展开筛选栏"}
-              onClick={() => {
-                setExpanded((e) => !e)
-                if (expanded) setPinned(false)
-              }}
-            >
-              <SapIcon name={expanded ? "slim-arrow-up" : "slim-arrow-down"} />
-            </Button>
-            {expanded && (
-              <Button
-                variant="outline"
-                size="icon-xs"
-                aria-label={pinned ? "取消固定页头" : "固定页头"}
-                title={pinned ? "取消固定页头" : "固定页头"}
-                aria-pressed={pinned}
-                onClick={() => setPinned((p) => !p)}
-              >
-                <SapIcon name={pinned ? "pushpin-on" : "pushpin-off"} />
-              </Button>
-            )}
-          </div>
-        )}
-      </header>
-      <section className="list-content" aria-label="Purchase Orders">
-        <div className="order-worklist">
-          <div
-            className="table-toolbar"
-            role="toolbar"
-            aria-label="Purchase Order Actions"
-          >
-            <h2>Purchase Orders</h2>
-            <span className="flex-spacer" />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="toolbar-wide"
-              title="设置"
-              aria-label="打开表格设置"
-              onClick={openSettings}
-            >
-              <SapIcon name="action-settings" />
-            </Button>
-            <Separator
-              orientation="vertical"
-              className="toolbar-separator toolbar-wide"
-            />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="toolbar-wide"
-              title="导出"
-              aria-label="导出订单 CSV"
-              disabled={results.length === 0}
-              onClick={exportResults}
-            >
-              <SapIcon name="excel-attachment" />
-            </Button>
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="toolbar-overflow"
-                  />
-                }
-                aria-label="更多表格操作"
-                title="更多"
-              >
-                <SapIcon name="overflow" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuGroup>
-                  <DropdownMenuItem onClick={openSettings}>
-                    <SapIcon name="action-settings" />
-                    设置
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
-                <DropdownMenuGroup>
-                  <DropdownMenuItem
-                    onClick={exportResults}
-                    disabled={results.length === 0}
-                  >
-                    <SapIcon name="excel-attachment" />
-                    导出
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-          <span className="sr-only" role="status">
-            共 {results.length} 条采购订单，已加载 {visible.length} 条，已选择{" "}
-            {selected.length} 条
-          </span>
-          <Table
-            className="orders-table"
-            role="grid"
-            aria-label="Purchase Orders"
-            aria-multiselectable="true"
-            onFocusCapture={tableNavigation.onFocusCapture}
-            onBlurCapture={tableNavigation.onBlurCapture}
-            onKeyDown={tableNavigation.onKeyDown}
-          >
-            <TableHeader>
-              <TableRow
-                data-grid-row="header"
-                data-grid-key="header:row"
-                tabIndex={tableNavigation.tabIndex("header:row")}
-                aria-label="列标题"
-              >
-                <TableHead
-                  className="checkbox-column"
-                  data-grid-cell="selection"
-                  data-grid-key="header:selection"
-                  tabIndex={tableNavigation.tabIndex("header:selection")}
-                >
-                  <Checkbox
-                    aria-label="选择全部订单"
-                    tabIndex={tableNavigation.contentTabIndex}
-                    checked={allSelected}
-                    indeterminate={!allSelected && someSelected}
-                    onCheckedChange={(checked) =>
-                      setSelected((s) =>
-                        checked
-                          ? [...new Set([...s, ...results.map((o) => o.id)])]
-                          : s.filter((id) => !results.some((o) => o.id === id))
-                      )
-                    }
-                  />
-                </TableHead>
-                {mainColumns.map((c) => (
-                  <TableHead
-                    key={c}
-                    data-grid-cell={c}
-                    data-grid-key={`header:${c}`}
-                    tabIndex={tableNavigation.tabIndex(`header:${c}`)}
-                    className={c === "amount" ? "numeric-column" : `col-${c}`}
-                    aria-sort={
-                      sort.key === c
-                        ? sort.direction === "asc"
-                          ? "ascending"
-                          : "descending"
-                        : undefined
-                    }
-                  >
-                    <span className="column-label">
-                      {COLUMN_LABELS[c]}
-                      {sort.key === c && (
-                        <SapIcon
-                          name={
-                            sort.direction === "asc"
-                              ? "slim-arrow-up"
-                              : "slim-arrow-down"
-                          }
-                        />
-                      )}
-                    </span>
-                  </TableHead>
-                ))}
-                <TableHead
-                  className="navigation-column"
-                  data-grid-cell="navigation"
-                  data-grid-key="header:navigation"
-                  tabIndex={tableNavigation.tabIndex("header:navigation")}
-                >
-                  <span className="sr-only">查看详情</span>
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {visible.map((o, rowIndex) => (
-                <Fragment key={o.id}>
-                  <TableRow
-                    tabIndex={tableNavigation.tabIndex(`${o.id}:row`)}
-                    data-grid-row={o.id}
-                    data-grid-key={`${o.id}:row`}
-                    aria-selected={selected.includes(o.id)}
-                    aria-rowindex={rowIndex + 2}
-                    aria-describedby={
-                      popinColumns.length ? `purchase-popin-${o.id}` : undefined
-                    }
-                    aria-label={`Purchase Order ${o.id}`}
-                    data-state={
-                      selected.includes(o.id) ? "selected" : undefined
-                    }
-                    onClick={(e) => {
-                      if (
-                        !(e.target as HTMLElement).closest(
-                          "button,a,input,[role=checkbox]"
-                        )
-                      )
-                        onOpen(o.id)
-                    }}
-                    className={
-                      popinColumns.length ? "order-row has-popin" : "order-row"
-                    }
-                  >
-                    <TableCell
-                      className="checkbox-column"
-                      role="gridcell"
-                      data-grid-cell="selection"
-                      data-grid-key={`${o.id}:selection`}
-                      tabIndex={tableNavigation.tabIndex(`${o.id}:selection`)}
-                      rowSpan={popinColumns.length ? 2 : 1}
-                    >
-                      <Checkbox
-                        aria-label={`选择订单 ${o.id}`}
-                        tabIndex={tableNavigation.contentTabIndex}
-                        checked={selected.includes(o.id)}
-                        onCheckedChange={(checked) => toggle(o.id, checked)}
-                      />
-                    </TableCell>
-                    {mainColumns.map((c) => (
-                      <TableCell
-                        key={c}
-                        role="gridcell"
-                        data-grid-cell={c}
-                        data-grid-key={`${o.id}:${c}`}
-                        tabIndex={tableNavigation.tabIndex(`${o.id}:${c}`)}
-                        className={
-                          c === "amount" ? "numeric-column" : `col-${c}`
-                        }
-                      >
-                        <OrderValue order={o} column={c} />
-                      </TableCell>
-                    ))}
-                    <TableCell
-                      className="navigation-column"
-                      role="gridcell"
-                      data-grid-cell="navigation"
-                      data-grid-key={`${o.id}:navigation`}
-                      tabIndex={tableNavigation.tabIndex(`${o.id}:navigation`)}
-                      rowSpan={popinColumns.length ? 2 : 1}
-                    >
-                      <Button
-                        variant="ghost"
-                        size="icon-xs"
-                        aria-label={`查看订单 ${o.id}`}
-                        tabIndex={tableNavigation.contentTabIndex}
-                        title="查看订单"
-                        onClick={() => onOpen(o.id)}
-                      >
-                        <SapIcon name="navigation-right-arrow" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  {popinColumns.length > 0 && (
-                    <TableRow
-                      className="popin-row"
-                      id={`purchase-popin-${o.id}`}
-                      aria-hidden="true"
-                      data-state={
-                        selected.includes(o.id) ? "selected" : undefined
-                      }
-                      onClick={() => onOpen(o.id)}
-                    >
-                      <TableCell colSpan={mainColumns.length}>
-                        <dl className="popin-fields">
-                          {popinColumns.map((c) => (
-                            <div key={c}>
-                              <dt>{COLUMN_LABELS[c]}</dt>
-                              <dd>
-                                <OrderValue order={o} column={c} />
-                              </dd>
-                            </div>
-                          ))}
-                        </dl>
-                      </TableCell>
-                    </TableRow>
-                  )}
-                </Fragment>
-              ))}
-              {results.length === 0 && (
-                <TableRow>
-                  <TableCell
-                    colSpan={mainColumns.length + 2}
-                    className="table-no-data"
-                  >
-                    未找到数据。请调整筛选条件。
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-          {loaded < results.length && (
-            <div ref={loadRef} className="load-sentinel" aria-hidden="true" />
-          )}
-        </div>
-      </section>
+            }
+          />
+        }
+        toolbar={
+          <TableToolbar
+            title="Purchase Orders"
+            label="Purchase Order Actions"
+            overflowLabel="更多表格操作"
+            actions={[
+              {
+                id: "settings",
+                label: "设置",
+                ariaLabel: "打开表格设置",
+                icon: "action-settings",
+                group: "personalization",
+                onAction: openSettings,
+                iconOnly: true,
+              },
+              {
+                id: "export",
+                label: "导出",
+                ariaLabel: "导出订单 CSV",
+                icon: "excel-attachment",
+                group: "export",
+                onAction: exportResults,
+                disabled: results.length === 0,
+                iconOnly: true,
+              },
+            ]}
+          />
+        }
+      >
+        <ResponsiveTable
+          rows={results}
+          columns={columns.map((column) => ({
+            id: column,
+            label: COLUMN_LABELS[column],
+            render: (order: Order) => (
+              <OrderValue order={order} column={column} />
+            ),
+            minWidth: COLUMN_WIDTH[column],
+            align: column === "amount" ? ("end" as const) : ("start" as const),
+            className: column === "amount" ? "numeric-column" : `col-${column}`,
+          }))}
+          getRowId={(order) => order.id}
+          getRowLabel={(order) => `Purchase Order ${order.id}`}
+          selectedIds={selected}
+          onSelectionChange={setSelected}
+          onRowNavigate={onOpen}
+          sort={sort}
+          growingPageSize={LOAD_SIZE}
+          labels={{
+            table: "Purchase Orders",
+            selectAll: "选择全部订单",
+            selectRow: (order) => `选择订单 ${order.id}`,
+            navigateRow: (order) => `查看订单 ${order.id}`,
+            navigation: "查看详情",
+            columnHeaders: "列标题",
+            noData: "未找到数据。请调整筛选条件。",
+            status: ({ total, loaded, selected }) =>
+              `共 ${total} 条采购订单，已加载 ${loaded} 条，已选择 ${selected} 条`,
+          }}
+        />
+      </ListReport>
       <Dialog open={settingsOpen} onOpenChange={setSettingsOpen}>
         <DialogContent className="table-settings-dialog">
           <DialogHeader>
@@ -1115,7 +764,6 @@ export function OrderList({
               onClick={() => {
                 setColumns([...columnDraft])
                 setSort({ ...sortDraft })
-                setLoaded(LOAD_SIZE)
                 setSelected([])
                 setSettingsOpen(false)
               }}
@@ -1252,7 +900,6 @@ export function OrderList({
                 setFilters({ ...adaptFilters })
                 setFields([...adaptFields])
                 setSelected([])
-                setLoaded(LOAD_SIZE)
                 setAdaptOpen(false)
               }}
             >
@@ -1300,6 +947,6 @@ export function OrderList({
           </DialogFooter>
         </DialogContent>
       </Dialog>
-    </div>
+    </>
   )
 }

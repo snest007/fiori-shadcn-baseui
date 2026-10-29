@@ -228,6 +228,21 @@
           "path": "registry/fiori/components/fiori/ui/toggle.tsx",
           "type": "registry:ui",
           "target": "@components/fiori/ui/toggle.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/dropdown-menu.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "@components/fiori/ui/tabs.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/object-status.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/object-status.tsx"
         }
       ],
       "meta": {
@@ -373,10 +388,131 @@
       }
     },
     {
+      "name": "fiori-dynamic-page",
+      "type": "registry:component",
+      "title": "Fiori Dynamic Page",
+      "description": "Controlled dynamic header, scroll snapping, pinning and measured sticky offsets.",
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/dynamic-page.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/dynamic-page.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/list-report.css",
+          "type": "registry:file",
+          "target": "@components/fiori/list-report.css"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-filter-bar",
+      "type": "registry:component",
+      "title": "Fiori Filter Bar",
+      "description": "Caller-defined filter fields, basic search and actions in the Fiori filter layout.",
+      "registryDependencies": [
+        "@fiori/fiori-dynamic-page",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-primitives"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/filter-bar.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/filter-bar.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-table-toolbar",
+      "type": "registry:component",
+      "title": "Fiori Table Toolbar",
+      "description": "Ordered caller actions with responsive overflow and persistent business actions.",
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-dynamic-page",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-primitives"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/table-toolbar.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/table-toolbar.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-responsive-table",
+      "type": "registry:component",
+      "title": "Fiori Responsive Table",
+      "description": "External row and column renderers, controlled selection, responsive pop-in, growing and read-only grid navigation.",
+      "registryDependencies": [
+        "@fiori/fiori-button",
+        "@fiori/fiori-dynamic-page",
+        "@fiori/fiori-foundation",
+        "@fiori/fiori-primitives"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/responsive-table.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/responsive-table.tsx"
+        },
+        {
+          "path": "registry/fiori/components/fiori/use-responsive-table-navigation.ts",
+          "type": "registry:component",
+          "target": "@components/fiori/use-responsive-table-navigation.ts"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      }
+    },
+    {
+      "name": "fiori-list-report",
+      "type": "registry:block",
+      "title": "Fiori List Report",
+      "description": "Composable Fiori list report layout using caller filter bar, toolbar and responsive table.",
+      "registryDependencies": [
+        "@fiori/fiori-dynamic-page",
+        "@fiori/fiori-foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/fiori/components/fiori/list-report.tsx",
+          "type": "registry:component",
+          "target": "@components/fiori/list-report.tsx"
+        }
+      ],
+      "meta": {
+        "source": "Fiori Design Lab",
+        "baseline": "SAPUI5 1.151.0 / Morning Horizon"
+      },
+      "docs": "Provide application-owned filters, rows, selection and action callbacks. Use inside FioriProvider; no OData or UI5 control runtime is included. See docs/list-report-api.md."
+    },
+    {
       "name": "fiori-kit",
       "type": "registry:item",
       "title": "Fiori Pilot Kit",
-      "description": "First-batch public Fiori source components and their scoped foundation.",
+      "description": "Public Fiori components, list-report building blocks and their scoped foundation.",
       "registryDependencies": [
         "@fiori/fiori-foundation",
         "@fiori/fiori-button",
@@ -385,7 +521,12 @@
         "@fiori/fiori-message-strip",
         "@fiori/fiori-value-help",
         "@fiori/fiori-value-help-conditions",
-        "@fiori/fiori-message-popover"
+        "@fiori/fiori-message-popover",
+        "@fiori/fiori-dynamic-page",
+        "@fiori/fiori-filter-bar",
+        "@fiori/fiori-table-toolbar",
+        "@fiori/fiori-responsive-table",
+        "@fiori/fiori-list-report"
       ],
       "docs": "Import FioriProvider from your components/fiori/fiori-provider and compose installed Fiori components inside it. React 19 and Tailwind 4 are required. Full API contracts are supplied in the authoring project docs."
     }

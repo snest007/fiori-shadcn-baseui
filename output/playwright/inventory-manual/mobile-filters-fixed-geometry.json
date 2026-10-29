@@ -1,0 +1,74 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "dialog": {
+    "x": 0,
+    "y": 0,
+    "width": 390,
+    "height": 844
+  },
+  "provider": "inventory-provider",
+  "density": "cozy",
+  "title": "调整筛选",
+  "focus": "inventory-draft-search",
+  "fields": [
+    {
+      "id": "inventory-draft-search",
+      "x": 17,
+      "y": 86,
+      "right": 373,
+      "bottom": 122
+    },
+    {
+      "id": "inventory-draft-warehouse",
+      "x": 17,
+      "y": 166,
+      "right": 373,
+      "bottom": 202
+    },
+    {
+      "id": "inventory-draft-status",
+      "x": 17,
+      "y": 246,
+      "right": 373,
+      "bottom": 282
+    }
+  ],
+  "buttons": [
+    {
+      "text": "全部",
+      "aria": "调整仓库筛选",
+      "bottom": 202
+    },
+    {
+      "text": "全部",
+      "aria": "调整库存状态筛选",
+      "bottom": 282
+    },
+    {
+      "text": "取消",
+      "aria": null,
+      "bottom": 839
+    },
+    {
+      "text": "重置",
+      "aria": null,
+      "bottom": 839
+    },
+    {
+      "text": "确定",
+      "aria": null,
+      "bottom": 839
+    },
+    {
+      "text": "关闭",
+      "aria": null,
+      "bottom": 51
+    }
+  ],
+  "translate": "0px",
+  "maxHeight": "844px",
+  "fieldPadding": "16px"
+}

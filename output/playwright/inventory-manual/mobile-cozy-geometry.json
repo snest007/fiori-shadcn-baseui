@@ -1,0 +1,37 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "documentWidth": 390,
+  "mainWidth": 390,
+  "mainScrollWidth": 390,
+  "provider": "<div class=\"inventory-provider\" id=\"inventory-provider\" data-fiori-root=\"\" data-fiori-density=\"cozy\"><main class=\"inventory-scroll\" data-fiori-scroll=\"true\" tabindex=\"-1\"><div><div id=\"inventory-list-report\" class=\"list-report\" data-header-expanded=\"false\" data-header-pinned=\"false\" style=\"--list-header-height: 84px;\"><header class=\"list-page-header\"><div cl",
+  "popinClasses": [
+    "border-b transition-colors hover:bg-fiori-muted/50 has-aria-expanded:bg-fiori-muted/50 data-[state=selected]:bg-fiori-muted popin-row",
+    "border-b transition-colors hover:bg-fiori-muted/50 has-aria-expanded:bg-fiori-muted/50 data-[state=selected]:bg-fiori-muted popin-row",
+    "border-b transition-colors hover:bg-fiori-muted/50 has-aria-expanded:bg-fiori-muted/50 data-[state=selected]:bg-fiori-muted popin-row"
+  ],
+  "toolbarButtons": [
+    {
+      "label": "标记已盘点",
+      "rect": {
+        "x": 218,
+        "y": 173.5,
+        "width": 112,
+        "height": 36
+      },
+      "display": "flex"
+    },
+    {
+      "label": "更多表格操作",
+      "rect": {
+        "x": 334,
+        "y": 173.5,
+        "width": 44,
+        "height": 36
+      },
+      "display": "flex"
+    }
+  ]
+}

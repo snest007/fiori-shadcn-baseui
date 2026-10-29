@@ -191,6 +191,27 @@
       "bytes": 1804
     },
     {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "stage": "registry/fiori/components/fiori/ui/dropdown-menu.tsx",
+      "target": "@components/fiori/ui/dropdown-menu.tsx",
+      "sha256": "2d6c40414e69e2ba515d571ad5b1989fdb0c06364fc5f7c31263099d322e5cee",
+      "bytes": 9231
+    },
+    {
+      "source": "src/components/ui/tabs.tsx",
+      "stage": "registry/fiori/components/fiori/ui/tabs.tsx",
+      "target": "@components/fiori/ui/tabs.tsx",
+      "sha256": "871ab2ee26ae8d6577d50d6e027b430200e18f6cb65af1469cdde6271d8e0bb1",
+      "bytes": 3563
+    },
+    {
+      "source": "src/components/fiori/object-status.tsx",
+      "stage": "registry/fiori/components/fiori/object-status.tsx",
+      "target": "@components/fiori/object-status.tsx",
+      "sha256": "54faf419111c08964ec4ebdd8164d5f01216a550d6c282dc70cc5f6271c3dad7",
+      "bytes": 730
+    },
+    {
       "source": "src/components/fiori/message-strip.tsx",
       "stage": "registry/fiori/components/fiori/message-strip.tsx",
       "target": "@components/fiori/message-strip.tsx",
@@ -259,6 +280,55 @@
       "target": "@components/fiori/message-popover.css",
       "sha256": "69bbefb68bd841f92e425cdfd457da8bcc4f424884de5e32b7b967bb9c5c1235",
       "bytes": 11071
+    },
+    {
+      "source": "src/components/fiori/dynamic-page.tsx",
+      "stage": "registry/fiori/components/fiori/dynamic-page.tsx",
+      "target": "@components/fiori/dynamic-page.tsx",
+      "sha256": "72bacce4ee6a9e26189d663f9deaf5b6a798e556dd023e0a1f1541e3d0389ba0",
+      "bytes": 9459
+    },
+    {
+      "source": "src/components/fiori/list-report.css",
+      "stage": "registry/fiori/components/fiori/list-report.css",
+      "target": "@components/fiori/list-report.css",
+      "sha256": "15340b258d94f17a586ba9a80992e1bf264c571ac6c8d622b66e1273d72611ba",
+      "bytes": 11663
+    },
+    {
+      "source": "src/components/fiori/filter-bar.tsx",
+      "stage": "registry/fiori/components/fiori/filter-bar.tsx",
+      "target": "@components/fiori/filter-bar.tsx",
+      "sha256": "74a4cd6441b3fbbba1529462c63c8f38a05a3bc93aa28024c4f92f772125878f",
+      "bytes": 1282
+    },
+    {
+      "source": "src/components/fiori/table-toolbar.tsx",
+      "stage": "registry/fiori/components/fiori/table-toolbar.tsx",
+      "target": "@components/fiori/table-toolbar.tsx",
+      "sha256": "d570b41bcdbca367633f01f2ef022248e608bf7a45ab3627a5e2e9a21652f3de",
+      "bytes": 7546
+    },
+    {
+      "source": "src/components/fiori/responsive-table.tsx",
+      "stage": "registry/fiori/components/fiori/responsive-table.tsx",
+      "target": "@components/fiori/responsive-table.tsx",
+      "sha256": "f64160ef8937e6962a502547d517495b1162bc0e94032a5c5bf6f69e52fadce1",
+      "bytes": 13051
+    },
+    {
+      "source": "src/components/fiori/use-responsive-table-navigation.ts",
+      "stage": "registry/fiori/components/fiori/use-responsive-table-navigation.ts",
+      "target": "@components/fiori/use-responsive-table-navigation.ts",
+      "sha256": "41c78420391d71920d15da4d510569a5dd792777030b57fe1dfa4a22b812ce9a",
+      "bytes": 5910
+    },
+    {
+      "source": "src/components/fiori/list-report.tsx",
+      "stage": "registry/fiori/components/fiori/list-report.tsx",
+      "target": "@components/fiori/list-report.tsx",
+      "sha256": "67797ee6ad05e651b675c850456219b70ed3106f45d277080b3532846e16cdf7",
+      "bytes": 1867
     }
   ]
 }

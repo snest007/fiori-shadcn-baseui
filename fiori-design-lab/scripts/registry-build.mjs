@@ -53,7 +53,8 @@ const definitions = [
       "src/components/ui/field.tsx", "src/components/ui/input-group.tsx", "src/components/ui/table.tsx",
       "src/components/ui/label.tsx", "src/components/ui/separator.tsx", "src/components/ui/textarea.tsx",
       "src/components/ui/alert.tsx", "src/components/ui/popover.tsx", "src/components/ui/toggle-group.tsx",
-      "src/components/ui/toggle.tsx",
+      "src/components/ui/toggle.tsx", "src/components/ui/dropdown-menu.tsx",
+      "src/components/ui/tabs.tsx", "src/components/fiori/object-status.tsx",
     ],
     internal: true,
   },
@@ -79,6 +80,33 @@ const definitions = [
     name: "fiori-message-popover", type: "registry:component", title: "Fiori Message Popover",
     description: "Controlled caller messages, type filters, details, back navigation and target activation.",
     sources: ["src/components/fiori/message-popover.tsx", "src/components/fiori/message-popover.css"],
+  },
+
+  {
+    name: "fiori-dynamic-page", type: "registry:component", title: "Fiori Dynamic Page",
+    description: "Controlled dynamic header, scroll snapping, pinning and measured sticky offsets.",
+    sources: ["src/components/fiori/dynamic-page.tsx", "src/components/fiori/list-report.css"],
+  },
+  {
+    name: "fiori-filter-bar", type: "registry:component", title: "Fiori Filter Bar",
+    description: "Caller-defined filter fields, basic search and actions in the Fiori filter layout.",
+    sources: ["src/components/fiori/filter-bar.tsx"],
+  },
+  {
+    name: "fiori-table-toolbar", type: "registry:component", title: "Fiori Table Toolbar",
+    description: "Ordered caller actions with responsive overflow and persistent business actions.",
+    sources: ["src/components/fiori/table-toolbar.tsx"],
+  },
+  {
+    name: "fiori-responsive-table", type: "registry:component", title: "Fiori Responsive Table",
+    description: "External row and column renderers, controlled selection, responsive pop-in, growing and read-only grid navigation.",
+    sources: ["src/components/fiori/responsive-table.tsx", "src/components/fiori/use-responsive-table-navigation.ts"],
+  },
+  {
+    name: "fiori-list-report", type: "registry:block", title: "Fiori List Report",
+    description: "Composable Fiori list report layout using caller filter bar, toolbar and responsive table.",
+    sources: ["src/components/fiori/list-report.tsx"],
+    docs: "Provide application-owned filters, rows, selection and action callbacks. Use inside FioriProvider; no OData or UI5 control runtime is included. See docs/list-report-api.md.",
   },
 ]
 const sourceOwner = new Map()
@@ -238,7 +266,7 @@ for (const definition of definitions) {
 }
 registryItems.push({
   name: "fiori-kit", type: "registry:item", title: "Fiori Pilot Kit",
-  description: "First-batch public Fiori source components and their scoped foundation.",
+  description: "Public Fiori components, list-report building blocks and their scoped foundation.",
   registryDependencies: definitions.filter(item => !item.internal).map(item => `@fiori/${item.name}`),
   docs: "Import FioriProvider from your components/fiori/fiori-provider and compose installed Fiori components inside it. React 19 and Tailwind 4 are required. Full API contracts are supplied in the authoring project docs.",
 })

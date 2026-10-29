@@ -13,16 +13,17 @@ export function useResponsiveTableNavigation({
   firstRow?: string
   rowIds: string[]
   columnIds: string[]
-  open: (id: string) => void
+  open?: (id: string) => void
   selectAll: () => void
   pageSize?: number
 }) {
   const [active, setActive] = useState<string>()
   const [contentMode, setContentMode] = useState(false)
   const previousControl = useRef(new Map<string, HTMLElement>())
-  const activeRow = active?.split(":")[0]
+  const delimiter = active?.lastIndexOf(":") ?? -1
+  const activeRow = delimiter >= 0 ? active?.slice(0, delimiter) : undefined
   const existingRow = activeRow === "header" || rowIds.includes(activeRow ?? "")
-  const activeColumn = active?.split(":")[1]
+  const activeColumn = delimiter >= 0 ? active?.slice(delimiter + 1) : undefined
   const existingColumn = [
     "row",
     "selection",
@@ -108,7 +109,7 @@ export function useResponsiveTableNavigation({
     if (event.key === " " || event.key === "Enter") {
       event.preventDefault()
       if (!cell && event.key === "Enter" && row.dataset.gridRow !== "header")
-        open(row.dataset.gridRow!)
+        open?.(row.dataset.gridRow!)
       else if (!cell || cell.dataset.gridCell === "selection")
         controls(cell ?? row)[0]?.click()
       return

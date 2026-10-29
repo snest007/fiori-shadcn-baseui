@@ -1,0 +1,15 @@
+{
+  "provider": "inventory-provider",
+  "rect": {
+    "x": 250,
+    "y": 214,
+    "width": 128,
+    "height": 107
+  },
+  "items": [
+    "设置",
+    "导出"
+  ],
+  "focus": "menu",
+  "focusText": "设置导出"
+}

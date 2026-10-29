@@ -21,8 +21,12 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: |
+            package-lock.json
             fiori-design-lab/package-lock.json
             fiori-registry-consumer/package-lock.json
+
+      - name: Install browser verification dependencies
+        run: npm ci
 
       - name: Install design lab dependencies
         run: npm ci
@@ -40,3 +44,17 @@ jobs:
 
       - name: Verify installed source closure
         run: npm run verify:installation
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify list-report interactions and capture screenshots
+        run: npm run test:list-report -- --capture-only
+
+      - name: Save browser verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: list-report-browser-evidence
+          path: output/playwright/current/
+          if-no-files-found: warn

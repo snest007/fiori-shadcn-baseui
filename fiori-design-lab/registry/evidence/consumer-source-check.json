@@ -7,7 +7,7 @@
     "lib": "~/lib",
     "hooks": "~/hooks"
   },
-  "installedSourceFiles": 37,
+  "installedSourceFiles": 47,
   "checkedSources": [
     {
       "source": "src/components/fiori/fiori-context.ts",
@@ -172,6 +172,24 @@
       "imports": 3
     },
     {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "target": "@components/fiori/ui/dropdown-menu.tsx",
+      "installed": "src/components/fiori/ui/dropdown-menu.tsx",
+      "imports": 5
+    },
+    {
+      "source": "src/components/ui/tabs.tsx",
+      "target": "@components/fiori/ui/tabs.tsx",
+      "installed": "src/components/fiori/ui/tabs.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/fiori/object-status.tsx",
+      "target": "@components/fiori/object-status.tsx",
+      "installed": "src/components/fiori/object-status.tsx",
+      "imports": 3
+    },
+    {
       "source": "src/components/fiori/message-strip.tsx",
       "target": "@components/fiori/message-strip.tsx",
       "installed": "src/components/fiori/message-strip.tsx",
@@ -230,6 +248,48 @@
       "target": "@components/fiori/message-popover.css",
       "installed": "src/components/fiori/message-popover.css",
       "imports": 0
+    },
+    {
+      "source": "src/components/fiori/dynamic-page.tsx",
+      "target": "@components/fiori/dynamic-page.tsx",
+      "installed": "src/components/fiori/dynamic-page.tsx",
+      "imports": 5
+    },
+    {
+      "source": "src/components/fiori/list-report.css",
+      "target": "@components/fiori/list-report.css",
+      "installed": "src/components/fiori/list-report.css",
+      "imports": 0
+    },
+    {
+      "source": "src/components/fiori/filter-bar.tsx",
+      "target": "@components/fiori/filter-bar.tsx",
+      "installed": "src/components/fiori/filter-bar.tsx",
+      "imports": 3
+    },
+    {
+      "source": "src/components/fiori/table-toolbar.tsx",
+      "target": "@components/fiori/table-toolbar.tsx",
+      "installed": "src/components/fiori/table-toolbar.tsx",
+      "imports": 6
+    },
+    {
+      "source": "src/components/fiori/responsive-table.tsx",
+      "target": "@components/fiori/responsive-table.tsx",
+      "installed": "src/components/fiori/responsive-table.tsx",
+      "imports": 9
+    },
+    {
+      "source": "src/components/fiori/use-responsive-table-navigation.ts",
+      "target": "@components/fiori/use-responsive-table-navigation.ts",
+      "installed": "src/components/fiori/use-responsive-table-navigation.ts",
+      "imports": 1
+    },
+    {
+      "source": "src/components/fiori/list-report.tsx",
+      "target": "@components/fiori/list-report.tsx",
+      "installed": "src/components/fiori/list-report.tsx",
+      "imports": 2
     }
   ],
   "failures": [],

@@ -1,0 +1,58 @@
+2026-10-29: final header-absent guard synchronization.
+Review: shadcn add @fiori/fiori-dynamic-page --diff src/components/fiori/dynamic-page.tsx
+- Resolving items.
+┌ shadcn add @fiori/fiori-dynamic-page (dry run)
+│
+├ src/components/fiori/dynamic-page.tsx (overwrite)
+│ ┌──────────────────────────────────────────────
+│ │ --- a/src/components/fiori/dynamic-page.tsx
+│ │ +++ b/src/components/fiori/dynamic-page.tsx
+│ │ @@ -164,6 +164,7 @@
+│ │        if (
+│ │          effectivePinned ||
+│ │          phone ||
+│ │ +        header == null ||
+│ │          root.closest("[hidden]") ||
+│ │          pendingScrollRef.current != null ||
+│ │          (suppressedPosition != null && y === suppressedPosition)
+│ │ @@ -185,6 +186,7 @@
+│ │      expanded,
+│ │      effectivePinned,
+│ │      phone,
+│ │ +    header,
+│ │      snapThreshold,
+│ │      geometry.canScroll,
+│ │      onExpandedChange,
+│ └──────────────────────────────────────────────
+│
+└ Run without --dry-run to apply.
+
+Apply: shadcn add @fiori/fiori-dynamic-page
+- Checking registry.
+✔ Checking registry.
+- Installing dependencies.
+- Installing dependencies.
+✔ Installing dependencies.
+- Updating files.
+? The file dynamic-page.tsx already exists. Would you like to overwrite? › (y/N)✔ The file dynamic-page.tsx already exists. Would you like to overwrite? … yes
+- Updating files.
+ℹ Updated 1 file:
+  - src/components/fiori/dynamic-page.tsx
+ℹ Skipped 13 files: (files might be identical, use --overwrite to overwrite)
+  - src/components/fiori/fiori-context.ts
+  - src/components/fiori/fiori-provider.tsx
+  - src/components/fiori/sap-icon.tsx
+  - src/lib/fiori/utils.ts
+  - src/lib/fiori/styles/fiori-scoped.css
+  - src/lib/fiori/styles/fiori-fonts.css
+  - src/lib/fiori/styles/SAP-THEME-LICENSE.txt
+  - src/lib/fiori/styles/FONT-LICENSE.txt
+  - src/lib/fiori/styles/FONT-SOURCES.md
+  - src/lib/fiori/licenses/icons-LICENSE.txt
+  - src/lib/fiori/licenses/icons-SOURCES.md
+  - src/components/fiori/ui/button.tsx
+  - src/components/fiori/list-report.css
+Use FioriProvider around Fiori components. The provider imports isolated theme CSS; no UI5 control runtime or network font request is required.
+
+
+Consumer package.json and existing dependency identities unchanged; portable lockfile and Registry URL restored.

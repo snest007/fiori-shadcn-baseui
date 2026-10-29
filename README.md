@@ -4,7 +4,7 @@
 
 页面和组件交互由 React 与 Base UI 实现，没有引入 UI5/SAPUI5 控件运行时。SAP 资源用于静态字体、图标、主题参数和 sample 图片，来源与许可见 [第三方声明](./THIRD_PARTY_NOTICES.md)。
 
-当前范围为 Morning Horizon 明亮主题：Button、Input、Select、MessageStrip、Value Help 单选/多选、独立条件字段、MessagePopover，以及 `FioriProvider` 和隔离主题。List Report 与 Object Page 用于对照和演示，尚未提炼成可分发页面模板。
+当前范围为 Morning Horizon 明亮主题：Button、Input、Select、MessageStrip、Value Help 单选/多选、独立条件字段、MessagePopover，以及 `FioriProvider` 和隔离主题。List Report 已拆成可分发的 DynamicPage、FilterBar、TableToolbar、ResponsiveTable 和 ListReport 区块；Object Page 仍用于对照和演示。
 
 ![独立 React 消费示例](./fiori-design-lab/screenshots/consumer-desktop.png)
 
@@ -21,6 +21,7 @@ fiori-shadcn-baseui/
 需要 Node.js **22.12.0 或更新版本**及 npm，CI 使用 Node.js 24。在仓库根目录安装两端依赖：
 
 ```bash
+npm ci
 npm --prefix fiori-design-lab ci
 npm --prefix fiori-registry-consumer ci
 ```
@@ -55,7 +56,7 @@ npm run preview:lab
 
 ## Registry 安装
 
-本地 Registry 有10个条目，组合入口 `@fiori/fiori-kit` 安装37个源码、CSS和许可文件。先构建并启动实验室的4178预览服务，在目标 shadcn 项目的 `components.json` 中加入：
+本地 Registry 有15个条目，组合入口 `@fiori/fiori-kit` 安装47个源码、CSS和许可文件。先构建并启动实验室的4178预览服务，在目标 shadcn 项目的 `components.json` 中加入：
 
 ```json
 {
@@ -77,6 +78,8 @@ npx shadcn@latest add @fiori/fiori-kit
 
 - [组件契约](./fiori-design-lab/docs/component-contracts.md)：受控状态、密度、键盘、焦点与主题隔离。
 - [Value Help API](./fiori-design-lab/docs/value-help-api.md)：外部目录、列、筛选、单选/多选与条件字段。
+- [List Report API](./fiori-design-lab/docs/list-report-api.md)：外部字段与数据、受控页头、表格操作、选择和响应式布局。
+- [List Report 验证](./fiori-design-lab/docs/list-report-validation.md)：固定 UI5 对照、独立库存消费和回归结果。
 - [消息 API](./fiori-design-lab/docs/messages-api.md)：外部消息、分类、详情与字段定位。
 - [QA 记录](./fiori-design-lab/QA.md)：官方对照、截图、浏览器步骤与结果。
 - [消费和设备验收](./fiori-design-lab/docs/consumer-validation.md)：可重复操作与尚未执行的设备检查。
@@ -87,9 +90,20 @@ npx shadcn@latest add @fiori/fiori-kit
 npm run verify
 ```
 
-这会检查两端 lint/build、主题和 Registry 生成一致性、9项目录/条件契约测试及消费源码闭包。Actions 执行相同的源码检查。
+这会检查两端 lint/build、194项主题参数、Registry 生成一致性、9项目录/条件契约测试及47文件消费源码闭包。
 
-本轮已完成桌面和390×844浏览器交互回归；axe 4.14.0 对桌面、手机普通页及手机 Value Help 复扫未报告违规，未判定项另有颜色和键盘复核。真实触屏、软键盘、Safari/VoiceOver尚未执行；以上结果不等同完整无障碍认证或全部 Fiori 变体一致性。
+独立消费的 `/#/inventory` 使用72条库存记录、12种物料和6个仓库，演示筛选、盘点、列设置、排序、导出及只读详情；原组件消费入口为 `/#/components`。已安装组件不需要作者服务。
+
+两端构建后运行 List Report 浏览器回归：
+
+```bash
+npx playwright install chromium
+npm run test:list-report
+```
+
+脚本自动启动4278/4288临时生产预览，结束后关闭。macOS截图与仓库内的平台基线比较；其他平台先用 `--capture-only` 做交互断言和截图，再人工检查。基线更新用 `--update-baselines`，必须先审查变化；它是当前React实现的回归基线。Actions执行源码检查和Linux Chromium的 `--capture-only`，上传截图与断言结果。官方对照和实现截图分别保存在 `output/playwright/ui5-reference/` 与 `output/playwright/baselines/darwin/`。
+
+第一批组件已完成桌面和390×844浏览器交互回归；axe 4.14.0 对桌面、手机普通页及手机 Value Help 复扫未报告违规，未判定项另有颜色和键盘复核。真实触屏、软键盘、Safari/VoiceOver尚未执行；以上结果不等同完整无障碍认证或全部 Fiori 变体一致性。
 
 ## 参考与当前边界
 

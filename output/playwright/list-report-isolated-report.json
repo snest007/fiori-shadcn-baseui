@@ -1,0 +1,153 @@
+{
+  "baseline": "SAPUI5 1.151.0 / Morning Horizon; browser snapshots are implementation regression evidence",
+  "platform": "darwin",
+  "browserVersion": "156.0.8078.4",
+  "playwrightVersion": "1.64.1",
+  "screenshotMode": "compare",
+  "results": [
+    {
+      "name": "author compact collapse and screenshot",
+      "passed": true
+    },
+    {
+      "name": "expand, pin and measured sticky stacking",
+      "passed": true
+    },
+    {
+      "name": "unpin collapses above threshold, mid-page upward scroll stays collapsed",
+      "passed": true
+    },
+    {
+      "name": "header snaps at measured T and expands below T, manual collapse clears pin",
+      "passed": true
+    },
+    {
+      "name": "live filters and selection without row navigation",
+      "passed": true
+    },
+    {
+      "name": "growing retains all-result select-all and F2 row/control navigation",
+      "passed": true
+    },
+    {
+      "name": "row Enter navigates and return preserves app list",
+      "passed": true
+    },
+    {
+      "name": "Cozy density screenshot",
+      "passed": true
+    },
+    {
+      "name": "900px and 390px pop-in, overflow menu and settings Escape",
+      "passed": true
+    },
+    {
+      "name": "independent consumer uses shared page and external rows",
+      "passed": true
+    },
+    {
+      "name": "consumer row checkbox, business action and retained selection",
+      "passed": true
+    },
+    {
+      "name": "consumer different filter schema and empty result",
+      "passed": true
+    },
+    {
+      "name": "consumer keyboard row navigation and detail return",
+      "passed": true
+    },
+    {
+      "name": "consumer phone pop-in and never-overflow business action",
+      "passed": true
+    },
+    {
+      "name": "consumer phone filter draft cancel, submit and reset",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "author-compact-collapsed",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-compact-expanded",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-compact-pinned",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-cozy",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-900",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-390",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-phone-settings",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "author-phone-overflow-closed",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-compact",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-selected",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-no-data",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-phone",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-phone-overflow",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-phone-filter-dialog",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    },
+    {
+      "name": "inventory-phone-filtered",
+      "mode": "compared",
+      "changedPixelRatio": 0
+    }
+  ],
+  "browserErrors": [],
+  "verificationContext": {
+    "source": "isolated archive of this task changes, without parallel ComponentLibrary/ObjectPage changes",
+    "rootAndBothProjectsNpmCi": "passed",
+    "npmRunVerify": "passed",
+    "previewLifecycle": "script started and stopped 4278/4288"
+  }
+}

@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "fiori-kit",
   "title": "Fiori Pilot Kit",
-  "description": "First-batch public Fiori source components and their scoped foundation.",
+  "description": "Public Fiori components, list-report building blocks and their scoped foundation.",
   "registryDependencies": [
     "@fiori/fiori-foundation",
     "@fiori/fiori-button",
@@ -11,7 +11,12 @@
     "@fiori/fiori-message-strip",
     "@fiori/fiori-value-help",
     "@fiori/fiori-value-help-conditions",
-    "@fiori/fiori-message-popover"
+    "@fiori/fiori-message-popover",
+    "@fiori/fiori-dynamic-page",
+    "@fiori/fiori-filter-bar",
+    "@fiori/fiori-table-toolbar",
+    "@fiori/fiori-responsive-table",
+    "@fiori/fiori-list-report"
   ],
   "docs": "Import FioriProvider from your components/fiori/fiori-provider and compose installed Fiori components inside it. React 19 and Tailwind 4 are required. Full API contracts are supplied in the authoring project docs.",
   "type": "registry:item"

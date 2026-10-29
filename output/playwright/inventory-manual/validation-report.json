@@ -1,0 +1,425 @@
+{
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T10:40:22.125468+00:00",
+  "scope": "Independent Registry consumer inventory business scenario; manual headed Chromium via Playwright CLI.",
+  "url": "http://127.0.0.1:4488/#/inventory",
+  "publicSourcePolicy": "No edits to installed public component source, Registry, package.json or lockfiles. Public components installed through shadcn Registry CLI.",
+  "businessFiles": [
+    "src/inventory/data.ts",
+    "src/inventory/InventoryDemo.tsx",
+    "src/inventory/inventory.css",
+    "src/App.tsx",
+    "src/App.css"
+  ],
+  "build": {
+    "command": "npm run build",
+    "cwd": "fiori-registry-consumer",
+    "result": "passed",
+    "note": "TypeScript and Vite production build passed after final CSS changes. Vite reports a nonfatal chunk size warning."
+  },
+  "testedViewports": [
+    {
+      "width": 1280,
+      "height": 720,
+      "density": "compact"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "density": "cozy"
+    }
+  ],
+  "tests": [
+    {
+      "name": "Desktop no horizontal overflow",
+      "result": "passed",
+      "evidence": [
+        "desktop-initial-geometry.json",
+        "desktop-initial.png"
+      ]
+    },
+    {
+      "name": "Desktop warehouse and stock filters",
+      "result": "passed",
+      "actual": "Chengdu warehouse: 12 rows. Chengdu plus empty: INV-0034 only.",
+      "evidence": [
+        "cd-empty-result.json",
+        "desktop-cd-empty.png"
+      ]
+    },
+    {
+      "name": "Mark counted preserves selection",
+      "result": "passed",
+      "actual": "INV-0034 remains aria-selected=true, becomes counted, updated date 2026-10-29, then action disabled.",
+      "evidence": [
+        "counted-selection.json",
+        "desktop-counted.png"
+      ]
+    },
+    {
+      "name": "Column settings cancel and confirm",
+      "result": "passed",
+      "actual": "Cancel retains updated date column; confirm hides it; focus restores to settings trigger.",
+      "evidence": [
+        "settings-cancel.json",
+        "settings-apply.json"
+      ]
+    },
+    {
+      "name": "Filter reset",
+      "result": "passed",
+      "actual": "Restores 72 rows, clears selection; initially 20 loaded.",
+      "evidence": [
+        "filters-current.yml"
+      ]
+    },
+    {
+      "name": "Single field sorting",
+      "result": "passed",
+      "actual": "Available inventory descending; header aria-sort=descending; first records INV-0065=457, INV-0052=456, INV-0039=455.",
+      "evidence": [
+        "sort-applied.json",
+        "desktop-sort-dialog.png"
+      ]
+    },
+    {
+      "name": "Desktop dialog semantics",
+      "result": "passed",
+      "evidence": [
+        "dialog-semantics.json"
+      ]
+    },
+    {
+      "name": "Detail navigation and return focus/scroll",
+      "result": "passed",
+      "before": {
+        "scrollTop": 600,
+        "rows": [
+          {
+            "id": "INV-0037",
+            "top": 301.5,
+            "label": "MAT-1007 运输缓冲垫，杭州成品仓"
+          },
+          {
+            "id": "INV-0024",
+            "top": 360.5,
+            "label": "MAT-1004 传动轴套，深圳出口仓"
+          },
+          {
+            "id": "INV-0011",
+            "top": 419.5,
+            "label": "MAT-1002 工业密封圈，重庆备件仓"
+          },
+          {
+            "id": "INV-0062",
+            "top": 478.5,
+            "label": "MAT-1011 防锈保护剂，上海备件仓"
+          },
+          {
+            "id": "INV-0049",
+            "top": 537.5,
+            "label": "MAT-1009 设备维护油，杭州成品仓"
+          },
+          {
+            "id": "INV-0036",
+            "top": 596.5,
+            "label": "MAT-1006 防静电包装袋，深圳出口仓"
+          }
+        ]
+      },
+      "enter": {
+        "path": "#/inventory/INV-0024",
+        "scrollTop": 0,
+        "focus": "inventory-detail-back"
+      },
+      "return": {
+        "path": "#/inventory",
+        "scrollTop": 600,
+        "focusTag": "TR",
+        "focusRow": "INV-0024",
+        "focusKey": "INV-0024:row",
+        "focusLabel": "MAT-1004 传动轴套，深圳出口仓"
+      },
+      "evidence": [
+        "before-navigation.json",
+        "detail-enter.json",
+        "detail-return.json",
+        "desktop-detail.png",
+        "desktop-return.png"
+      ]
+    },
+    {
+      "name": "Phone responsive table and toolbar",
+      "result": "passed",
+      "actual": "No horizontal document/main overflow. Secondary columns render in pop-in. Business action remains visible; initial 72-row title pushes settings and export into overflow menu.",
+      "evidence": [
+        "mobile-cozy-geometry.json",
+        "mobile-cozy-final.png",
+        "mobile-filters-latest-escape.json"
+      ]
+    },
+    {
+      "name": "Phone toolbar menu and Escape focus",
+      "result": "passed",
+      "open": {
+        "provider": "inventory-provider",
+        "rect": {
+          "x": 250,
+          "y": 214,
+          "width": 128,
+          "height": 107
+        },
+        "items": [
+          "设置",
+          "导出"
+        ],
+        "focus": "menu",
+        "focusText": "设置导出"
+      },
+      "close": {
+        "visibleMenus": 0,
+        "focus": "更多表格操作",
+        "expanded": "false",
+        "provider": "inventory-provider"
+      },
+      "evidence": [
+        "mobile-toolbar-menu.png",
+        "mobile-toolbar-menu.json",
+        "mobile-toolbar-menu-escape.json"
+      ]
+    },
+    {
+      "name": "Phone fullscreen filter dialog after CSS repair",
+      "result": "passed",
+      "actual": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dialog": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "provider": "inventory-provider",
+        "density": "cozy",
+        "title": "调整筛选",
+        "focus": "inventory-draft-search",
+        "fields": [
+          {
+            "id": "inventory-draft-search",
+            "x": 17,
+            "y": 86,
+            "right": 373,
+            "bottom": 122
+          },
+          {
+            "id": "inventory-draft-warehouse",
+            "x": 17,
+            "y": 166,
+            "right": 373,
+            "bottom": 202
+          },
+          {
+            "id": "inventory-draft-status",
+            "x": 17,
+            "y": 246,
+            "right": 373,
+            "bottom": 282
+          }
+        ],
+        "buttons": [
+          {
+            "text": "全部",
+            "aria": "调整仓库筛选",
+            "bottom": 202
+          },
+          {
+            "text": "全部",
+            "aria": "调整库存状态筛选",
+            "bottom": 282
+          },
+          {
+            "text": "取消",
+            "aria": null,
+            "bottom": 839
+          },
+          {
+            "text": "重置",
+            "aria": null,
+            "bottom": 839
+          },
+          {
+            "text": "确定",
+            "aria": null,
+            "bottom": 839
+          },
+          {
+            "text": "关闭",
+            "aria": null,
+            "bottom": 51
+          }
+        ],
+        "translate": "0px",
+        "maxHeight": "844px",
+        "fieldPadding": "16px"
+      },
+      "evidence": [
+        "mobile-filters-fixed.png",
+        "mobile-filters-fixed-geometry.json"
+      ]
+    },
+    {
+      "name": "Nested phone warehouse Select and Escape",
+      "result": "passed",
+      "actual": "Full screen Select belongs to inventory-provider. Escape leaves parent dialog open and restores focus to inventory-draft-warehouse.",
+      "open": {
+        "provider": "inventory-provider",
+        "rect": {
+          "x": 0,
+          "y": 44,
+          "width": 390,
+          "height": 800
+        },
+        "role": "listbox",
+        "labels": {
+          "ariaLabel": null,
+          "labelledby": null
+        },
+        "options": [
+          {
+            "text": "全部",
+            "selected": "true"
+          },
+          {
+            "text": "杭州成品仓",
+            "selected": "false"
+          },
+          {
+            "text": "上海备件仓",
+            "selected": "false"
+          },
+          {
+            "text": "南京中转仓",
+            "selected": "false"
+          },
+          {
+            "text": "成都成品仓",
+            "selected": "false"
+          },
+          {
+            "text": "重庆备件仓",
+            "selected": "false"
+          },
+          {
+            "text": "深圳出口仓",
+            "selected": "false"
+          }
+        ],
+        "focus": "",
+        "dialogs": 1
+      },
+      "close": {
+        "visibleListboxes": 0,
+        "openDialogs": 1,
+        "focusId": "inventory-draft-warehouse",
+        "focusLabel": "调整仓库筛选"
+      },
+      "evidence": [
+        "mobile-warehouse-select.png",
+        "mobile-warehouse-select.json",
+        "mobile-warehouse-select-escape.json"
+      ]
+    },
+    {
+      "name": "Phone filter submit",
+      "result": "passed",
+      "actual": {
+        "rows": [
+          "INV-0034"
+        ],
+        "status": "共 1 条库存记录，已加载 1 条，已选择 0 条",
+        "focus": "调整筛选 (2)",
+        "dialogsVisible": 0
+      },
+      "evidence": [
+        "mobile-filters-submit.json",
+        "mobile-filtered-cd-empty.png"
+      ]
+    },
+    {
+      "name": "Phone filter cancel discards draft",
+      "result": "passed",
+      "actual": {
+        "rows": [
+          "INV-0034"
+        ],
+        "summary": "2 个筛选器已激活：仓库：成都成品仓，库存状态：缺货",
+        "focus": "调整筛选 (2)"
+      },
+      "note": "Typed MAT-1001 search draft then Cancel; committed Chengdu plus empty remains INV-0034.",
+      "evidence": [
+        "mobile-filters-cancel.json"
+      ]
+    },
+    {
+      "name": "Phone filter Escape discards draft",
+      "result": "passed",
+      "actual": {
+        "rows": [
+          "INV-0034"
+        ],
+        "summary": "2 个筛选器已激活：仓库：成都成品仓，库存状态：缺货",
+        "focus": "调整筛选 (2)",
+        "visibleDialogs": 0
+      },
+      "latestBuildClose": {
+        "focus": "调整筛选 (0)",
+        "visibleDialogs": 0,
+        "documentWidth": 390,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      "note": "Typed MAT-1001 search draft then Escape; committed Chengdu plus empty remains INV-0034. Escape also rechecked after final padding build.",
+      "evidence": [
+        "mobile-filters-final-escape.json",
+        "mobile-filters-latest-escape.json"
+      ]
+    }
+  ],
+  "fixedBusinessCss": [
+    "Clear Tailwind translation variables and independent translate for phone fullscreen dialog.",
+    "Override fullscreen max-height to 100dvh.",
+    "Add dialog field-group padding: desktop 20px 24px; phone 16px."
+  ],
+  "finalScreenshots": [
+    "desktop-initial.png",
+    "desktop-cd-empty.png",
+    "desktop-counted.png",
+    "desktop-sort-dialog.png",
+    "desktop-detail.png",
+    "desktop-return.png",
+    "mobile-cozy-final.png",
+    "mobile-filters-fixed.png",
+    "mobile-warehouse-select.png",
+    "mobile-toolbar-menu.png",
+    "mobile-filtered-cd-empty.png"
+  ],
+  "beforeArtifactsExcludedFromFinalEvidence": [
+    "mobile-filters.png",
+    "mobile-filters-geometry.json",
+    "mobile-dialog-translate-rules.json",
+    "mobile-dialog-motion-style.json"
+  ],
+  "artifactNote": "mobile-filters-fixed.png and mobile-filters-fixed-geometry.json were overwritten with latest production build evidence: dialog x0/y0, 390x844, 16px field padding.",
+  "notExecutedInThisManualPass": [
+    "Physical touchscreen device",
+    "Mobile soft keyboard and viewport keyboard resize",
+    "VoiceOver or other screen reader",
+    "Native Safari or Firefox",
+    "Manual CSV download content inspection",
+    "Sort settings cancel in manual pass"
+  ],
+  "limits": "390x844 is desktop Chromium viewport resizing, not real mobile device validation. This is evidence for the independent consumer scenario, not complete UI5 interaction parity or all Fiori components."
+}

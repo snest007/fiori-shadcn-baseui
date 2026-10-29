@@ -1,0 +1,46 @@
+{
+  "provider": "inventory-provider",
+  "rect": {
+    "x": 0,
+    "y": 44,
+    "width": 390,
+    "height": 800
+  },
+  "role": "listbox",
+  "labels": {
+    "ariaLabel": null,
+    "labelledby": null
+  },
+  "options": [
+    {
+      "text": "全部",
+      "selected": "true"
+    },
+    {
+      "text": "杭州成品仓",
+      "selected": "false"
+    },
+    {
+      "text": "上海备件仓",
+      "selected": "false"
+    },
+    {
+      "text": "南京中转仓",
+      "selected": "false"
+    },
+    {
+      "text": "成都成品仓",
+      "selected": "false"
+    },
+    {
+      "text": "重庆备件仓",
+      "selected": "false"
+    },
+    {
+      "text": "深圳出口仓",
+      "selected": "false"
+    }
+  ],
+  "focus": "",
+  "dialogs": 1
+}

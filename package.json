@@ -11,9 +11,14 @@
     "verify:lab": "npm --prefix fiori-design-lab run lint && npm --prefix fiori-design-lab run build && npm --prefix fiori-design-lab run theme:check && npm --prefix fiori-design-lab run foundation:check && npm --prefix fiori-design-lab run registry:check && npm --prefix fiori-design-lab run test:contracts",
     "verify:consumer": "npm --prefix fiori-registry-consumer run lint && npm --prefix fiori-registry-consumer run build",
     "verify:installation": "npm --prefix fiori-design-lab run registry:verify-consumer -- ../fiori-registry-consumer",
-    "verify": "npm run verify:lab && npm run verify:consumer && npm run verify:installation"
+    "verify": "npm run verify:lab && npm run verify:consumer && npm run verify:installation",
+    "test:list-report": "node scripts/list-report-regression.mjs"
   },
   "engines": {
     "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "pngjs": "7.0.0"
   }
 }
